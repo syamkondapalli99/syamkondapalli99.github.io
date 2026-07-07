@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — JKS Soft Tech</title>
+    <meta name="description" content="JKS Soft Tech is a Singapore-based technology and consulting company helping enterprises reimagine their businesses for the digital age.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- HEADER / NAV -->
+<header class="header" role="banner">
+    <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
+            <img src="assets/jksLogo.jpg" alt="JKS Soft Tech logo" class="logo-img">
+        </a>
+
+        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="nav-menu" class="nav" role="navigation" aria-label="Main navigation">
+            <a href="index.html"      tabindex="1" class="nav-link">Home</a>
+             <div class="nav-item dropdown">
+                <a href="about.html" class="nav-link">About Us</a>
+                <div class="dropdown-menu"><div class="dropdown-menu">
+                    <a href="aboutExtra.html" class="is-active">Our Story</a>
+                </div>
+            </div>
+            <a href="services.html"   tabindex="3" class="nav-link">Services</a>
+            <a href="industries.html" tabindex="4" class="nav-link">Industries</a>
+            <a href="index.html#contact" tabindex="5" class="nav-link">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero" aria-label="About Us introduction">
+    <div class="page-hero-inner">
+        <p class="hero-eyebrow">Our Core Values</p>
+        <h1>Empowering Businesses Through Technology and Innovation</h1>
+        <p class="page-hero-lede">At JKS Soft Tech, you’re part of a global team that values learning, growth, and meaningful impact.
+We foster a supportive environment where every voice matters and collaboration drives success.
+With the right resources and strong values, we empower you to build a fulfilling and balanced career.</p>
+    </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="why-us-heading">
+    <div class="section-inner-single">
+        <div class="why-us-header reveal">
+            <div class="why-us-header-label">
+                <p class="section-eyebrow">Why Choose Us</p>
+                <h2 id="why-us-heading">What sets JKS Soft Tech apart</h2>
+            </div>
+            <p class="why-us-header-desc">We provide innovative, reliable, and scalable technology solutions tailored to client needs, backed by strong expertise and a commitment to quality and continuous innovation.</p>
+        </div>
+
+       <div class="info-grid info-grid-clean reveal reveal-delay-1">
+    <div class="info-card info-card-large">
+        <h3>Value Creation</h3>
+        <p>We help clients build stronger, high-performance businesses by consistently delivering value and nurturing long-term relationships.</p>
+    </div>
+
+    <div class="info-card info-card-large">
+        <h3>Global Network</h3>
+        <p>We combine collaboration, global insight, and shared learning to deliver exceptional service wherever our clients do business.</p>
+    </div>
+
+    <div class="info-card">
+        <h3>Mutual Respect</h3>
+        <p>We value diversity, foster trust, and create an open environment where every contribution is respected.</p>
+    </div>
+
+    <div class="info-card">
+        <h3>Integrity</h3>
+        <p>We act with honesty, take responsibility for our actions, and align our words with our work.</p>
+    </div>
+
+    <div class="info-card">
+        <h3>Thought Leadership</h3>
+        <p>We build for the future by strengthening our people, communities, and long-term business impact.</p>
+    </div>
+
+    <div class="info-card">
+        <h3>Thriving Community</h3>
+        <p>We attract and grow talented people in a supportive environment shaped by collaboration and a “Yes, we can” mindset.</p>
+    </div>
+</div>
+    </div>
+</section>
+<script>
+const elements = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        }
+    });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
