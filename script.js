@@ -55,3 +55,57 @@ if (form) {
         form.reset();
     });
 }
+
+// HERO AUTO SLIDER
+
+const slides = document.querySelectorAll(".hero-slide");
+const dots = document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+
+
+function changeSlide(index){
+
+    slides.forEach(slide=>{
+        slide.classList.remove("active");
+    });
+
+    dots.forEach(dot=>{
+        dot.classList.remove("active");
+    });
+
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+
+}
+
+
+function autoSlide(){
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    changeSlide(currentSlide);
+
+}
+
+
+setInterval(autoSlide,5000);
+
+
+// manual dots click
+
+dots.forEach((dot,index)=>{
+
+    dot.addEventListener("click",()=>{
+
+        currentSlide=index;
+        changeSlide(index);
+
+    });
+
+});

@@ -39,64 +39,69 @@
 
 
 <!-- HERO -->
-<section id="home" class="hero" aria-label="Welcome">
+<!-- HERO SLIDER -->
+<section class="hero-slider" aria-label="Welcome">
+
+<div class="hero-slide active">
+    <div class="hero-overlay"></div>
     <div class="hero-inner">
-        <p class="hero-eyebrow">hi</p>
-        <h1>We wire enterprise<br>systems together</h1>
-        <p class="hero-sub">JKS Soft Tech is the integration partner behind the scenes at global enterprises — connecting TIBCO, MuleSoft, APIs, and cloud infrastructure into digital foundations that actually hold together.</p>
+        <h1 class="hero-title">We wire enterprise<br>systems together</h1>
+        <p class="hero-sub">
+            JKS Soft Tech connects TIBCO, MuleSoft, APIs, and cloud infrastructure 
+            into digital foundations that enterprises rely on.
+        </p>
+
         <div class="hero-actions">
-            <a href="index.html#contact" tabindex="7" class="btn btn-primary">Talk to Our Team</a>
-            <a href="services.html"      tabindex="8" class="btn btn-ghost">See Our Services</a>
+            <a href="index.html#contact" class="btn btn-primary">Talk to Our Team</a>
+            <a href="services.html" class="btn btn-ghost">See Our Services</a>
         </div>
     </div>
-    <div class="hero-img-wrap reveal">
-        <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" class="circuit-svg" role="img" aria-label="Animated diagram showing Consulting, Technology and Outsourcing connected to API, cloud, IoT and automation nodes">
-            <g class="trace-lines" stroke="rgba(255,255,255,0.35)" stroke-width="1.4" fill="none">
-                <path d="M70 90 C 160 90, 150 40, 250 40 S 380 90, 400 90"/>
-                <path d="M70 90 C 140 130, 160 200, 250 200 S 370 170, 400 210"/>
-                <path d="M70 90 L 70 320 C 70 360, 100 380, 140 380 L 340 380 C 380 380, 400 350, 400 320 L 400 210"/>
-                <path d="M250 40 L 250 200"/>
-                <path d="M140 380 L 140 300 L 250 300"/>
-                <path d="M340 380 L 340 300 L 250 300"/>
-            </g>
-            <g class="trace-dots" fill="#F4903F">
-                <circle cx="120" cy="90" r="2.4"/>
-                <circle cx="180" cy="60" r="2.4"/>
-                <circle cx="320" cy="150" r="2.4"/>
-                <circle cx="250" cy="120" r="2.4"/>
-                <circle cx="140" cy="340" r="2.4"/>
-                <circle cx="340" cy="340" r="2.4"/>
-            </g>
-            <g class="node node-lg">
-                <circle cx="70" cy="90" r="30"/>
-                <text x="70" y="96" text-anchor="middle">C</text>
-            </g>
-            <g class="node node-lg">
-                <circle cx="250" cy="40" r="30"/>
-                <text x="250" y="46" text-anchor="middle">T</text>
-            </g>
-            <g class="node node-lg">
-                <circle cx="400" cy="90" r="30"/>
-                <text x="400" y="96" text-anchor="middle">O</text>
-            </g>
-            <g class="node node-sm">
-                <circle cx="250" cy="200" r="22"/>
-                <text x="250" y="205" text-anchor="middle" class="sm">API</text>
-            </g>
-            <g class="node node-sm">
-                <circle cx="400" cy="210" r="22"/>
-                <text x="400" y="215" text-anchor="middle" class="sm">CLD</text>
-            </g>
-            <g class="node node-sm">
-                <circle cx="140" cy="380" r="22"/>
-                <text x="140" y="385" text-anchor="middle" class="sm">IoT</text>
-            </g>
-            <g class="node node-sm">
-                <circle cx="340" cy="380" r="22"/>
-                <text x="340" y="385" text-anchor="middle" class="sm">AUTO</text>
-            </g>
-        </svg>
+</div>
+
+
+    <div class="hero-slide">
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+            <h1>AI-powered<br>business transformation</h1>
+            <p>
+                From cloud platforms to enterprise integration, we help businesses
+                modernise their technology landscape.
+            </p>
+
+            <div class="hero-actions">
+                <a href="services.html" class="btn btn-primary">
+                    Explore Services
+                </a>
+            </div>
+        </div>
     </div>
+
+
+    <div class="hero-slide">
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+            <h1>Building smarter<br>digital ecosystems</h1>
+            <p>
+                Combining artificial intelligence, automation, and engineering expertise
+                to create scalable enterprise solutions.
+            </p>
+
+            <div class="hero-actions">
+                <a href="index.html#contact" class="btn btn-primary">
+                    Start a Project
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Slider indicators -->
+    <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
 </section>
 
 
@@ -125,29 +130,80 @@
 
 <!-- THREE WAYS TO WORK WITH US (overview — full detail lives on services.html) -->
 <section id="units" class="section" aria-labelledby="units-heading">
-    <div class="section-inner section-inner--single">
+
+    <div class="section-inner-single units-layout">
+
+        <!-- SECTION INTRO -->
         <div class="section-text reveal">
             <p class="section-eyebrow">What We Do</p>
-            <h2 id="units-heading">One relationship, three ways to work with us</h2>
-            <p>Every engagement draws on the same delivery bench — you choose the shape that fits the problem. <a href="services.html" class="inline-link">See the full breakdown of our services →</a></p>
-        </div>
-        <div class="plain-grid" style="margin-top:32px; grid-template-columns:repeat(3,1fr);">
-            <div class="card reveal">
-                <p class="field-label">Consulting</p>
-                <p>Strategy and architecture work for teams deciding what to build, buy, or retire.</p>
-            </div>
-            <div class="card reveal reveal-delay-1">
-                <p class="field-label">Technology</p>
-                <p>Hands-on build and implementation across the middleware, APIs, and cloud platforms you already run on.</p>
-            </div>
-            <div class="card reveal reveal-delay-2">
-                <p class="field-label">Outsourcing</p>
-                <p>Dedicated delivery teams that sit inside your roadmap long-term, not just for a single project.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
+            <h2 id="units-heading">
+                One relationship, three ways to work with us
+            </h2>
+
+            <p>
+                Every engagement draws on the same delivery bench — you choose the shape that fits the problem.
+            </p>
+        </div>
+
+
+        <!-- SERVICE CARDS -->
+        <div class="plain-grid units-cards">
+
+            <a href="services.html#consulting" class="card-link">
+                <div class="card reveal">
+                    <img src="./assets/consulting_high_res.png" 
+                         alt="Consulting services" 
+                         class="unit-image">
+
+                    <div class="unit-content">
+                        <p class="field-label">Consulting</p>
+                        <p>
+                            Strategy and architecture work for teams deciding what to build, buy, or retire.
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="services.html#technology" class="card-link">
+                <div class="card reveal reveal-delay-1">
+                    <img src="./assets/technology_high_res.png" 
+                         alt="Technology services" 
+                         class="unit-image">
+
+                    <div class="unit-content">
+                        <p class="field-label">Technology</p>
+                        <p>
+                            Hands-on build and implementation across the middleware, APIs, and cloud platforms you already run on.
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="services.html#outsourcing" class="card-link">
+                <div class="card reveal reveal-delay-2">
+                    <img src="./assets/outsourcing_high_res.png" 
+                         alt="Outsourcing services" 
+                         class="unit-image">
+
+                    <div class="unit-content">
+                        <p class="field-label">Outsourcing</p>
+
+                        <p>
+                            Dedicated delivery teams that sit inside your roadmap long-term, not just for a single project.
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+  
 
 <!-- PARTNERS -->
 <section id="partners" class="section section-alt" aria-labelledby="partners-heading">
