@@ -210,7 +210,7 @@ header {
 .menu-toggle span {
     display: block;
     height: 2px;
-    background: #fff;
+    background: var(--navy);
     border-radius: 2px;
     transition: 0.2s;
 }
@@ -523,6 +523,7 @@ header {
 /* ---------- Sections ---------- */
 .section     { background: #fff;    padding: 80px 24px; }
 .section-alt { background: var(--warm); padding: 80px 24px; }
+.section-alt-alt { background: #fff;    padding: 80px 24px; }
 
 .section-inner {
     max-width: 1100px;
@@ -868,6 +869,69 @@ textarea:focus {
   object-fit: cover;
 }
 
+.about-hero {
+    position: relative;
+    background-image: url("./assets/ai-business-transformation.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 53, 84, 0.65);
+}
+
+.about-hero .page-hero-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.services-hero {
+    position: relative;
+    background-image: url("./assets/orange.back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.services-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 53, 84, 0.65);
+}
+
+.services-hero .page-hero-inner {
+    position: relative;
+    z-index: 1;
+}
+
+/* Industries Hero Background */
+
+.industries-hero {
+    background-image: url("./assets/mixed-colour.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.industries-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 53, 84, 0.55);
+}
+
+.industries-hero .page-hero-inner {
+    position: relative;
+    z-index: 2;
+}
 /* ---------- Two-up plain content grid (no card) ---------- */
 .plain-grid {
     display: grid;
@@ -906,7 +970,7 @@ textarea:focus {
         top: 68px;
         left: 0;
         right: 0;
-        background: var(--navy);
+        background: #fff;
         flex-direction: column;
         align-items: stretch;
         padding: 12px 16px 20px;
@@ -1340,14 +1404,14 @@ textarea:focus {
 
 .dropdown-menu a.is-active {
     color: var(--teal);
-    background: rgba(0, 119, 168, 0.1);
-    border-left: 3px solid var(--teal);
+    background: rgba(244, 144, 63, 0.12);
+    border-left: 3px solid var(--orange);
 }
 
 .dropdown-menu a {
     display: block;
     padding: 10px 16px;
-    color: var(--navy);            /* dark blue text */
+    color: #fffff;            /* dark blue text */
     font-size: 0.9rem;
     transition: all 0.2s ease;
 }
@@ -1360,6 +1424,20 @@ textarea:focus {
 /* show dropdown on hover */
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.dropdown-menu {
+    background: #ffffff !important;
+}
+
+.dropdown-menu a {
+    background: #ffffff;
+    color: var(--navy);
+}
+
+.dropdown-menu a:hover {
+    background: var(--sky);
+    color: var(--navy);
 }
 
 /* =============================================
@@ -1435,4 +1513,187 @@ textarea:focus {
     .units-cards .card {
         min-height: 340px;
     }
+}
+
+/* =============================================
+   PARTNERS SECTION
+============================================= */
+.partners-section {
+    overflow: hidden;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 420px) minmax(0, 760px);
+    align-items: center;
+    gap: 3rem;
+}
+
+.partners-copy {
+    max-width: 420px;
+}
+
+.partners-carousel {
+    justify-self: end;          /* keeps it on the right */
+    width: 100%;
+    max-width: 760px;           /* controls overall size */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.partners-viewport {
+    width: 100%;
+    overflow: hidden;
+    padding: 1.25rem 0;
+}
+
+.partners-track {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+/* 3 visible cards */
+.partner-slide {
+    flex: 0 0 calc((100% - 2.5rem) / 3);
+    height: 130px;
+    background: #fff;
+    border-radius: 22px;
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.10);
+    opacity: 0.72;
+    transform: scale(0.88);
+    transition: transform 0.45s ease, opacity 0.45s ease, box-shadow 0.45s ease;
+}
+
+.partner-slide {
+    height: 140px;
+}
+
+.partner-slide img {
+    width: 180px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.partner-slide.is-left,
+.partner-slide.is-right {
+    opacity: 0.88;
+    transform: scale(0.9);
+}
+
+.partner-slide.is-center {
+    opacity: 1;
+    transform: scale(1.08);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.16);
+    z-index: 2;
+}
+
+.partner-arrow {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #003554;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.partner-arrow:hover {
+    background: #0077A8;
+    transform: translateY(-2px);
+}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 1100px) {
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-copy {
+        max-width: 100%;
+    }
+
+    .partners-carousel {
+        justify-self: stretch;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-slide {
+        height: 120px;
+    }
+}
+
+    .partner-arrow {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+
+
+.consulting-image-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.consulting-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.consulting-details {
+    flex: 1;
+}
+
+.btn-full {
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Outsourcing image card */
+
+.outsourcing-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.outsourcing-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.outsourcing-card .btn {
+    margin-top: auto;
+}
+
+.quote-card {
+    overflow: hidden;
+    padding: 0;
+}
+
+.quote-card-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
 }

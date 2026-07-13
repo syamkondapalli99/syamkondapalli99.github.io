@@ -129,7 +129,7 @@
 
 
 <!-- THREE WAYS TO WORK WITH US (overview — full detail lives on services.html) -->
-<section id="units" class="section" aria-labelledby="units-heading">
+<section id="units" class="section section-alt" aria-labelledby="units-heading">
 
     <div class="section-inner-single units-layout">
 
@@ -206,23 +206,112 @@
   
 
 <!-- PARTNERS -->
-<section id="partners" class="section section-alt" aria-labelledby="partners-heading">
-    <div class="section-inner section-inner--single">
-        <div class="section-text reveal">
+<section id="partners" class="section section-alt-alt partners-section" aria-labelledby="partners-heading">
+    <div class="section-inner partners-grid">
+
+        <!-- LEFT SIDE -->
+        <div class="partners-copy reveal">
             <p class="section-eyebrow">Partner Network</p>
             <h2 id="partners-heading">Certified on platforms enterprises already trust</h2>
+            <p>
+                We work across cloud, infrastructure, software and enterprise ecosystems,
+                aligning delivery with the platforms our clients already use.
+            </p>
         </div>
-        <div class="partner-row">
-            <div class="partner-card reveal">
-                <img src="./assets/aws-partner-network.jpg" alt="AWS Partner Network">
+
+        <!-- RIGHT SIDE ONLY -->
+        <div class="partners-carousel reveal">
+            <button class="partner-arrow partner-arrow-left" aria-label="Previous partner">
+                &#10094;
+            </button>
+
+            <div class="partners-viewport">
+                <div class="partners-track" id="partnersTrack">
+                    <div class="partner-slide"><img src="./assets/amazon.jpg" alt="AWS Partner Network"></div>
+                    <div class="partner-slide"><img src="./assets/google.jpg" alt="DigitalOcean"></div>
+                    <div class="partner-slide"><img src="./assets/aws.jpg" alt="Partner 3"></div>
+                    <div class="partner-slide"><img src="./assets/mulesoft.jpg" alt="Partner 4"></div>
+                    <div class="partner-slide"><img src="./assets/ocean.jpg" alt="Partner 5"></div>
+                    <div class="partner-slide"><img src="./assets/tibco.jpg" alt="Partner 6"></div>
+                </div>
             </div>
-            <div class="partner-card reveal reveal-delay-1">
-                <img src="./assets/digitalocean-partner.jpg" alt="DigitalOcean">
-            </div>
+
+            <button class="partner-arrow partner-arrow-right" aria-label="Next partner">
+                &#10095;
+            </button>
         </div>
+
     </div>
 </section>
+<!-- WHY CHOOSE US -->
+<section class="section section-alt" aria-labelledby="why-us-heading">
+    <div class="section-inner-single">
 
+        <div class="why-us-header reveal">
+            <div class="why-us-header-label">
+                <p class="section-eyebrow">Why Choose Us</p>
+                <h2 id="why-us-heading">What sets JKS Soft Tech apart</h2>
+            </div>
+
+            <p class="why-us-header-desc">
+                We provide innovative, reliable, and scalable technology solutions tailored to client needs, backed by strong expertise and a commitment to quality and continuous innovation.
+            </p>
+        </div>
+
+
+        <div class="info-grid info-grid-clean reveal reveal-delay-1">
+
+            <div class="info-card info-card-large">
+                <h3>Value Creation</h3>
+                <p>
+                    We help clients build stronger, high-performance businesses by consistently delivering value and nurturing long-term relationships.
+                </p>
+            </div>
+
+
+            <div class="info-card info-card-large">
+                <h3>Global Network</h3>
+                <p>
+                    We combine collaboration, global insight, and shared learning to deliver exceptional service wherever our clients do business.
+                </p>
+            </div>
+
+
+            <div class="info-card">
+                <h3>Mutual Respect</h3>
+                <p>
+                    We value diversity, foster trust, and create an open environment where every contribution is respected.
+                </p>
+            </div>
+
+
+            <div class="info-card">
+                <h3>Integrity</h3>
+                <p>
+                    We act with honesty, take responsibility for our actions, and align our words with our work.
+                </p>
+            </div>
+
+
+            <div class="info-card">
+                <h3>Thought Leadership</h3>
+                <p>
+                    We build for the future by strengthening our people, communities, and long-term business impact.
+                </p>
+            </div>
+
+
+            <div class="info-card">
+                <h3>Thriving Community</h3>
+                <p>
+                    We attract and grow talented people in a supportive environment shaped by collaboration and a “Yes, we can” mindset.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
 <!-- CONTACT -->
 <section id="contact" class="section" aria-labelledby="contact-heading">
@@ -276,15 +365,35 @@
             <form class="contact-form" id="contactForm">
                 <div class="form-group">
                     <label for="full-name" class="field-label">Full Name</label>
-                    <input tabindex="9" id="full-name" type="text" placeholder="Jane Smith" autocomplete="name" required>
+                    <input 
+                    tabindex="9" 
+                    id="full-name" 
+                    name="name"
+                    type="text" 
+                    placeholder="Jane Smith" 
+                    autocomplete="name" 
+                    required>
                 </div>
                 <div class="form-group">
                     <label for="email" class="field-label">Work Email</label>
-                    <input tabindex="10" id="email" type="email" placeholder="jane@company.com" autocomplete="email" required>
+                   <input 
+                   tabindex="10" 
+                   id="email"
+                   name="email"
+                   type="email" 
+                   placeholder="jane@company.com" 
+                   autocomplete="email" 
+                   required>
                 </div>
                 <div class="form-group">
                     <label for="message" class="field-label">What are you trying to solve?</label>
-                    <textarea tabindex="11" id="message" rows="4" placeholder="Tell us about the systems, teams, or timeline involved" required></textarea>
+                 <textarea 
+                 tabindex="11"
+                 id="message"
+                 name="message"
+                 rows="4"
+                 placeholder="Tell us about the systems, teams, or timeline involved"
+                 required></textarea>
                 </div>
                 <button tabindex="12" type="submit" class="btn btn-primary btn-full">Send Message</button>
                 <p class="field-hint" id="formNote" role="status" aria-live="polite"></p>
