@@ -13,30 +13,146 @@
 
 <!-- HEADER / NAV -->
 <header class="header" role="banner">
+
     <div class="header-inner">
+
         <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
-            <img src="./assets/jksLogo.jpg" alt="JKS Soft Tech logo" class="logo-img">
+            <img src="./assets/jksLogo.jpg" 
+                 alt="JKS Soft Tech logo" 
+                 class="logo-img">
         </a>
 
-        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
-            <span></span><span></span><span></span>
+
+        <button class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
         </button>
 
-        <nav id="nav-menu" class="nav" role="navigation" aria-label="Main navigation">
-            <a href="index.html"      tabindex="1" class="nav-link">Home</a>
-             <div class="nav-item dropdown">
-                <a href="about.html" class="nav-link">About Us</a>
-                <div class="dropdown-menu">
-                    <a href="aboutExtra.html" class="is-active">Our Story</a>
-                </div>
-            </div>
-            <a href="services.html"   tabindex="3" class="nav-link">Services</a>
-            <a href="industries.html" tabindex="4" class="nav-link">Industries</a>
-            <a href="index.html#contact" tabindex="5" class="nav-link">Contact</a>
-        </nav>
-    </div>
-</header>
+        <nav id="nav-menu" 
+             class="nav" 
+             role="navigation" 
+             aria-label="Main navigation">
 
+
+            <!-- Home -->
+            <a href="index.html"
+               tabindex="1"
+               class="nav-link ">
+                Home
+            </a>
+
+            <!-- About -->
+            <div class="nav-item dropdown">
+
+                <a href="about.html"
+                   class="nav-link">
+                    About Us
+                </a>
+
+
+                <div class="dropdown-menu">
+
+                    <a href="aboutExtra.html">
+                        Our Story
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Services -->
+            <div class="nav-item dropdown">
+
+                <a href="services.html"
+                   tabindex="3"
+                   class="nav-link">
+                    Services
+                </a>
+
+
+                <div class="dropdown-menu">
+
+                    <a href="consulting.html">
+                        Consulting
+                    </a>
+
+
+                    <a href="technology.html">
+                        Technology
+                    </a>
+
+
+                    <a href="outsourcing.html">
+                        Outsourcing
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Industries -->
+            <a href="industries.html"
+               tabindex="4"
+               class="nav-link">
+                Industries
+            </a>
+
+            <!-- Careers -->
+            <div class="nav-item dropdown is-active" >
+
+
+                <a href="careers.html"
+                   tabindex="5"
+                   class="nav-link">
+                    Careers
+                </a>
+
+
+                <div class="dropdown-menu">
+
+
+                    <a href="internship.html">
+                        Internship
+                    </a>
+
+
+                    <a href="advanced-training.html">
+                        Advanced Training
+                    </a>
+
+
+                    <a href="training-schedule.html">
+                        Training Schedule
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+            <!-- Contact -->
+            <a href="index.html#contact"
+               tabindex="6"
+               class="nav-link">
+                Contact
+            </a>
+
+
+
+        </nav>
+
+
+    </div>
+
+</header>
 
 <!-- PAGE HERO -->
 <section class="page-hero about-hero" aria-label="About Us introduction">
@@ -105,12 +221,11 @@ We are a next-generation technology and consuaASlting company leveraging Artific
     <div class="section-inner">
 
         <!-- MOVED CARD FIRST -->
-        <div class="card quote-card reveal reveal-delay-1">
-            <p class="quote-text">
-                "Grassroots innovation, a deeply embedded culture of co-creation, and a commitment to exceeding expectations give our clients a clear advantage in today’s digital and connected world."
-            </p>
-            <p class="quote-attr">— JKS Soft Tech, on our approach</p>
-        </div>
+<div class="reveal reveal-delay-1">
+    <img src="./assets/digital-readiness-2.0.png" 
+         alt="JKS Soft Tech philosophy" 
+         class="about-story-image about-story-image--large">
+</div>
 
         <!-- MOVED TEXT SECOND -->
         <div class="section-text reveal">
@@ -161,25 +276,128 @@ We are a next-generation technology and consuaASlting company leveraging Artific
 
 <!-- FOOTER -->
 <footer class="footer" role="contentinfo">
+
     <div class="footer-inner">
+
         <div class="footer-brand">
             <span class="logo-text logo-text--footer">JKS Soft Tech</span>
-            <p>JKS Soft Tech Pte. Ltd.<br>Consulting · Technology · Outsourcing.</p>
+            <p>
+                JKS Soft Tech Pte. Ltd.<br>
+                Consulting · Technology · Outsourcing.
+            </p>
         </div>
-        <nav class="footer-links" aria-label="Footer navigation">
-            <a href="index.html"      tabindex="7">Home</a>
-            <a href="about.html"      tabindex="8">About Us</a>
-            <a href="services.html"   tabindex="9">Services</a>
-            <a href="industries.html" tabindex="10">Industries</a>
-            <a href="index.html#contact" tabindex="11">Contact</a>
-        </nav>
-        <p class="footer-copy">© 2026 JKS Soft Tech Pte. Ltd. All rights reserved.</p>
+
+
+        <div class="footer-nav-wrapper">
+
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="industries.html">Industries</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+
+            <div class="footer-social">
+
+           
+
+                <div class="footer-social-icons">
+
+                    <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all"
+                       target="_blank"
+                       aria-label="LinkedIn">
+
+                        <img src="./assets/linkedin.png"
+                             alt="LinkedIn">
+                    </a>
+
+
+                    <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw"
+                       target="_blank"
+                       aria-label="Social Media">
+
+                        <img src="./assets/twitter.png"
+                             alt="Social Media">
+                    </a>
+
+
+                    <a href="YOUR_THIRD_SOCIAL_LINK"
+                       target="_blank"
+                       aria-label="Social Media">
+
+                        <img src="./assets/whatsapp.png"
+                             alt="Social Media">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="footer-copy">
+            © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
+        </p>
+
     </div>
+
 </footer>
 
+<!-- ChatBot -->
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" aria-label="Close">&times;</button>
+
+        <h3>Message Sent</h3>
+
+        <p>
+            Thank you for contacting us. We will get back to you within
+            <strong>3 business days.</strong>
+        </p>
+    </div>
+</div>
+
+<!-- Chat Button -->
+<button id="chat-button">
+    💬
+</button>
+
+
+<!-- Chat Window -->
+<div id="chat-box">
+
+    <div class="chat-header">
+        <span>JKS Assistant</span>
+        <button id="close-chat">×</button>
+    </div>
+
+
+    <div id="chat-content">
+        <div class="bot-message">
+            Hello! How can I help you today?
+        </div>
+    </div>
+
+
+    <div class="chat-input-area">
+        <input 
+            type="text" 
+            id="chat-input" 
+            placeholder="Ask a question..."
+        >
+
+        <button id="send-chat">
+            ➤
+        </button>
+    </div>
+
+</div>
+
 <script src="script.js"></script>
-
-
-
 </body>
+
 </html>
+

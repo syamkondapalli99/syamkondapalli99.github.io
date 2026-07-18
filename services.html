@@ -12,29 +12,147 @@
 <body>
 
 <!-- HEADER / NAV -->
+<!-- HEADER / NAV -->
 <header class="header" role="banner">
+
     <div class="header-inner">
+
         <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
-            <img src="./assets/jksLogo.jpg" alt="JKS Soft Tech logo" class="logo-img">
+            <img src="./assets/jksLogo.jpg" 
+                 alt="JKS Soft Tech logo" 
+                 class="logo-img">
         </a>
 
-        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
-            <span></span><span></span><span></span>
+
+        <button class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
         </button>
 
-        <nav id="nav-menu" class="nav" role="navigation" aria-label="Main navigation">
-            <a href="index.html"      tabindex="1" class="nav-link">Home</a>
+        <nav id="nav-menu" 
+             class="nav" 
+             role="navigation" 
+             aria-label="Main navigation">
+
+
+            <!-- Home -->
+            <a href="index.html"
+               tabindex="1"
+               class="nav-link ">
+                Home
+            </a>
+
+            <!-- About -->
             <div class="nav-item dropdown">
-                <a href="about.html" class="nav-link">About Us</a>
+
+                <a href="about.html"
+                   class="nav-link">
+                    About Us
+                </a>
+
+
                 <div class="dropdown-menu">
-                    <a href="aboutExtra.html" class="is-active">Our Story</a>
+
+                    <a href="aboutExtra.html">
+                        Our Story
+                    </a>
+
                 </div>
+
             </div>
-            <a href="services.html"   tabindex="3" class="nav-link is-active">Services</a>
-            <a href="industries.html" tabindex="4" class="nav-link">Industries</a>
-            <a href="index.html#contact" tabindex="5" class="nav-link">Contact</a>
+
+            <!-- Services -->
+            <div class="nav-item dropdown">
+
+                <a href="services.html"
+                   tabindex="3"
+                   class="nav-link">
+                    Services
+                </a>
+
+
+                <div class="dropdown-menu">
+
+                    <a href="consulting.html">
+                        Consulting
+                    </a>
+
+
+                    <a href="technology.html">
+                        Technology
+                    </a>
+
+
+                    <a href="outsourcing.html">
+                        Outsourcing
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Industries -->
+            <a href="industries.html"
+               tabindex="4"
+               class="nav-link">
+                Industries
+            </a>
+
+            <!-- Careers -->
+            <div class="nav-item dropdown is-active" >
+
+
+                <a href="careers.html"
+                   tabindex="5"
+                   class="nav-link">
+                    Careers
+                </a>
+
+
+                <div class="dropdown-menu">
+
+
+                    <a href="internship.html">
+                        Internship
+                    </a>
+
+
+                    <a href="advanced-training.html">
+                        Advanced Training
+                    </a>
+
+
+                    <a href="training-schedule.html">
+                        Training Schedule
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+            <!-- Contact -->
+            <a href="index.html#contact"
+               tabindex="6"
+               class="nav-link">
+                Contact
+            </a>
+
+
+
         </nav>
+
+
     </div>
+
 </header>
 
 
@@ -53,60 +171,113 @@
 <!-- CONSULTING -->
 <section id="consulting" class="section" aria-labelledby="consulting-heading">
     <div class="section-inner">
+
         <div class="section-text reveal">
             <p class="section-eyebrow">Consulting</p>
-            <h2 id="consulting-heading">Start with the right architecture</h2>
-            <p>Strategy and architecture work for teams deciding what to build, buy, or retire. We get into the org chart, not just the tech stack, so recommendations survive contact with reality.</p>
-            <p>We bring deep, functional expertise, but are known for our holistic perspective — capturing value across the boundaries and silos of any organisation, rather than optimising individual pieces in isolation.</p>
+
+            <h2 id="consulting-heading">
+                Start with the right architecture
+            </h2>
+
+            <p>
+                Strategy and architecture work for teams deciding what to build, buy, or retire. 
+                We get into the org chart, not just the tech stack, so recommendations survive 
+                contact with reality.
+            </p>
+
+            <p>
+                We bring deep, functional expertise, but are known for our holistic perspective — 
+                capturing value across the boundaries and silos of any organisation, rather than 
+                optimising individual pieces in isolation.
+            </p>
+
+     <a href="consulting.html" class="btn btn-primary btn-read-more">
+    Read More →
+</a>
+
         </div>
+
+
         <div class="card reveal reveal-delay-1 consulting-image-card">
 
-    <img 
-        src="./assets/handshake-higher-resolution.png" 
-        alt="Consulting and technology architecture"
-        class="consulting-image"
-    >
+            <img 
+                src="./assets/handshake-higher-resolution.png" 
+                alt="Consulting and technology architecture"
+                class="consulting-image"
+            >
 
-    <div class="consulting-details">
-        <p class="field-label">What's included</p>
+            <div class="consulting-details">
+                <p class="field-label">What's included</p>
 
-        <ul class="check-list" aria-label="Consulting services">
-            <li>Digital foundation &amp; roadmap</li>
-            <li>Integration &amp; systems architecture</li>
-            <li>Technology due diligence</li>
-            <li>Corporate finance &amp; M&amp;A support</li>
-            <li>Digital maturity assessment</li>
-        </ul>
-    </div>
+                <ul class="check-list" aria-label="Consulting services">
+                    <li>Digital foundation &amp; roadmap</li>
+                    <li>Integration &amp; systems architecture</li>
+                    <li>Technology due diligence</li>
+                    <li>Corporate finance &amp; M&amp;A support</li>
+                    <li>Digital maturity assessment</li>
+                </ul>
+            </div>
 
-    <a href="index.html#contact" class="btn btn-primary btn-full">
-        Book a Consulting Call
-    </a>
+            <a href="index.html#contact" class="btn btn-primary btn-full">
+                Book a Consulting Call
+            </a>
 
-</div>
-</div>
+        </div>
+
     </div>
 </section>
-
 
 <!-- TECHNOLOGY -->
 <section id="technology" class="section section-alt" aria-labelledby="technology-heading">
     <div class="section-inner">
+
         <div class="section-text reveal">
+
             <p class="section-eyebrow">Technology</p>
-            <h2 id="technology-heading">Build on middleware you already trust</h2>
-            <p>Hands-on build and implementation across the platforms enterprises already run on — middleware, APIs, cloud, and the automation that connects them.</p>
-            <p>If you're already living in the cloud, we help you maximise that investment: modern architecture techniques that improve business continuity and reduce operational risk, guided by a framework that reads the digital trends shaping your industry five, ten, even twenty years out.</p>
+
+            <h2 id="technology-heading">
+                Build on middleware you already trust
+            </h2>
+
+            <p>
+                Hands-on build and implementation across the platforms enterprises already run on — 
+                middleware, APIs, cloud, and the automation that connects them.
+            </p>
+
+            <p>
+                If you're already living in the cloud, we help you maximise that investment: 
+                modern architecture techniques that improve business continuity and reduce 
+                operational risk, guided by a framework that reads the digital trends shaping 
+                your industry five, ten, even twenty years out.
+            </p>
+
+<a href="technology.html" class="btn btn-primary btn-read-more">
+    Read More   →
+</a>
+
         </div>
+
+
         <div class="card reveal reveal-delay-1">
+
             <div class="code-scene" aria-hidden="true">
-                <div class="code-dots"><span></span><span></span><span></span></div>
+
+                <div class="code-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
                 <pre class="code-lines"><span class="code-line l1"><span class="code-kw">const</span> integration = connect(<span class="code-str">'TIBCO'</span>, <span class="code-str">'MuleSoft'</span>);</span>
 <span class="code-line l2">await integration.<span class="code-fn">sync</span>(apiGateway);</span>
 <span class="code-line l3">cloud.<span class="code-fn">deploy</span>(integration);</span>
 <span class="code-line l4"><span class="code-comment">// systems, talking to each other</span></span></pre>
+
             </div>
+
+
             <p class="field-label">What's included</p>
+
             <ul class="check-list" aria-label="Technology services">
                 <li>TIBCO &amp; MuleSoft implementation</li>
                 <li>API design &amp; delivery</li>
@@ -114,33 +285,60 @@
                 <li>Microservices &amp; systems architecture</li>
                 <li>Digital maturity tooling</li>
             </ul>
-            <a href="#capabilities" class="btn btn-primary btn-full">See Our Tech Stack</a>
+
+
+            <a href="#capabilities" class="btn btn-primary btn-full">
+                See Our Tech Stack
+            </a>
+
         </div>
+
     </div>
 </section>
 
 
 <!-- OUTSOURCING -->
 <section id="outsourcing" class="section" aria-labelledby="outsourcing-heading">
+
     <div class="section-inner">
+
         <div class="section-text reveal">
+
             <p class="section-eyebrow">Outsourcing</p>
-            <h2 id="outsourcing-heading">Delivery teams that stay with the roadmap</h2>
-            <p>Dedicated delivery teams that sit inside your roadmap long-term — for the ongoing work that needs continuity more than a one-off project. With years of experience specialising in offshore software outsourcing, we bring the same quality bar to every engagement.</p>
+
+            <h2 id="outsourcing-heading">
+                Delivery teams that stay with the roadmap
+            </h2>
+
+            <p>
+                Dedicated delivery teams that sit inside your roadmap long-term — for the ongoing 
+                work that needs continuity more than a one-off project. With years of experience 
+                specialising in offshore software outsourcing, we bring the same quality bar to 
+                every engagement.
+            </p>
+
+
+  <a href="outsourcing.html" class="btn btn-primary btn-read-more">
+    Read More  →
+</a>
+
         </div>
+
+
         <div class="card quote-card outsourcing-card reveal reveal-delay-1">
 
-    <img 
-        src="./assets/team.jpg" 
-        alt="Long term outsourcing delivery team"
-        class="outsourcing-card-image"
-    >
+            <img 
+                src="./assets/team.jpg" 
+                alt="Long term outsourcing delivery team"
+                class="outsourcing-card-image"
+            >
 
-    <a href="index.html#contact" class="btn btn-primary btn-full">
-        Talk About Long-Term Delivery
-    </a>
+            <a href="index.html#contact" class="btn btn-primary btn-full">
+                Talk About Long-Term Delivery
+            </a>
 
-</div>
+        </div>
+
     </div>
     <div class="section-inner" style="margin-top:48px;">
         <div class="section-text reveal" style="grid-column: span 2;">
@@ -227,21 +425,124 @@
 
 <!-- FOOTER -->
 <footer class="footer" role="contentinfo">
+
     <div class="footer-inner">
+
         <div class="footer-brand">
             <span class="logo-text logo-text--footer">JKS Soft Tech</span>
-            <p>JKS Soft Tech Pte. Ltd.<br>Consulting · Technology · Outsourcing.</p>
+            <p>
+                JKS Soft Tech Pte. Ltd.<br>
+                Consulting · Technology · Outsourcing.
+            </p>
         </div>
-        <nav class="footer-links" aria-label="Footer navigation">
-            <a href="index.html"      tabindex="7">Home</a>
-            <a href="about.html"      tabindex="8">About Us</a>
-            <a href="services.html"   tabindex="9">Services</a>
-            <a href="industries.html" tabindex="10">Industries</a>
-            <a href="index.html#contact" tabindex="11">Contact</a>
-        </nav>
-        <p class="footer-copy">© 2026 JKS Soft Tech Pte. Ltd. All rights reserved.</p>
+
+
+        <div class="footer-nav-wrapper">
+
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="industries.html">Industries</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+
+            <div class="footer-social">
+
+           
+
+                <div class="footer-social-icons">
+
+                    <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all"
+                       target="_blank"
+                       aria-label="LinkedIn">
+
+                        <img src="./assets/linkedin.png"
+                             alt="LinkedIn">
+                    </a>
+
+
+                    <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw"
+                       target="_blank"
+                       aria-label="Social Media">
+
+                        <img src="./assets/twitter.png"
+                             alt="Social Media">
+                    </a>
+
+
+                    <a href="YOUR_THIRD_SOCIAL_LINK"
+                       target="_blank"
+                       aria-label="Social Media">
+
+                        <img src="./assets/whatsapp.png"
+                             alt="Social Media">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="footer-copy">
+            © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
+        </p>
+
     </div>
+
 </footer>
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" aria-label="Close">&times;</button>
+
+        <h3>Message Sent</h3>
+
+        <p>
+            Thank you for contacting us. We will get back to you within
+            <strong>3 business days.</strong>
+        </p>
+    </div>
+</div>
+
+<!-- Chat Button -->
+<button id="chat-button">
+    💬
+</button>
+
+
+<!-- Chat Window -->
+<div id="chat-box">
+
+    <div class="chat-header">
+        <span>JKS Assistant</span>
+        <button id="close-chat">×</button>
+    </div>
+
+
+    <div id="chat-content">
+        <div class="bot-message">
+            Hello! How can I help you today?
+        </div>
+    </div>
+
+
+    <div class="chat-input-area">
+        <input 
+            type="text" 
+            id="chat-input" 
+            placeholder="Ask a question..."
+        >
+
+        <button id="send-chat">
+            ➤
+        </button>
+    </div>
+
+</div>
+
 
 <script src="script.js"></script>
 

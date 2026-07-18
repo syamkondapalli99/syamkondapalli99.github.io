@@ -3,18 +3,32 @@
 console.log("script.js loaded");
 const toggle = document.querySelector('.menu-toggle');
 const nav    = document.querySelector('.nav');
-toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('nav--open');
-    toggle.setAttribute('aria-expanded', open);
-});
+
+    if(toggle && nav){
+
+    toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('nav--open');
+        toggle.setAttribute('aria-expanded', open);
+    });
+
+}
+
 
 // Close mobile nav after choosing a link
-nav.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        nav.classList.remove('nav--open');
-        toggle.setAttribute('aria-expanded', 'false');
+if(nav && toggle){
+
+    nav.querySelectorAll('.nav-link').forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            nav.classList.remove('nav--open');
+            toggle.setAttribute('aria-expanded','false');
+
+        });
+
     });
-});
+
+}
 
 // Scroll-triggered reveal animations (also gates the custom
 // connect / code / cloud illustrations — they stay paused until
@@ -196,45 +210,655 @@ if (partnersTrack && partnerPrev && partnerNext) {
     updatePosition(false);
 }
 
-document
-.getElementById("contactForm")
-.addEventListener("submit", async function(e){
+const contactForm = document.getElementById("contactForm");
 
-    e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener("submit", async function(e){
 
+        e.preventDefault();
 
-    const name = document.getElementById("full-name").value;
-
-    const email = document.getElementById("email").value;
-
-    const message = document.getElementById("message").value;
-
-
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
+        const name = document.getElementById("full-name").value;
+        const email = document.getElementById("email").value;
+        const enquiryType = document.getElementById("enquiry-type").value;
+        const message = document.getElementById("message").value;
 
 
-    const response = await fetch(
-        "http://localhost:3000/send-email",
-        {
-            method: "POST",
+        // Show popup immediately
+        showSuccessPopup();
 
-            headers:{
-                "Content-Type":"application/json"
-            },
+        // Clear form immediately
+        contactForm.reset();
 
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                message: message
-            })
+
+        // Send email in background
+        try {
+
+            const response = await fetch("http://localhost:3000/send-email", {
+
+                method: "POST",
+
+                headers:{
+                    "Content-Type":"application/json"
+                },
+
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    enquiryType: enquiryType,
+                    message: message
+                })
+
+            });
+
+
+            const result = await response.json();
+
+            console.log(result);
+
+        } 
+        
+        catch(error) {
+            console.log("Email failed:", error);
         }
+
+    });
+}
+
+const modal = document.getElementById("successModal");
+const closeBtn = document.querySelector(".modal-close");
+
+console.log("Modal:", modal);
+console.log("Close button:", closeBtn);
+
+function showSuccessPopup() {
+
+    modal.classList.add("show");
+
+    const timer = setTimeout(() => {
+        modal.classList.remove("show");
+    }, 10000);
+
+
+    closeBtn.onclick = () => {
+        clearTimeout(timer);
+        modal.classList.remove("show");
+    };
+}
+
+// ===============================
+// CHATBOT
+// ===============================
+
+const chatButton = document.getElementById("chat-button");
+const chatBox = document.getElementById("chat-box");
+const closeChat = document.getElementById("close-chat");
+
+
+// Open chatbot
+if (chatButton && chatBox) {
+
+    chatButton.addEventListener("click", () => {
+
+        chatBox.style.display = "flex";
+
+    });
+
+}
+
+
+// Close chatbot
+if (closeChat && chatBox) {
+
+    closeChat.addEventListener("click", () => {
+
+        chatBox.style.display = "none";
+
+    });
+
+}
+
+
+const sendButton = document.getElementById("send-chat");
+const chatInput = document.getElementById("chat-input");
+const chatContent = document.getElementById("chat-content");
+
+// Button click sends message
+if(sendButton){
+    sendButton.addEventListener("click", sendMessage);
+}
+
+
+// Enter key sends message
+if(chatInput){
+
+    chatInput.addEventListener("keypress", function(e){
+
+        if(e.key === "Enter"){
+
+            e.preventDefault();
+
+            sendMessage();
+
+        }
+
+    });
+
+}
+
+
+// Main send function
+function sendMessage(){
+
+    let message = chatInput.value.trim();
+
+    if(message === "") return;
+
+
+    // show user message
+    chatContent.innerHTML += `
+        <div class="user-message">
+            ${message}
+        </div>
+    `;
+
+
+    chatInput.value = "";
+
+
+    let reply = getBotResponse(message);
+
+
+    setTimeout(()=>{
+
+        chatContent.innerHTML += `
+            <div class="bot-message">
+                ${reply}
+            </div>
+        `;
+
+        chatContent.scrollTop = chatContent.scrollHeight;
+
+    },500);
+
+}
+
+function getBotResponse(message){
+
+    message = message.toLowerCase();
+
+
+
+    // Greetings
+    if(
+        message.includes("hello") ||
+        message.includes("hi") ||
+        message.includes("hey") ||
+        message.includes("good morning") ||
+        message.includes("good afternoon")
+    ){
+
+        return "Hello! 😊 Welcome to JKS Soft Tech. How can I assist you today?";
+
+    }
+
+
+
+    // Services
+    else if(
+        message.includes("service") ||
+        message.includes("services") ||
+        message.includes("offer") ||
+        message.includes("what do you do") ||
+        message.includes("what can you provide")
+    ){
+
+        return `We provide AI solutions, website development, software consulting, cloud solutions, and customised technology solutions for businesses.
+
+FOr more information please visit our Services page:
+<a href="services.html" class="chat-link">
+    here
+</a>.`;
+    }
+
+
+
+    // Website development
+    else if(
+        message.includes("website") ||
+        message.includes("web development") ||
+        message.includes("web design") ||
+        message.includes("build a website")
+    ){
+
+        return "Yes, we design and develop responsive websites that are modern, accessible, user-friendly, and tailored to your business goals.";
+
+    }
+
+
+
+    // AI solutions
+    else if(
+        message.includes("ai") ||
+        message.includes("artificial intelligence") ||
+        message.includes("machine learning") ||
+        message.includes("automation")
+    ){
+
+        return "We provide AI-powered solutions to help businesses automate processes, improve efficiency, and create smarter digital experiences.";
+
+    }
+
+
+
+    // Software development
+    else if(
+        message.includes("software") ||
+        message.includes("application") ||
+        message.includes("app development")
+    ){
+
+        return "We develop customised software solutions based on your business requirements, helping you improve operations and productivity.";
+
+    }
+
+
+
+    // Cloud services
+    else if(
+        message.includes("cloud") ||
+        message.includes("aws") ||
+        message.includes("server") ||
+        message.includes("hosting")
+    ){
+
+        return "We provide cloud-based solutions to help businesses improve scalability, reliability, and digital infrastructure.";
+
+    }
+
+
+
+    // Pricing
+    else if(
+        message.includes("price") ||
+        message.includes("cost") ||
+        message.includes("pricing") ||
+        message.includes("how much") ||
+        message.includes("quote")
+    ){
+
+        return "Our pricing depends on your project requirements, features, and complexity. Contact us for a customised quotation.";
+
+    }
+
+
+
+    // Project timeline
+    else if(
+        message.includes("time") ||
+        message.includes("how long") ||
+        message.includes("duration") ||
+        message.includes("timeline")
+    ){
+
+        return "Project timelines depend on the size and complexity of the project. After discussing your requirements, we can provide an estimated timeframe.";
+
+    }
+
+
+
+    // Contact
+    else if(
+    message.includes("contact") ||
+    message.includes("phone") ||
+    message.includes("reach") ||
+    message.includes("talk")
+){
+
+    return `You can contact us through our enquiry form or email us at 
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@jkssofttech.com" 
+       target="_blank" 
+       class="email-link">
+       info@jkssofttech.com
+    </a>. Our team will respond within 3 business days.`;
+
+}
+
+
+    // Location
+    else if(
+        message.includes("location") ||
+        message.includes("where are you") ||
+        message.includes("based")
+    ){
+
+        return "We are based in Singapore and provide technology solutions for businesses.";
+
+    }
+
+
+
+    // Support
+    else if(
+        message.includes("support") ||
+        message.includes("help") ||
+        message.includes("problem")
+    ){
+
+        return "Our team provides technical support and assistance for our digital solutions. Please contact us with your requirements.";
+
+    }
+
+
+
+    // Company information
+    else if(
+        message.includes("company") ||
+        message.includes("about") ||
+        message.includes("who are you")
+    ){
+
+        return "JKS Soft Tech is a technology consulting company focused on delivering innovative software, AI, and digital solutions for businesses.";
+
+    }
+
+
+
+    // Clients
+    else if(
+        message.includes("client") ||
+        message.includes("business") ||
+        message.includes("who do you work with")
+    ){
+
+        return "We work with businesses looking for reliable technology solutions, including websites, software, and AI-powered services.";
+
+    }
+
+
+
+    // Security
+    else if(
+        message.includes("security") ||
+        message.includes("safe") ||
+        message.includes("privacy")
+    ){
+
+        return "We prioritise secure development practices and design solutions with reliability and user privacy in mind.";
+
+    }
+
+    else if(
+        message.includes("job") ||
+        message.includes("jobs") 
+        
+    ){
+
+        return "Regarding job applications, please fill out the form in the Contact Us page. Our staff will attend to you.";
+
+    }
+
+
+
+    // Thank you
+    else if(
+        message.includes("thank") ||
+        message.includes("thanks")
+    ){
+
+        return "You're welcome! 😊 Feel free to ask if you have any other questions.";
+
+    }
+
+
+
+    // Default response
+    // Default response
+else{
+
+    return `I'm sorry, for further enquiries, please contact our team through the enquiry form or drop us an email at 
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@jkssofttech.com" 
+       target="_blank" 
+       class="email-link">
+       info@jkssofttech.com
+    </a>
+    and we will be happy to assist you.`;
+
+}
+}
+
+//////////////////Why Choose Us carousel/////////////////////
+
+////////////////// WHY CHOOSE US INFINITE CAROUSEL //////////////////
+
+const whyTrack = document.getElementById("whyTrack");
+const whyCardsOriginal = Array.from(document.querySelectorAll("#whyTrack .info-card"));
+
+const leftBtn = document.querySelector(".why-left");
+const rightBtn = document.querySelector(".why-right");
+
+if (whyTrack && whyCardsOriginal.length) {
+
+    const totalWhyCards = whyCardsOriginal.length;
+
+    // Clone cards
+    const clonesBefore = whyCardsOriginal.map(card => card.cloneNode(true));
+    const clonesAfter = whyCardsOriginal.map(card => card.cloneNode(true));
+
+    clonesBefore.reverse().forEach(card => {
+        whyTrack.insertBefore(card, whyTrack.firstChild);
+    });
+
+    clonesAfter.forEach(card => {
+        whyTrack.appendChild(card);
+    });
+
+
+    const whyCards = Array.from(
+        whyTrack.querySelectorAll(".info-card")
     );
 
 
-    const result = await response.json();
+    let whyIndex = totalWhyCards;
+    let animating = false;
 
-    console.log(result);
+
+    function getCardWidth(){
+
+        return whyCards[0].offsetWidth + 22;
+
+    }
+
+
+    function moveWhyCarousel(animation=true){
+
+        whyTrack.style.transition = animation 
+            ? "transform 0.6s ease"
+            : "none";
+
+
+        whyTrack.style.transform =
+            `translateX(-${whyIndex * getCardWidth()}px)`;
+
+    }
+
+
+    function nextWhy(){
+
+        if(animating) return;
+
+        animating=true;
+
+        whyIndex++;
+
+        moveWhyCarousel(true);
+
+    }
+
+
+    function prevWhy(){
+
+        if(animating) return;
+
+        animating=true;
+
+        whyIndex--;
+
+        moveWhyCarousel(true);
+
+    }
+
+
+
+    whyTrack.addEventListener("transitionend",()=>{
+
+
+        // reached end clones
+        if(whyIndex >= totalWhyCards * 2){
+
+            whyIndex = totalWhyCards;
+
+            moveWhyCarousel(false);
+
+        }
+
+
+        // reached beginning clones
+        if(whyIndex <= 0){
+
+            whyIndex = totalWhyCards;
+
+            moveWhyCarousel(false);
+
+        }
+
+
+        animating=false;
+
+    });
+
+
+
+    rightBtn.addEventListener("click", nextWhy);
+
+    leftBtn.addEventListener("click", prevWhy);
+
+
+
+    // automatic movement
+
+    setInterval(()=>{
+
+        nextWhy();
+
+    },4000);
+
+
+
+    window.addEventListener("resize",()=>{
+
+        moveWhyCarousel(false);
+
+    });
+
+
+
+    // initial position
+
+    moveWhyCarousel(false);
+
+}
+
+const accordionButtons = document.querySelectorAll(".accordion-trigger");
+
+
+accordionButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const item = button.closest(".accordion-item");
+
+        const expanded = button.getAttribute("aria-expanded") === "true";
+
+
+        // close others (optional)
+        document.querySelectorAll(".accordion-item").forEach(other => {
+
+            if(other !== item){
+
+                other.classList.remove("is-open");
+
+                other.querySelector(".accordion-trigger")
+                .setAttribute("aria-expanded","false");
+
+            }
+
+        });
+
+
+
+        button.setAttribute(
+            "aria-expanded",
+            !expanded
+        );
+
+
+        item.classList.toggle(
+            "is-open",
+            !expanded
+        );
+
+
+    });
+
+});
+
+// ===============================
+// Capability Dropdown
+// ===============================
+
+const capabilityButtons = document.querySelectorAll(".capability-toggle");
+
+console.log("Capability buttons found:", capabilityButtons.length);
+
+
+capabilityButtons.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        const item = this.closest(".capability-item");
+
+        const isOpen = item.classList.contains("open");
+
+
+        // close all dropdowns
+        document.querySelectorAll(".capability-item").forEach(other => {
+
+            other.classList.remove("open");
+
+            const otherButton = other.querySelector(".capability-toggle");
+
+            if(otherButton){
+                otherButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+            }
+
+        });
+
+
+        // open clicked dropdown
+        if(!isOpen){
+
+            item.classList.add("open");
+
+            this.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+        }
+
+    });
 
 });

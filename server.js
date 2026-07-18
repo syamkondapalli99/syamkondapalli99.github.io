@@ -1,4 +1,5 @@
 require("dotenv").config();
+console.log(process.env.EMAIL_USER);
 
 const express = require("express");
 const nodemailer = require("nodemailer");
