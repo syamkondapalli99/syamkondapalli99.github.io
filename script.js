@@ -50,15 +50,7 @@ if (revealEls.length) {
     }
 }
 
-// Accordion / dropdown content
-document.querySelectorAll('.accordion-trigger').forEach((btn) => {
-    btn.addEventListener('click', () => {
-        const item = btn.closest('.accordion-item');
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        item.classList.toggle('is-open', !expanded);
-    });
-});
+
 
 
 
