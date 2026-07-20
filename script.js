@@ -2,9 +2,9 @@
 
 console.log("script.js loaded");
 const toggle = document.querySelector('.menu-toggle');
-const nav    = document.querySelector('.nav');
+const nav = document.querySelector('.nav');
 
-    if(toggle && nav){
+if (toggle && nav) {
 
     toggle.addEventListener('click', () => {
         const open = nav.classList.toggle('nav--open');
@@ -15,14 +15,14 @@ const nav    = document.querySelector('.nav');
 
 
 // Close mobile nav after choosing a link
-if(nav && toggle){
+if (nav && toggle) {
 
     nav.querySelectorAll('.nav-link').forEach(link => {
 
         link.addEventListener('click', () => {
 
             nav.classList.remove('nav--open');
-            toggle.setAttribute('aria-expanded','false');
+            toggle.setAttribute('aria-expanded', 'false');
 
         });
 
@@ -62,13 +62,13 @@ const dots = document.querySelectorAll(".dot");
 let currentSlide = 0;
 
 
-function changeSlide(index){
+function changeSlide(index) {
 
-    slides.forEach(slide=>{
+    slides.forEach(slide => {
         slide.classList.remove("active");
     });
 
-    dots.forEach(dot=>{
+    dots.forEach(dot => {
         dot.classList.remove("active");
     });
 
@@ -79,11 +79,11 @@ function changeSlide(index){
 }
 
 
-function autoSlide(){
+function autoSlide() {
 
     currentSlide++;
 
-    if(currentSlide >= slides.length){
+    if (currentSlide >= slides.length) {
         currentSlide = 0;
     }
 
@@ -92,16 +92,16 @@ function autoSlide(){
 }
 
 
-setInterval(autoSlide,5000);
+setInterval(autoSlide, 5000);
 
 
 // manual dots click
 
-dots.forEach((dot,index)=>{
+dots.forEach((dot, index) => {
 
-    dot.addEventListener("click",()=>{
+    dot.addEventListener("click", () => {
 
-        currentSlide=index;
+        currentSlide = index;
         changeSlide(index);
 
     });
@@ -205,12 +205,13 @@ if (partnersTrack && partnerPrev && partnerNext) {
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
-    contactForm.addEventListener("submit", async function(e){
+    contactForm.addEventListener("submit", async function (e) {
 
         e.preventDefault();
 
         const name = document.getElementById("full-name").value;
         const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
         const enquiryType = document.getElementById("enquiry-type").value;
         const message = document.getElementById("message").value;
 
@@ -229,13 +230,14 @@ if (contactForm) {
 
                 method: "POST",
 
-                headers:{
-                    "Content-Type":"application/json"
+                headers: {
+                    "Content-Type": "application/json"
                 },
 
                 body: JSON.stringify({
                     name: name,
                     email: email,
+                    phone: phone,
                     enquiryType: enquiryType,
                     message: message
                 })
@@ -247,14 +249,15 @@ if (contactForm) {
 
             console.log(result);
 
-        } 
-        
-        catch(error) {
+        } catch(error) {
+
             console.log("Email failed:", error);
+
         }
 
-    });
-}
+    }); // closes addEventListener
+
+} // closes if(contactForm)
 
 const modal = document.getElementById("successModal");
 const closeBtn = document.querySelector(".modal-close");
@@ -315,17 +318,17 @@ const chatInput = document.getElementById("chat-input");
 const chatContent = document.getElementById("chat-content");
 
 // Button click sends message
-if(sendButton){
+if (sendButton) {
     sendButton.addEventListener("click", sendMessage);
 }
 
 
 // Enter key sends message
-if(chatInput){
+if (chatInput) {
 
-    chatInput.addEventListener("keypress", function(e){
+    chatInput.addEventListener("keypress", function (e) {
 
-        if(e.key === "Enter"){
+        if (e.key === "Enter") {
 
             e.preventDefault();
 
@@ -339,11 +342,11 @@ if(chatInput){
 
 
 // Main send function
-function sendMessage(){
+function sendMessage() {
 
     let message = chatInput.value.trim();
 
-    if(message === "") return;
+    if (message === "") return;
 
 
     // show user message
@@ -360,7 +363,7 @@ function sendMessage(){
     let reply = getBotResponse(message);
 
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         chatContent.innerHTML += `
             <div class="bot-message">
@@ -370,24 +373,24 @@ function sendMessage(){
 
         chatContent.scrollTop = chatContent.scrollHeight;
 
-    },500);
+    }, 500);
 
 }
 
-function getBotResponse(message){
+function getBotResponse(message) {
 
     message = message.toLowerCase();
 
 
 
     // Greetings
-    if(
+    if (
         message.includes("hello") ||
         message.includes("hi") ||
         message.includes("hey") ||
         message.includes("good morning") ||
         message.includes("good afternoon")
-    ){
+    ) {
 
         return "Hello! 😊 Welcome to JKS Soft Tech. How can I assist you today?";
 
@@ -396,13 +399,13 @@ function getBotResponse(message){
 
 
     // Services
-    else if(
+    else if (
         message.includes("service") ||
         message.includes("services") ||
         message.includes("offer") ||
         message.includes("what do you do") ||
         message.includes("what can you provide")
-    ){
+    ) {
 
         return `We provide AI solutions, website development, software consulting, cloud solutions, and customised technology solutions for businesses.
 
@@ -415,12 +418,12 @@ FOr more information please visit our Services page:
 
 
     // Website development
-    else if(
+    else if (
         message.includes("website") ||
         message.includes("web development") ||
         message.includes("web design") ||
         message.includes("build a website")
-    ){
+    ) {
 
         return "Yes, we design and develop responsive websites that are modern, accessible, user-friendly, and tailored to your business goals.";
 
@@ -429,12 +432,12 @@ FOr more information please visit our Services page:
 
 
     // AI solutions
-    else if(
+    else if (
         message.includes("ai") ||
         message.includes("artificial intelligence") ||
         message.includes("machine learning") ||
         message.includes("automation")
-    ){
+    ) {
 
         return "We provide AI-powered solutions to help businesses automate processes, improve efficiency, and create smarter digital experiences.";
 
@@ -443,11 +446,11 @@ FOr more information please visit our Services page:
 
 
     // Software development
-    else if(
+    else if (
         message.includes("software") ||
         message.includes("application") ||
         message.includes("app development")
-    ){
+    ) {
 
         return "We develop customised software solutions based on your business requirements, helping you improve operations and productivity.";
 
@@ -456,12 +459,12 @@ FOr more information please visit our Services page:
 
 
     // Cloud services
-    else if(
+    else if (
         message.includes("cloud") ||
         message.includes("aws") ||
         message.includes("server") ||
         message.includes("hosting")
-    ){
+    ) {
 
         return "We provide cloud-based solutions to help businesses improve scalability, reliability, and digital infrastructure.";
 
@@ -470,13 +473,13 @@ FOr more information please visit our Services page:
 
 
     // Pricing
-    else if(
+    else if (
         message.includes("price") ||
         message.includes("cost") ||
         message.includes("pricing") ||
         message.includes("how much") ||
         message.includes("quote")
-    ){
+    ) {
 
         return "Our pricing depends on your project requirements, features, and complexity. Contact us for a customised quotation.";
 
@@ -485,12 +488,12 @@ FOr more information please visit our Services page:
 
 
     // Project timeline
-    else if(
+    else if (
         message.includes("time") ||
         message.includes("how long") ||
         message.includes("duration") ||
         message.includes("timeline")
-    ){
+    ) {
 
         return "Project timelines depend on the size and complexity of the project. After discussing your requirements, we can provide an estimated timeframe.";
 
@@ -499,29 +502,29 @@ FOr more information please visit our Services page:
 
 
     // Contact
-    else if(
-    message.includes("contact") ||
-    message.includes("phone") ||
-    message.includes("reach") ||
-    message.includes("talk")
-){
+    else if (
+        message.includes("contact") ||
+        message.includes("phone") ||
+        message.includes("reach") ||
+        message.includes("talk")
+    ) {
 
-    return `You can contact us through our enquiry form or email us at 
+        return `You can contact us through our enquiry form or email us at 
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@jkssofttech.com" 
        target="_blank" 
        class="email-link">
        info@jkssofttech.com
     </a>. Our team will respond within 3 business days.`;
 
-}
+    }
 
 
     // Location
-    else if(
+    else if (
         message.includes("location") ||
         message.includes("where are you") ||
         message.includes("based")
-    ){
+    ) {
 
         return "We are based in Singapore and provide technology solutions for businesses.";
 
@@ -530,11 +533,11 @@ FOr more information please visit our Services page:
 
 
     // Support
-    else if(
+    else if (
         message.includes("support") ||
         message.includes("help") ||
         message.includes("problem")
-    ){
+    ) {
 
         return "Our team provides technical support and assistance for our digital solutions. Please contact us with your requirements.";
 
@@ -543,11 +546,11 @@ FOr more information please visit our Services page:
 
 
     // Company information
-    else if(
+    else if (
         message.includes("company") ||
         message.includes("about") ||
         message.includes("who are you")
-    ){
+    ) {
 
         return "JKS Soft Tech is a technology consulting company focused on delivering innovative software, AI, and digital solutions for businesses.";
 
@@ -556,11 +559,11 @@ FOr more information please visit our Services page:
 
 
     // Clients
-    else if(
+    else if (
         message.includes("client") ||
         message.includes("business") ||
         message.includes("who do you work with")
-    ){
+    ) {
 
         return "We work with businesses looking for reliable technology solutions, including websites, software, and AI-powered services.";
 
@@ -569,21 +572,21 @@ FOr more information please visit our Services page:
 
 
     // Security
-    else if(
+    else if (
         message.includes("security") ||
         message.includes("safe") ||
         message.includes("privacy")
-    ){
+    ) {
 
         return "We prioritise secure development practices and design solutions with reliability and user privacy in mind.";
 
     }
 
-    else if(
+    else if (
         message.includes("job") ||
-        message.includes("jobs") 
-        
-    ){
+        message.includes("jobs")
+
+    ) {
 
         return "Regarding job applications, please fill out the form in the Contact Us page. Our staff will attend to you.";
 
@@ -592,10 +595,10 @@ FOr more information please visit our Services page:
 
 
     // Thank you
-    else if(
+    else if (
         message.includes("thank") ||
         message.includes("thanks")
-    ){
+    ) {
 
         return "You're welcome! 😊 Feel free to ask if you have any other questions.";
 
@@ -605,9 +608,9 @@ FOr more information please visit our Services page:
 
     // Default response
     // Default response
-else{
+    else {
 
-    return `I'm sorry, for further enquiries, please contact our team through the enquiry form or drop us an email at 
+        return `I'm sorry, for further enquiries, please contact our team through the enquiry form or drop us an email at 
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@jkssofttech.com" 
        target="_blank" 
        class="email-link">
@@ -615,7 +618,7 @@ else{
     </a>
     and we will be happy to assist you.`;
 
-}
+    }
 }
 
 //////////////////Why Choose Us carousel/////////////////////
@@ -654,16 +657,16 @@ if (whyTrack && whyCardsOriginal.length) {
     let animating = false;
 
 
-    function getCardWidth(){
+    function getCardWidth() {
 
         return whyCards[0].offsetWidth + 22;
 
     }
 
 
-    function moveWhyCarousel(animation=true){
+    function moveWhyCarousel(animation = true) {
 
-        whyTrack.style.transition = animation 
+        whyTrack.style.transition = animation
             ? "transform 0.6s ease"
             : "none";
 
@@ -674,11 +677,11 @@ if (whyTrack && whyCardsOriginal.length) {
     }
 
 
-    function nextWhy(){
+    function nextWhy() {
 
-        if(animating) return;
+        if (animating) return;
 
-        animating=true;
+        animating = true;
 
         whyIndex++;
 
@@ -687,11 +690,11 @@ if (whyTrack && whyCardsOriginal.length) {
     }
 
 
-    function prevWhy(){
+    function prevWhy() {
 
-        if(animating) return;
+        if (animating) return;
 
-        animating=true;
+        animating = true;
 
         whyIndex--;
 
@@ -701,11 +704,11 @@ if (whyTrack && whyCardsOriginal.length) {
 
 
 
-    whyTrack.addEventListener("transitionend",()=>{
+    whyTrack.addEventListener("transitionend", () => {
 
 
         // reached end clones
-        if(whyIndex >= totalWhyCards * 2){
+        if (whyIndex >= totalWhyCards * 2) {
 
             whyIndex = totalWhyCards;
 
@@ -715,7 +718,7 @@ if (whyTrack && whyCardsOriginal.length) {
 
 
         // reached beginning clones
-        if(whyIndex <= 0){
+        if (whyIndex <= 0) {
 
             whyIndex = totalWhyCards;
 
@@ -724,7 +727,7 @@ if (whyTrack && whyCardsOriginal.length) {
         }
 
 
-        animating=false;
+        animating = false;
 
     });
 
@@ -738,15 +741,15 @@ if (whyTrack && whyCardsOriginal.length) {
 
     // automatic movement
 
-    setInterval(()=>{
+    setInterval(() => {
 
         nextWhy();
 
-    },4000);
+    }, 4000);
 
 
 
-    window.addEventListener("resize",()=>{
+    window.addEventListener("resize", () => {
 
         moveWhyCarousel(false);
 
@@ -775,12 +778,12 @@ accordionButtons.forEach(button => {
         // close others (optional)
         document.querySelectorAll(".accordion-item").forEach(other => {
 
-            if(other !== item){
+            if (other !== item) {
 
                 other.classList.remove("is-open");
 
                 other.querySelector(".accordion-trigger")
-                .setAttribute("aria-expanded","false");
+                    .setAttribute("aria-expanded", "false");
 
             }
 
@@ -829,7 +832,7 @@ capabilityButtons.forEach(button => {
 
             const otherButton = other.querySelector(".capability-toggle");
 
-            if(otherButton){
+            if (otherButton) {
                 otherButton.setAttribute(
                     "aria-expanded",
                     "false"
@@ -840,7 +843,7 @@ capabilityButtons.forEach(button => {
 
 
         // open clicked dropdown
-        if(!isOpen){
+        if (!isOpen) {
 
             item.classList.add("open");
 
@@ -854,3 +857,25 @@ capabilityButtons.forEach(button => {
     });
 
 });
+
+// Character counter
+
+// Character counter
+
+const messageCounterBox = document.getElementById("message");
+
+if (messageCounterBox) {
+
+    messageCounterBox.addEventListener("input", function () {
+
+        const text = this.value.trim();
+
+        document.getElementById("messageWordCount").innerText =
+            text === "" ? 0 : text.split(/\s+/).length;
+
+        document.getElementById("messageCharCount").innerText =
+            this.value.length;
+
+    });
+
+}
