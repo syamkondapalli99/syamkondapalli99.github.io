@@ -1,908 +1,822 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JKS Soft Tech — Consulting, Technology &amp; Outsourcing</title>
-    <meta name="description" content="JKS Soft Tech is a Singapore-based technology consulting and integration partner — Consulting, Technology, and Outsourcing for enterprise digital transformation.">
+    <meta name="description"
+        content="JKS Soft Tech is a Singapore-based technology consulting and integration partner — Consulting, Technology, and Outsourcing for enterprise digital transformation.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
 
-<!-- HEADER / NAV -->
-<header class="header" role="banner">
+    <!-- HEADER / NAV -->
+    <header class="header" role="banner">
+        <div class="header-inner">
 
-    <div class="header-inner">
-
-        <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
-            <img src="./assets/jksLogo.jpg" 
-                 alt="JKS Soft Tech logo" 
-                 class="logo-img">
-        </a>
-
-
-        <button class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="nav-menu">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-        <nav id="nav-menu" 
-             class="nav" 
-             role="navigation" 
-             aria-label="Main navigation">
-
-
-            <!-- Home -->
-            <a href="index.html"
-               tabindex="1"
-               class="nav-link ">
-                Home
+            <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
+                <img src="./assets/jksLogo.jpg" alt="JKS Soft Tech logo" class="logo-img">
             </a>
 
-            <!-- About -->
-            <div class="nav-item dropdown">
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-                <a href="about.html"
-                   class="nav-link">
+            <nav id="nav-menu" class="nav" role="navigation" aria-label="Main navigation">
+                <!-- Home -->
+                <a href="index.html" tabindex="1" class="nav-link">
+                    Home
+                </a>
+
+                <!-- About: no dropdown -->
+                <a href="about.html" tabindex="2" class="nav-link">
                     About Us
                 </a>
 
-
-                <div class="dropdown-menu">
-
-                    <a href="aboutExtra.html">
-                        Our Story
+                <!-- Services -->
+                <div class="nav-item dropdown">
+                    <a href="services.html" tabindex="3" class="nav-link">
+                        Services
                     </a>
 
+                    <div class="dropdown-menu">
+                        <a href="consulting.html">Consulting</a>
+                        <a href="technology.html">Technology</a>
+                        <a href="outsourcing.html">Outsourcing</a>
+                    </div>
                 </div>
 
-            </div>
-
-            <!-- Services -->
-            <div class="nav-item dropdown">
-
-                <a href="services.html"
-                   tabindex="3"
-                   class="nav-link">
-                    Services
+                <!-- Industries -->
+                <a href="industries.html" tabindex="4" class="nav-link">
+                    Industries
                 </a>
 
-
-                <div class="dropdown-menu">
-
-                    <a href="consulting.html">
-                        Consulting
+                <!-- Careers -->
+                <div class="nav-item dropdown is-active">
+                    <a href="careers.html" tabindex="5" class="nav-link">
+                        Careers
                     </a>
 
-
-                    <a href="technology.html">
-                        Technology
-                    </a>
-
-
-                    <a href="outsourcing.html">
-                        Outsourcing
-                    </a>
-
+                    <div class="dropdown-menu">
+                        <a href="internship.html">Internship</a>
+                        <a href="advanced-training.html">Advanced Training</a>
+                        <a href="training-schedule.html">Training Schedule</a>
+                    </div>
                 </div>
 
-            </div>
-
-
-            <!-- Industries -->
-            <a href="industries.html"
-               tabindex="4"
-               class="nav-link">
-                Industries
-            </a>
-
-            <!-- Careers -->
-            <div class="nav-item dropdown is-active" >
-
-
-                <a href="careers.html"
-                   tabindex="5"
-                   class="nav-link">
-                    Careers
+                <!-- Contact -->
+                <a href="index.html#contact" tabindex="6" class="nav-link">
+                    Contact
                 </a>
+            </nav>
+        </div>
+    </header>
 
-
-                <div class="dropdown-menu">
-
-
-                    <a href="internship.html">
-                        Internship
-                    </a>
-
-
-                    <a href="advanced-training.html">
-                        Advanced Training
-                    </a>
-
-
-                    <a href="training-schedule.html">
-                        Training Schedule
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-            <!-- Contact -->
-            <a href="index.html#contact"
-               tabindex="6"
-               class="nav-link">
-                Contact
-            </a>
-
-
-
-        </nav>
-
-
-    </div>
-
-</header>
-
-<!-- ===============================
+    <!-- ===============================
      CONSULTING HERO
 ================================ -->
 
-<section class="consulting-hero">
+    <section class="consulting-hero">
 
-    <div class="consulting-hero-inner" style="text-align:center;">
+        <div class="consulting-hero-inner" style="text-align:center;">
 
-        <p class="hero-eyebrow">Consulting Services</p>
+            <p class="hero-eyebrow">Consulting Services</p>
 
-        <h1>
-            Turning Technology Challenges Into Business Advantage
-        </h1>
+            <h1>
+                Turning Technology Challenges Into Business Advantage
+            </h1>
 
-        <p>
-            We help organisations define strategy, modernise technology,
-            and accelerate transformation through innovative digital solutions.
-        </p>
+            <p>
+                We help organisations define strategy, modernise technology,
+                and accelerate transformation through innovative digital solutions.
+            </p>
 
-        <a href="index.html#contact" class="btn btn-primary">
-            Talk To Our Experts
-        </a>
+            <a href="index.html#contact" class="btn btn-primary">
+                Talk To Our Experts
+            </a>
 
-    </div>
+        </div>
 
-</section>
+    </section>
 
 
 
-<!-- ===============================
+    <!-- ===============================
      INTRODUCTION
 ================================ -->
 
-<section class="section consulting-intro">
+    <section class="section consulting-intro">
 
-<div class="consulting-layout">
-
-
-<div>
-
-<p class="section-eyebrow">
-Our Perspective
-</p>
+        <div class="consulting-layout">
 
 
-<h2>
-Solving critical business challenges through technology
-</h2>
+            <div>
+
+                <p class="section-eyebrow">
+                    Our Perspective
+                </p>
 
 
-</div>
+                <h2>
+                    Solving critical business challenges through technology
+                </h2>
 
 
-
-<div class="consulting-description">
-
-<p>
-We focus on the client's most critical issues and opportunities:
-strategy, organisation, operations, technology transformation,
-digital innovation, analytics, corporate finance, and sustainability.
-</p>
-
-
-<p>
-Our specialists combine deep technical expertise with a holistic
-business perspective, helping organisations create value across
-departments instead of improving isolated parts.
-</p>
-
-
-</div>
-
-
-</div>
-
-</section>
+            </div>
 
 
 
+            <div class="consulting-description">
 
-<!-- ===============================
+                <p>
+                    We focus on the client's most critical issues and opportunities:
+                    strategy, organisation, operations, technology transformation,
+                    digital innovation, analytics, corporate finance, and sustainability.
+                </p>
+
+
+                <p>
+                    Our specialists combine deep technical expertise with a holistic
+                    business perspective, helping organisations create value across
+                    departments instead of improving isolated parts.
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- ===============================
      HOW WE CAN HELP - EXPANDABLE
 ================================ -->
 
-<section class="section-alt consulting-help">
+    <section class="section-alt consulting-help">
 
-    <div class="section-inner-single">
+        <div class="section-inner-single">
 
 
-        <div class="help-header">
+            <div class="help-header">
 
-            <p class="section-eyebrow">
-                How We Can Help
-            </p>
+                <p class="section-eyebrow">
+                    How We Can Help
+                </p>
 
-            <h2>
-                Technology and innovation to reinvent your business
-            </h2>
+                <h2>
+                    Technology and innovation to reinvent your business
+                </h2>
 
-            <p>
-                Our global team of technology strategists, enterprise
-                architects, and transformation experts help organisations
-                harness technology to improve performance, create value,
-                and prepare for the future.
-            </p>
+                <p>
+                    Our global team of technology strategists, enterprise
+                    architects, and transformation experts help organisations
+                    harness technology to improve performance, create value,
+                    and prepare for the future.
+                </p>
+
+            </div>
+
+
+
+            <div class="capability-list">
+
+
+
+                <!-- 01 -->
+
+                <div class="capability-item">
+
+                    <div class="capability-number">
+                        01
+                    </div>
+
+
+                    <div class="capability-content">
+
+                        <button type="button" class="capability-toggle" aria-expanded="false">
+
+
+                            <div>
+
+                                <h3>
+                                    Cloud Strategy & Advisory
+                                </h3>
+
+                                <p>
+                                    Maximise your cloud investment by developing
+                                    scalable strategies that improve agility,
+                                    efficiency, security, and business value.
+                                </p>
+
+                            </div>
+
+                            <span class="dropdown-arrow">
+                                +
+                            </span>
+
+                        </button>
+
+
+                        <div class="capability-extra">
+
+                            <p>
+                                We help organisations build effective cloud
+                                strategies by assessing existing environments,
+                                planning migrations, and optimising cloud
+                                operations.
+                            </p>
+
+                            <ul>
+                                <li>Cloud migration planning</li>
+                                <li>Hybrid and multi-cloud strategies</li>
+                                <li>Cloud cost optimisation</li>
+                                <li>Security and governance frameworks</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!-- 02 -->
+
+                <div class="capability-item">
+
+                    <div class="capability-number">
+                        02
+                    </div>
+
+
+                    <div class="capability-content">
+
+                        <button type="button" class="capability-toggle" aria-expanded="false">
+
+                            <div>
+
+                                <h3>
+                                    Resilient Architecture
+                                </h3>
+
+                                <p>
+                                    Design modern technology architectures
+                                    that improve reliability, business
+                                    continuity, and reduce operational risks.
+                                </p>
+
+                            </div>
+
+                            <span class="dropdown-arrow">
+                                +
+                            </span>
+
+                        </button>
+
+
+                        <div class="capability-extra">
+
+                            <p>
+                                Our architects design secure and scalable
+                                systems that support business growth while
+                                improving resilience and operational stability.
+                            </p>
+
+                            <ul>
+                                <li>Enterprise architecture design</li>
+                                <li>System modernisation</li>
+                                <li>High availability solutions</li>
+                                <li>Risk reduction strategies</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!-- 03 -->
+
+                <div class="capability-item">
+
+                    <div class="capability-number">
+                        03
+                    </div>
+
+
+                    <div class="capability-content">
+
+                        <button type="button" class="capability-toggle" aria-expanded="false">
+
+                            <div>
+
+                                <h3>
+                                    Analytics & Automation
+                                </h3>
+
+                                <p>
+                                    Unlock the value of artificial intelligence,
+                                    data analytics, and automation to enable
+                                    faster and smarter decisions.
+                                </p>
+
+                            </div>
+
+
+                            <span class="dropdown-arrow">
+                                +
+                            </span>
+
+
+                        </button>
+
+
+                        <div class="capability-extra">
+
+                            <p>
+                                We transform data into actionable insights
+                                and automate repetitive processes to improve
+                                efficiency and decision-making.
+                            </p>
+
+
+                            <ul>
+                                <li>Artificial intelligence solutions</li>
+                                <li>Data analytics platforms</li>
+                                <li>Intelligent automation</li>
+                                <li>Real-time business insights</li>
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <!-- 04 -->
+
+                <div class="capability-item">
+
+                    <div class="capability-number">
+                        04
+                    </div>
+
+
+                    <div class="capability-content">
+
+
+                        <button type="button" class="capability-toggle" aria-expanded="false">
+
+                            <div>
+
+                                <h3>
+                                    Future Technologies
+                                </h3>
+
+                                <p>
+                                    Adopt emerging technologies and innovative
+                                    practices to create new opportunities for
+                                    growth.
+                                </p>
+
+                            </div>
+
+
+                            <span class="dropdown-arrow">
+                                +
+                            </span>
+
+
+                        </button>
+
+
+                        <div class="capability-extra">
+
+                            <p>
+                                We help businesses explore and implement
+                                emerging technologies that create competitive
+                                advantages.
+                            </p>
+
+
+                            <ul>
+                                <li>Artificial intelligence adoption</li>
+                                <li>Digital innovation strategies</li>
+                                <li>Emerging technology evaluation</li>
+                                <li>Technology roadmap development</li>
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <!-- 05 -->
+
+                <div class="capability-item">
+
+
+                    <div class="capability-number">
+                        05
+                    </div>
+
+
+
+                    <div class="capability-content">
+
+
+                        <button type="button" class="capability-toggle" aria-expanded="false">
+
+
+                            <div>
+
+                                <h3>
+                                    Technology Transformation
+                                </h3>
+
+
+                                <p>
+                                    Improve technology efficiency, optimise ROI,
+                                    and redirect investment towards innovation.
+                                </p>
+
+
+                            </div>
+
+
+                            <span class="dropdown-arrow">
+                                +
+                            </span>
+
+
+                        </button>
+
+
+
+                        <div class="capability-extra">
+
+
+                            <p>
+                                We support organisations through complete
+                                technology transformation journeys, from
+                                strategy development to implementation.
+                            </p>
+
+
+                            <ul>
+                                <li>Technology optimisation</li>
+                                <li>Digital transformation planning</li>
+                                <li>Legacy system modernisation</li>
+                                <li>Innovation acceleration</li>
+                            </ul>
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <!-- 06 -->
+
+                <div class="capability-item">
+
+
+                    <div class="capability-number">
+                        06
+                    </div>
+
+
+
+                    <div class="capability-content">
+
+
+                        <button type="button" class="capability-toggle" aria-expanded="false">
+
+
+                            <div>
+
+                                <h3>
+                                    Digital Strategy & Innovation
+                                </h3>
+
+
+                                <p>
+                                    Align technology investments with business
+                                    goals through future-ready digital strategies.
+                                </p>
+
+
+                            </div>
+
+
+                            <span class="dropdown-arrow">
+                                +
+                            </span>
+
+
+                        </button>
+
+
+
+                        <div class="capability-extra">
+
+
+                            <p>
+                                We create digital strategies that connect
+                                technology decisions with customer needs,
+                                operational improvements, and long-term growth.
+                            </p>
+
+
+                            <ul>
+                                <li>Digital business strategy</li>
+                                <li>Innovation consulting</li>
+                                <li>Customer experience transformation</li>
+                                <li>Future growth planning</li>
+                            </ul>
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
 
         </div>
 
 
+    </section>
 
-        <div class="capability-list">
 
-        
 
-            <!-- 01 -->
 
-            <div class="capability-item">
 
-                <div class="capability-number">
-                    01
-                </div>
 
 
-                <div class="capability-content">
 
-                    <button type="button" class="capability-toggle" aria-expanded="false">
-
-
-                        <div>
-
-                            <h3>
-                                Cloud Strategy & Advisory
-                            </h3>
-
-                            <p>
-                                Maximise your cloud investment by developing
-                                scalable strategies that improve agility,
-                                efficiency, security, and business value.
-                            </p>
-
-                        </div>
-
-                        <span class="dropdown-arrow">
-                            +
-                        </span>
-
-                    </button>
-
-
-                    <div class="capability-extra">
-
-                        <p>
-                            We help organisations build effective cloud
-                            strategies by assessing existing environments,
-                            planning migrations, and optimising cloud
-                            operations.
-                        </p>
-
-                        <ul>
-                            <li>Cloud migration planning</li>
-                            <li>Hybrid and multi-cloud strategies</li>
-                            <li>Cloud cost optimisation</li>
-                            <li>Security and governance frameworks</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <!-- 02 -->
-
-            <div class="capability-item">
-
-                <div class="capability-number">
-                    02
-                </div>
-
-
-                <div class="capability-content">
-
-                    <button type="button" class="capability-toggle" aria-expanded="false">
-
-                        <div>
-
-                            <h3>
-                                Resilient Architecture
-                            </h3>
-
-                            <p>
-                                Design modern technology architectures
-                                that improve reliability, business
-                                continuity, and reduce operational risks.
-                            </p>
-
-                        </div>
-
-                        <span class="dropdown-arrow">
-                            +
-                        </span>
-
-                    </button>
-
-
-                    <div class="capability-extra">
-
-                        <p>
-                            Our architects design secure and scalable
-                            systems that support business growth while
-                            improving resilience and operational stability.
-                        </p>
-
-                        <ul>
-                            <li>Enterprise architecture design</li>
-                            <li>System modernisation</li>
-                            <li>High availability solutions</li>
-                            <li>Risk reduction strategies</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <!-- 03 -->
-
-            <div class="capability-item">
-
-                <div class="capability-number">
-                    03
-                </div>
-
-
-                <div class="capability-content">
-
-                    <button type="button" class="capability-toggle" aria-expanded="false">
-
-                        <div>
-
-                            <h3>
-                                Analytics & Automation
-                            </h3>
-
-                            <p>
-                                Unlock the value of artificial intelligence,
-                                data analytics, and automation to enable
-                                faster and smarter decisions.
-                            </p>
-
-                        </div>
-
-
-                        <span class="dropdown-arrow">
-                            +
-                        </span>
-
-
-                    </button>
-
-
-                    <div class="capability-extra">
-
-                        <p>
-                            We transform data into actionable insights
-                            and automate repetitive processes to improve
-                            efficiency and decision-making.
-                        </p>
-
-
-                        <ul>
-                            <li>Artificial intelligence solutions</li>
-                            <li>Data analytics platforms</li>
-                            <li>Intelligent automation</li>
-                            <li>Real-time business insights</li>
-                        </ul>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-
-
-
-            <!-- 04 -->
-
-            <div class="capability-item">
-
-                <div class="capability-number">
-                    04
-                </div>
-
-
-                <div class="capability-content">
-
-
-                    <button type="button" class="capability-toggle" aria-expanded="false">
-
-                        <div>
-
-                            <h3>
-                                Future Technologies
-                            </h3>
-
-                            <p>
-                                Adopt emerging technologies and innovative
-                                practices to create new opportunities for
-                                growth.
-                            </p>
-
-                        </div>
-
-
-                        <span class="dropdown-arrow">
-                            +
-                        </span>
-
-
-                    </button>
-
-
-                    <div class="capability-extra">
-
-                        <p>
-                            We help businesses explore and implement
-                            emerging technologies that create competitive
-                            advantages.
-                        </p>
-
-
-                        <ul>
-                            <li>Artificial intelligence adoption</li>
-                            <li>Digital innovation strategies</li>
-                            <li>Emerging technology evaluation</li>
-                            <li>Technology roadmap development</li>
-                        </ul>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-
-
-
-            <!-- 05 -->
-
-            <div class="capability-item">
-
-
-                <div class="capability-number">
-                    05
-                </div>
-
-
-
-                <div class="capability-content">
-
-
-                   <button type="button" class="capability-toggle" aria-expanded="false">
-
-
-                        <div>
-
-                            <h3>
-                                Technology Transformation
-                            </h3>
-
-
-                            <p>
-                                Improve technology efficiency, optimise ROI,
-                                and redirect investment towards innovation.
-                            </p>
-
-
-                        </div>
-
-
-                        <span class="dropdown-arrow">
-                            +
-                        </span>
-
-
-                    </button>
-
-
-
-                    <div class="capability-extra">
-
-
-                        <p>
-                            We support organisations through complete
-                            technology transformation journeys, from
-                            strategy development to implementation.
-                        </p>
-
-
-                        <ul>
-                            <li>Technology optimisation</li>
-                            <li>Digital transformation planning</li>
-                            <li>Legacy system modernisation</li>
-                            <li>Innovation acceleration</li>
-                        </ul>
-
-
-                    </div>
-
-
-
-                </div>
-
-
-            </div>
-
-
-
-
-
-
-            <!-- 06 -->
-
-            <div class="capability-item">
-
-
-                <div class="capability-number">
-                    06
-                </div>
-
-
-
-                <div class="capability-content">
-
-
-                   <button type="button" class="capability-toggle" aria-expanded="false">
-
-
-                        <div>
-
-                            <h3>
-                                Digital Strategy & Innovation
-                            </h3>
-
-
-                            <p>
-                                Align technology investments with business
-                                goals through future-ready digital strategies.
-                            </p>
-
-
-                        </div>
-
-
-                        <span class="dropdown-arrow">
-                            +
-                        </span>
-
-
-                    </button>
-
-
-
-                    <div class="capability-extra">
-
-
-                        <p>
-                            We create digital strategies that connect
-                            technology decisions with customer needs,
-                            operational improvements, and long-term growth.
-                        </p>
-
-
-                        <ul>
-                            <li>Digital business strategy</li>
-                            <li>Innovation consulting</li>
-                            <li>Customer experience transformation</li>
-                            <li>Future growth planning</li>
-                        </ul>
-
-
-                    </div>
-
-
-
-                </div>
-
-
-            </div>
-
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ===============================
+    <!-- ===============================
      TRANSFORMATION MODEL
 ================================ -->
 
 
-<section class="section">
+    <section class="section">
 
 
-<div class="transformation-box">
+        <div class="transformation-box">
 
 
-<div class="transform-step">
+            <div class="transform-step">
 
-<h3>
-Strategy
-</h3>
+                <h3>
+                    Strategy
+                </h3>
 
-<p>
-Identify opportunities and create a technology roadmap.
-</p>
+                <p>
+                    Identify opportunities and create a technology roadmap.
+                </p>
 
-</div>
-
-
-
-<div class="transform-line"></div>
+            </div>
 
 
 
-<div class="transform-step">
-
-<h3>
-Transformation
-</h3>
-
-<p>
-Modernise systems, processes, and digital capabilities.
-</p>
-
-</div>
+            <div class="transform-line"></div>
 
 
 
-<div class="transform-line"></div>
+            <div class="transform-step">
+
+                <h3>
+                    Transformation
+                </h3>
+
+                <p>
+                    Modernise systems, processes, and digital capabilities.
+                </p>
+
+            </div>
 
 
 
-<div class="transform-step">
-
-<h3>
-Innovation
-</h3>
-
-<p>
-Use emerging technologies to accelerate growth.
-</p>
-
-</div>
-
-
-</div>
-
-
-</section>
+            <div class="transform-line"></div>
 
 
 
+            <div class="transform-step">
+
+                <h3>
+                    Innovation
+                </h3>
+
+                <p>
+                    Use emerging technologies to accelerate growth.
+                </p>
+
+            </div>
 
 
-<!-- ===============================
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- ===============================
      CTA
 ================================ -->
 
 
-<section class="consulting-cta">
+    <section class="consulting-cta">
 
 
-<h2>
-Ready to transform your technology landscape?
-</h2>
+        <h2>
+            Ready to transform your technology landscape?
+        </h2>
 
 
-<p>
-Partner with JKS Soft Tech to build scalable,
-secure, and future-ready solutions.
-</p>
+        <p>
+            Partner with JKS Soft Tech to build scalable,
+            secure, and future-ready solutions.
+        </p>
 
 
-<a href="index.html#contact" class="btn btn-primary">
-Contact Us
-</a>
+        <a href="index.html#contact" class="btn btn-primary">
+            Contact Us
+        </a>
 
 
 
-</section>
+    </section>
 
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
 
-    <div class="footer-inner">
+        <div class="footer-inner">
 
-        <div class="footer-brand">
-            <span class="logo-text logo-text--footer">JKS Soft Tech</span>
-            <p>
-                JKS Soft Tech Pte. Ltd.<br>
-                Consulting · Technology · Outsourcing.
-            </p>
-        </div>
+            <div class="footer-brand">
+                <span class="logo-text logo-text--footer">JKS Soft Tech</span>
+                <p>
+                    JKS Soft Tech Pte. Ltd.<br>
+                    Consulting · Technology · Outsourcing.
+                </p>
+            </div>
 
+            <div class="footer-nav-wrapper">
 
-   <div class="footer-nav-wrapper">
+                <div class="footer-nav-contact">
 
-            <nav class="footer-links" aria-label="Footer navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="services.html">Services</a>
-                <a href="industries.html">Industries</a>
-                <a href="careers.html">Careers</a>
-                <a href="index.html#contact">Contact</a>
-                
-            </nav>
+                    <nav class="footer-links" aria-label="Footer navigation">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="industries.html">Industries</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="index.html#contact">Contact</a>
+                    </nav>
 
+                    <div class="footer-contact">
+                        <p><strong>Contact Us</strong></p>
+                        <p>Email: <a href="mailto:info@jkssofttech.com">info@jkssofttech.com</a></p>
+                        <p>Phone: <a href="tel:+6582688457">+65 8268 8457</a></p>
+                    </div>
 
-            <div class="footer-social">
+                </div>
 
-           
+                <div class="footer-social">
+                    <div class="footer-social-icons">
 
-                <div class="footer-social-icons">
+                        <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all" target="_blank"
+                            aria-label="LinkedIn">
+                            <img src="./assets/linkedin.png" alt="LinkedIn">
+                        </a>
 
-                    <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all"
-                       target="_blank"
-                       aria-label="LinkedIn">
+                        <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw" target="_blank"
+                            aria-label="Twitter">
+                            <img src="./assets/twitter.png" alt="Twitter">
+                        </a>
 
-                        <img src="./assets/linkedin.png"
-                             alt="LinkedIn">
-                    </a>
+                        <a href="YOUR_THIRD_SOCIAL_LINK" target="_blank" aria-label="WhatsApp">
+                            <img src="./assets/whatsapp.png" alt="WhatsApp">
+                        </a>
 
-
-                    <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw"
-                       target="_blank"
-                       aria-label="Social Media">
-
-                        <img src="./assets/twitter.png"
-                             alt="Social Media">
-                    </a>
-
-
-                    <a href="YOUR_THIRD_SOCIAL_LINK"
-                       target="_blank"
-                       aria-label="Social Media">
-
-                        <img src="./assets/whatsapp.png"
-                             alt="Social Media">
-                    </a>
-
+                    </div>
                 </div>
 
             </div>
 
+            <p class="footer-copy">
+                © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
+            </p>
+
         </div>
 
-
-        <p class="footer-copy">
-            © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-<div id="successModal" class="modal">
-    <div class="modal-content">
-        <button class="modal-close" aria-label="Close">&times;</button>
-
-        <h3>Message Sent</h3>
-
-        <p>
-            Thank you for contacting us. We will get back to you within
-            <strong>3 business days.</strong>
-        </p>
-    </div>
-</div>
-
-<!-- Chat Button -->
-<button id="chat-button">
-    💬
-</button>
+    </footer>
 
 
-<!-- Chat Window -->
-<div id="chat-box">
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
 
-    <div class="chat-header">
-        <span>JKS Assistant</span>
-        <button id="close-chat">×</button>
-    </div>
+            <h3>Message Sent</h3>
 
-
-    <div id="chat-content">
-        <div class="bot-message">
-            Hello! How can I help you today?
+            <p>
+                Thank you for contacting us. We will get back to you within
+                <strong>3 business days.</strong>
+            </p>
         </div>
     </div>
 
+    <!-- Chat Button -->
+    <button id="chat-button">
+        💬
+    </button>
 
-    <div class="chat-input-area">
-        <input 
-            type="text" 
-            id="chat-input" 
-            placeholder="Ask a question..."
-        >
 
-        <button id="send-chat">
-            ➤
-        </button>
+    <!-- Chat Window -->
+    <div id="chat-box">
+
+        <div class="chat-header">
+            <span>JKS Assistant</span>
+            <button id="close-chat">×</button>
+        </div>
+
+
+        <div id="chat-content">
+            <div class="bot-message">
+                Hello! How can I help you today?
+            </div>
+        </div>
+
+
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask a question...">
+
+            <button id="send-chat">
+                ➤
+            </button>
+        </div>
+
     </div>
 
-</div>
 
 
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

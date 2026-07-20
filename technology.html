@@ -1,420 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JKS Soft Tech — Consulting, Technology &amp; Outsourcing</title>
-    <meta name="description" content="JKS Soft Tech is a Singapore-based technology consulting and integration partner — Consulting, Technology, and Outsourcing for enterprise digital transformation.">
+    <meta name="description"
+        content="JKS Soft Tech is a Singapore-based technology consulting and integration partner — Consulting, Technology, and Outsourcing for enterprise digital transformation.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
 
 
-<!-- HEADER / NAV -->
-<header class="header" role="banner">
+    <!-- HEADER / NAV -->
+    <header class="header" role="banner">
+        <div class="header-inner">
 
-    <div class="header-inner">
-
-        <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
-            <img src="./assets/jksLogo.jpg" 
-                 alt="JKS Soft Tech logo" 
-                 class="logo-img">
-        </a>
-
-
-        <button class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="nav-menu">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-        <nav id="nav-menu" 
-             class="nav" 
-             role="navigation" 
-             aria-label="Main navigation">
-
-
-            <!-- Home -->
-            <a href="index.html"
-               tabindex="1"
-               class="nav-link ">
-                Home
+            <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
+                <img src="./assets/jksLogo.jpg" alt="JKS Soft Tech logo" class="logo-img">
             </a>
 
-            <!-- About -->
-            <div class="nav-item dropdown">
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-                <a href="about.html"
-                   class="nav-link">
+            <nav id="nav-menu" class="nav" role="navigation" aria-label="Main navigation">
+                <!-- Home -->
+                <a href="index.html" tabindex="1" class="nav-link">
+                    Home
+                </a>
+
+                <!-- About: no dropdown -->
+                <a href="about.html" tabindex="2" class="nav-link">
                     About Us
                 </a>
 
-
-                <div class="dropdown-menu">
-
-                    <a href="aboutExtra.html">
-                        Our Story
+                <!-- Services -->
+                <div class="nav-item dropdown">
+                    <a href="services.html" tabindex="3" class="nav-link">
+                        Services
                     </a>
 
+                    <div class="dropdown-menu">
+                        <a href="consulting.html">Consulting</a>
+                        <a href="technology.html">Technology</a>
+                        <a href="outsourcing.html">Outsourcing</a>
+                    </div>
                 </div>
 
-            </div>
-
-            <!-- Services -->
-            <div class="nav-item dropdown">
-
-                <a href="services.html"
-                   tabindex="3"
-                   class="nav-link">
-                    Services
+                <!-- Industries -->
+                <a href="industries.html" tabindex="4" class="nav-link">
+                    Industries
                 </a>
 
-
-                <div class="dropdown-menu">
-
-                    <a href="consulting.html">
-                        Consulting
+                <!-- Careers -->
+                <div class="nav-item dropdown is-active">
+                    <a href="careers.html" tabindex="5" class="nav-link">
+                        Careers
                     </a>
 
-
-                    <a href="technology.html">
-                        Technology
-                    </a>
-
-
-                    <a href="outsourcing.html">
-                        Outsourcing
-                    </a>
-
+                    <div class="dropdown-menu">
+                        <a href="internship.html">Internship</a>
+                        <a href="advanced-training.html">Advanced Training</a>
+                        <a href="training-schedule.html">Training Schedule</a>
+                    </div>
                 </div>
 
-            </div>
-
-
-            <!-- Industries -->
-            <a href="industries.html"
-               tabindex="4"
-               class="nav-link">
-                Industries
-            </a>
-
-            <!-- Careers -->
-            <div class="nav-item dropdown is-active" >
-
-
-                <a href="careers.html"
-                   tabindex="5"
-                   class="nav-link">
-                    Careers
+                <!-- Contact -->
+                <a href="index.html#contact" tabindex="6" class="nav-link">
+                    Contact
                 </a>
+            </nav>
+        </div>
+    </header>
 
-
-                <div class="dropdown-menu">
-
-
-                    <a href="internship.html">
-                        Internship
-                    </a>
-
-
-                    <a href="advanced-training.html">
-                        Advanced Training
-                    </a>
-
-
-                    <a href="training-schedule.html">
-                        Training Schedule
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-            <!-- Contact -->
-            <a href="index.html#contact"
-               tabindex="6"
-               class="nav-link">
-                Contact
-            </a>
-
-
-
-        </nav>
-
-
-    </div>
-
-</header>
-
-<!-- ===============================
+    <!-- ===============================
      DIGITAL TRANSFORMATION BANNER
 ================================ -->
 
-<section class="digital-transformation-banner">
+    <!-- DIGITAL TRANSFORMATION HERO -->
+    <!-- TECHNOLOGY HERO -->
+    <section class="outsourcing-hero technology-page-hero">
+        <div class="outsourcing-overlay"></div>
 
-    <div class="digital-banner-overlay"></div>
+        <div class="outsourcing-hero-content">
+            <p class="hero-eyebrow">Technology</p>
 
-    <div class="digital-banner-content">
+            <h1>
+                Turning ambition into
+                <span>digital advantage</span>
+            </h1>
 
-        <p class="hero-eyebrow">Digital Transformation</p>
-
-        <h2>
-            Turning ambition into 
-            <span>digital advantage</span>
-        </h2>
-
-        <p>
-            To win in the digital era, you need a bold ambition and flawless execution.
-            Our multidisciplinary teams work side-by-side with you to design, build,
-            and scale truly transformative digital businesses.
-        </p>
-
-    </div>
-
-</section>
-
-        <div class="transformation-grid">
-
-
-            <article class="transform-card">
-                <div class="number">01</div>
-
-                <h3>Ambitions</h3>
-
-                <p>
-                    Whatever your ambition may be—from embracing new digital
-                    capabilities to reimagining business operations or launching
-                    new digital ventures—we help you establish new standards
-                    of excellence and unlock unprecedented value.
-                </p>
-
-            </article>
-
-
-
-            <article class="transform-card">
-                <div class="number">02</div>
-
-                <h3>Approach</h3>
-
-                <p>
-                    Our approach combines proven end-to-end transformation
-                    frameworks with integrated digital capabilities and an
-                    ecosystem of best-of-breed partners to accelerate your
-                    transformation journey.
-                </p>
-
-            </article>
-
-
-
-
-            <article class="transform-card">
-                <div class="number">03</div>
-
-                <h3>Innovation</h3>
-
-                <p>
-                    Technology drives transformation, but true change begins
-                    with a clearly defined digital strategy that delivers
-                    immediate value while creating a flexible path toward the
-                    future.
-                </p>
-
-            </article>
-
-
-
-
-            <article class="transform-card">
-                <div class="number">04</div>
-
-                <h3>Framework</h3>
-
-                <p>
-                    Our framework evaluates emerging digital trends shaping
-                    your industry while assessing your current digital maturity.
-                    We identify strengths, gaps, and opportunities to create
-                    a roadmap for sustainable growth.
-                </p>
-
-            </article>
-
-
-        </div>
-
-
-
-        <div class="journey">
-
-            <div class="journey-step">
-                <span>01</span>
-                Strategy
-            </div>
-
-            <div class="line"></div>
-
-            <div class="journey-step">
-                <span>02</span>
-                Build
-            </div>
-
-            <div class="line"></div>
-
-            <div class="journey-step">
-                <span>03</span>
-                Scale
-            </div>
-
-            <div class="line"></div>
-
-            <div class="journey-step">
-                <span>04</span>
-                Transform
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-
-    <div class="footer-inner">
-
-        <div class="footer-brand">
-            <span class="logo-text logo-text--footer">JKS Soft Tech</span>
             <p>
-                JKS Soft Tech Pte. Ltd.<br>
-                Consulting · Technology · Outsourcing.
+                To win in the digital era, you need a bold ambition and flawless execution.
+                Our multidisciplinary teams work side-by-side with you to design, build,
+                and scale truly transformative digital businesses.
             </p>
         </div>
+    </section>
+
+    <div class="transformation-grid">
 
 
-      <div class="footer-nav-wrapper">
+        <article class="transform-card">
+            <div class="number">01</div>
 
-            <nav class="footer-links" aria-label="Footer navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="services.html">Services</a>
-                <a href="industries.html">Industries</a>
-                <a href="careers.html">Careers</a>
-                <a href="index.html#contact">Contact</a>
-                
-            </nav>
+            <h3>Ambitions</h3>
 
+            <p>
+                Whatever your ambition may be—from embracing new digital
+                capabilities to reimagining business operations or launching
+                new digital ventures—we help you establish new standards
+                of excellence and unlock unprecedented value.
+            </p>
 
-            <div class="footer-social">
-
-           
-
-                <div class="footer-social-icons">
-
-                    <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all"
-                       target="_blank"
-                       aria-label="LinkedIn">
-
-                        <img src="./assets/linkedin.png"
-                             alt="LinkedIn">
-                    </a>
+        </article>
 
 
-                    <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw"
-                       target="_blank"
-                       aria-label="Social Media">
 
-                        <img src="./assets/twitter.png"
-                             alt="Social Media">
-                    </a>
+        <article class="transform-card">
+            <div class="number">02</div>
+
+            <h3>Approach</h3>
+
+            <p>
+                Our approach combines proven end-to-end transformation
+                frameworks with integrated digital capabilities and an
+                ecosystem of best-of-breed partners to accelerate your
+                transformation journey.
+            </p>
+
+        </article>
 
 
-                    <a href="YOUR_THIRD_SOCIAL_LINK"
-                       target="_blank"
-                       aria-label="Social Media">
 
-                        <img src="./assets/whatsapp.png"
-                             alt="Social Media">
-                    </a>
 
+        <article class="transform-card">
+            <div class="number">03</div>
+
+            <h3>Innovation</h3>
+
+            <p>
+                Technology drives transformation, but true change begins
+                with a clearly defined digital strategy that delivers
+                immediate value while creating a flexible path toward the
+                future.
+            </p>
+
+        </article>
+
+
+
+
+        <article class="transform-card">
+            <div class="number">04</div>
+
+            <h3>Framework</h3>
+
+            <p>
+                Our framework evaluates emerging digital trends shaping
+                your industry while assessing your current digital maturity.
+                We identify strengths, gaps, and opportunities to create
+                a roadmap for sustainable growth.
+            </p>
+
+        </article>
+
+
+    </div>
+
+
+
+    <div class="journey">
+
+        <div class="journey-step">
+            <span>01</span>
+            Strategy
+        </div>
+
+        <div class="line"></div>
+
+        <div class="journey-step">
+            <span>02</span>
+            Build
+        </div>
+
+        <div class="line"></div>
+
+        <div class="journey-step">
+            <span>03</span>
+            Scale
+        </div>
+
+        <div class="line"></div>
+
+        <div class="journey-step">
+            <span>04</span>
+            Transform
+        </div>
+
+    </div>
+
+
+    </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <span class="logo-text logo-text--footer">JKS Soft Tech</span>
+                <p>
+                    JKS Soft Tech Pte. Ltd.<br>
+                    Consulting · Technology · Outsourcing.
+                </p>
+            </div>
+
+            <div class="footer-nav-wrapper">
+
+                <div class="footer-nav-contact">
+
+                    <nav class="footer-links" aria-label="Footer navigation">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="industries.html">Industries</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="index.html#contact">Contact</a>
+                    </nav>
+
+                    <div class="footer-contact">
+                        <p><strong>Contact Us</strong></p>
+                        <p>Email: <a href="mailto:info@jkssofttech.com">info@jkssofttech.com</a></p>
+                        <p>Phone: <a href="tel:+6582688457">+65 8268 8457</a></p>
+                    </div>
+
+                </div>
+
+                <div class="footer-social">
+                    <div class="footer-social-icons">
+
+                        <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all" target="_blank"
+                            aria-label="LinkedIn">
+                            <img src="./assets/linkedin.png" alt="LinkedIn">
+                        </a>
+
+                        <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw" target="_blank"
+                            aria-label="Twitter">
+                            <img src="./assets/twitter.png" alt="Twitter">
+                        </a>
+
+                        <a href="YOUR_THIRD_SOCIAL_LINK" target="_blank" aria-label="WhatsApp">
+                            <img src="./assets/whatsapp.png" alt="WhatsApp">
+                        </a>
+
+                    </div>
                 </div>
 
             </div>
 
+            <p class="footer-copy">
+                © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
+            </p>
+
         </div>
 
+    </footer>
 
-        <p class="footer-copy">
-            © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
-        </p>
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
 
-    </div>
+            <h3>Message Sent</h3>
 
-</footer>
-
-
-<div id="successModal" class="modal">
-    <div class="modal-content">
-        <button class="modal-close" aria-label="Close">&times;</button>
-
-        <h3>Message Sent</h3>
-
-        <p>
-            Thank you for contacting us. We will get back to you within
-            <strong>3 business days.</strong>
-        </p>
-    </div>
-</div>
-
-<!-- Chat Button -->
-<button id="chat-button">
-    💬
-</button>
-
-
-<!-- Chat Window -->
-<div id="chat-box">
-
-    <div class="chat-header">
-        <span>JKS Assistant</span>
-        <button id="close-chat">×</button>
-    </div>
-
-
-    <div id="chat-content">
-        <div class="bot-message">
-            Hello! How can I help you today?
+            <p>
+                Thank you for contacting us. We will get back to you within
+                <strong>3 business days.</strong>
+            </p>
         </div>
     </div>
 
+    <!-- Chat Button -->
+    <button id="chat-button">
+        💬
+    </button>
 
-    <div class="chat-input-area">
-        <input 
-            type="text" 
-            id="chat-input" 
-            placeholder="Ask a question..."
-        >
 
-        <button id="send-chat">
-            ➤
-        </button>
+    <!-- Chat Window -->
+    <div id="chat-box">
+
+        <div class="chat-header">
+            <span>JKS Assistant</span>
+            <button id="close-chat">×</button>
+        </div>
+
+
+        <div id="chat-content">
+            <div class="bot-message">
+                Hello! How can I help you today?
+            </div>
+        </div>
+
+
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask a question...">
+
+            <button id="send-chat">
+                ➤
+            </button>
+        </div>
+
     </div>
 
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

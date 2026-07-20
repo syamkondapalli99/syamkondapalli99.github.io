@@ -1,742 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industries — JKS Soft Tech</title>
-    <meta name="description" content="JKS Soft Tech delivers consulting, technology, and outsourcing services across industries and geographies, with particular depth in financial services and digital payments.">
+    <meta name="description"
+        content="JKS Soft Tech delivers consulting, technology, and outsourcing services across industries and geographies, with particular depth in financial services and digital payments.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<!-- HEADER / NAV -->
-<header class="header" role="banner">
+    <!-- HEADER / NAV -->
+    <header class="header" role="banner">
+        <div class="header-inner">
 
-    <div class="header-inner">
-
-        <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
-            <img src="./assets/jksLogo.jpg" 
-                 alt="JKS Soft Tech logo" 
-                 class="logo-img">
-        </a>
-
-
-        <button class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="nav-menu">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-        <nav id="nav-menu" 
-             class="nav" 
-             role="navigation" 
-             aria-label="Main navigation">
-
-
-            <!-- Home -->
-            <a href="index.html"
-               tabindex="1"
-               class="nav-link ">
-                Home
+            <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
+                <img src="./assets/jksLogo.jpg" alt="JKS Soft Tech logo" class="logo-img">
             </a>
 
-            <!-- About -->
-            <div class="nav-item dropdown">
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-                <a href="about.html"
-                   class="nav-link">
+            <nav id="nav-menu" class="nav" role="navigation" aria-label="Main navigation">
+                <!-- Home -->
+                <a href="index.html" tabindex="1" class="nav-link">
+                    Home
+                </a>
+
+                <!-- About: no dropdown -->
+                <a href="about.html" tabindex="2" class="nav-link">
                     About Us
                 </a>
 
-
-                <div class="dropdown-menu">
-
-                    <a href="aboutExtra.html">
-                        Our Story
+                <!-- Services -->
+                <div class="nav-item dropdown">
+                    <a href="services.html" tabindex="3" class="nav-link">
+                        Services
                     </a>
 
+                    <div class="dropdown-menu">
+                        <a href="consulting.html">Consulting</a>
+                        <a href="technology.html">Technology</a>
+                        <a href="outsourcing.html">Outsourcing</a>
+                    </div>
                 </div>
+
+                <!-- Industries -->
+                <a href="industries.html" tabindex="4" class="nav-link">
+                    Industries
+                </a>
+
+                <!-- Careers -->
+                <div class="nav-item dropdown is-active">
+                    <a href="careers.html" tabindex="5" class="nav-link">
+                        Careers
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <a href="internship.html">Internship</a>
+                        <a href="advanced-training.html">Advanced Training</a>
+                        <a href="training-schedule.html">Training Schedule</a>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <a href="index.html#contact" tabindex="6" class="nav-link">
+                    Contact
+                </a>
+            </nav>
+        </div>
+    </header>
+    <!-- HERO -->
+
+
+    <section class="page-hero careers-hero advanced-bg-hero">
+
+
+        <div class="page-hero-inner">
+
+
+            <p class="hero-eyebrow">
+                Advanced Training
+            </p>
+
+
+
+            <h1>
+                Build Future-Ready Technology Skills
+            </h1>
+
+
+
+            <p class="page-hero-lede">
+
+                Develop expertise in cloud computing, artificial intelligence, machine learning, and emerging
+                technologies through structured industry-focused training programmes.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- INTRODUCTION -->
+
+
+    <section class="section">
+
+
+        <div class="section-inner section-inner--single">
+
+
+            <div class="section-text reveal">
+
+
+                <p class="section-eyebrow">
+                    Advanced Learning
+                </p>
+
+
+
+                <h2>
+                    Empowering Professionals Through Technology Training
+                </h2>
+
+
+
+                <p>
+
+                    At JKS Soft Tech, we believe learning is a continuous journey. Our advanced training programmes are
+                    designed to help students, professionals, and technology enthusiasts build practical skills through
+                    hands-on learning and exposure to industry-leading technologies.
+
+                </p>
+
+
+
+                <p>
+
+                    Focused on AWS cloud technologies, artificial intelligence, and digital transformation, our
+                    programmes combine theoretical foundations with real-world applications to prepare participants for
+                    evolving technology careers.
+
+                </p>
+
+
 
             </div>
 
-            <!-- Services -->
-            <div class="nav-item dropdown">
 
-                <a href="services.html"
-                   tabindex="3"
-                   class="nav-link">
-                    Services
+        </div>
+
+
+    </section>
+
+
+
+    <!-- TRAINING PROGRAMMES -->
+
+
+    <section class="section section-alt">
+
+
+        <div class="section-inner">
+
+
+            <div class="section-text reveal">
+
+
+                <p class="section-eyebrow">
+                    Training Programmes
+                </p>
+
+
+
+                <h2>
+                    Industry-Relevant Cloud & AI Training
+                </h2>
+
+
+
+                <p>
+
+                    Our programmes provide participants with practical experience in agile environments, software
+                    development practices, cloud solutions, and emerging technologies.
+
+                </p>
+
+
+
+                <p>
+
+                    Participants gain exposure to technologies including Java, Tibco, MuleSoft, AWS, artificial
+                    intelligence, machine learning, and modern digital consulting practices.
+
+                </p>
+
+
+
+            </div>
+
+
+
+
+            <div class="card reveal reveal-delay-1">
+
+
+                <img src="./assets/career.png" alt="Advanced technology training" class="card-image">
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- AWS CLOUD -->
+
+
+    <section class="section">
+
+
+        <div class="section-inner section-inner--single">
+
+
+            <div class="section-text reveal">
+
+
+                <p class="section-eyebrow">
+                    AWS Certification
+                </p>
+
+
+
+                <h2>
+                    AWS Certified Cloud Practitioner (CLF-C02)
+                </h2>
+
+
+
+                <p>
+
+                    The AWS Certified Cloud Practitioner certification provides a strong foundation in cloud concepts,
+                    AWS services, security, architecture, pricing, and support. It is designed for beginners, career
+                    changers, and professionals looking to understand cloud technologies.
+
+                </p>
+
+
+
+                <h3>
+                    Course Objectives
+                </h3>
+
+
+
+                <ul class="check-list">
+
+
+                    <li>
+                        Understand fundamental AWS Cloud concepts and benefits.
+                    </li>
+
+
+                    <li>
+                        Explain AWS compute, storage, database, and networking services.
+                    </li>
+
+
+                    <li>
+                        Understand AWS security, compliance, monitoring, and governance.
+                    </li>
+
+
+                    <li>
+                        Explore AWS AI/ML services and generative AI capabilities.
+                    </li>
+
+
+                    <li>
+                        Understand AWS pricing, support models, and migration strategies.
+                    </li>
+
+
+                    <li>
+                        Learn the AWS Well-Architected Framework principles.
+                    </li>
+
+
+                </ul>
+
+
+
+                <a href="mailto:info@jkssofttech.com" class="btn btn-primary">
+
+                    Register Now
+
                 </a>
 
 
-                <div class="dropdown-menu">
-
-                    <a href="consulting.html">
-                        Consulting
-                    </a>
-
-
-                    <a href="technology.html">
-                        Technology
-                    </a>
-
-
-                    <a href="outsourcing.html">
-                        Outsourcing
-                    </a>
-
-                </div>
 
             </div>
 
 
-            <!-- Industries -->
-            <a href="industries.html"
-               tabindex="4"
-               class="nav-link">
-                Industries
-            </a>
-
-            <!-- Careers -->
-            <div class="nav-item dropdown is-active" >
+        </div>
 
 
-                <a href="careers.html"
-                   tabindex="5"
-                   class="nav-link">
-                    Careers
+    </section>
+
+
+    <!-- AI TRAINING -->
+    <section class="section section-alt">
+        <div class="section-inner ai-training-layout">
+
+            <!-- Left side -->
+            <div class="section-text reveal">
+                <p class="section-eyebrow">Artificial Intelligence</p>
+
+                <h2>AWS Certified AI Practitioner (AIF-C01)</h2>
+
+                <p>
+                    This programme develops the knowledge required to understand
+                    artificial intelligence and machine learning using AWS technologies.
+                    Participants explore AI fundamentals, generative AI applications,
+                    responsible AI practices, and real-world AI solutions.
+                </p>
+
+                <a href="mailto:info@jkssofttech.com" class="btn btn-primary">
+                    Register Now
+                </a>
+            </div>
+
+            <!-- Right side -->
+            <div class="ai-training-dropdowns reveal reveal-delay-1">
+                <details class="course-dropdown" open>
+                    <summary>Course Objectives</summary>
+
+                    <ul class="check-list">
+                        <li>Understand AI and machine learning fundamentals including neural networks and NLP.</li>
+                        <li>Explore generative AI concepts including foundation models, embeddings, and prompt
+                            engineering.</li>
+                        <li>Learn how to build and optimise AI applications using AWS services.</li>
+                        <li>Understand responsible AI principles including fairness, transparency, and governance.</li>
+                        <li>Learn AI security, compliance, and data management practices.</li>
+                    </ul>
+                </details>
+
+                <details class="course-dropdown">
+                    <summary>AWS Services Covered</summary>
+
+                    <ul class="check-list">
+                        <li>Amazon Bedrock — Build and scale generative AI applications.</li>
+                        <li>Amazon Q — AI assistant for business productivity.</li>
+                        <li>Amazon SageMaker — Build, train, and deploy machine learning models.</li>
+                        <li>Amazon Comprehend, Rekognition, Transcribe, and Polly — AI-powered services for text, image,
+                            and speech processing.</li>
+                    </ul>
+                </details>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- CTA -->
+
+
+    <section class="section">
+
+
+        <div class="section-inner section-inner--single" style="text-align:center;">
+
+
+
+            <div class="section-text reveal" style="margin:0 auto;">
+
+
+
+                <p class="section-eyebrow" style="justify-content:center;">
+
+                    Start Learning Today
+
+                </p>
+
+
+
+
+                <h2>
+                    Ready to build your technology future?
+                </h2>
+
+
+
+
+                <p>
+
+                    Join our advanced training programmes and gain the skills required to succeed in cloud, AI, and
+                    digital transformation.
+
+                </p>
+
+
+
+
+                <a href="mailto:info@jkssofttech.com" class="btn btn-primary">
+
+                    Contact Us
+
                 </a>
 
 
-                <div class="dropdown-menu">
-
-
-                    <a href="internship.html">
-                        Internship
-                    </a>
-
-
-                    <a href="advanced-training.html">
-                        Advanced Training
-                    </a>
-
-
-                    <a href="training-schedule.html">
-                        Training Schedule
-                    </a>
-
-
-                </div>
-
 
             </div>
 
-            <!-- Contact -->
-            <a href="index.html#contact"
-               tabindex="6"
-               class="nav-link">
-                Contact
-            </a>
 
+        </div>
 
 
-        </nav>
+    </section>
 
 
-    </div>
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
 
-</header>
+        <div class="footer-inner">
 
-<!-- HERO -->
+            <div class="footer-brand">
+                <span class="logo-text logo-text--footer">JKS Soft Tech</span>
+                <p>
+                    JKS Soft Tech Pte. Ltd.<br>
+                    Consulting · Technology · Outsourcing.
+                </p>
+            </div>
 
+            <div class="footer-nav-wrapper">
 
-<section class="page-hero careers-hero advanced-bg-hero">
+                <div class="footer-nav-contact">
 
+                    <nav class="footer-links" aria-label="Footer navigation">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="industries.html">Industries</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="index.html#contact">Contact</a>
+                    </nav>
 
-<div class="page-hero-inner">
+                    <div class="footer-contact">
+                        <p><strong>Contact Us</strong></p>
+                        <p>Email: <a href="mailto:info@jkssofttech.com">info@jkssofttech.com</a></p>
+                        <p>Phone: <a href="tel:+6582688457">+65 8268 8457</a></p>
+                    </div>
 
+                </div>
 
-<p class="hero-eyebrow">
-Advanced Training
-</p>
+                <div class="footer-social">
+                    <div class="footer-social-icons">
 
+                        <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all" target="_blank"
+                            aria-label="LinkedIn">
+                            <img src="./assets/linkedin.png" alt="LinkedIn">
+                        </a>
 
+                        <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw" target="_blank"
+                            aria-label="Twitter">
+                            <img src="./assets/twitter.png" alt="Twitter">
+                        </a>
 
-<h1>
-Build Future-Ready Technology Skills
-</h1>
+                        <a href="YOUR_THIRD_SOCIAL_LINK" target="_blank" aria-label="WhatsApp">
+                            <img src="./assets/whatsapp.png" alt="WhatsApp">
+                        </a>
 
+                    </div>
+                </div>
 
+            </div>
 
-<p class="page-hero-lede">
+            <p class="footer-copy">
+                © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
+            </p>
 
-Develop expertise in cloud computing, artificial intelligence, machine learning, and emerging technologies through structured industry-focused training programmes.
+        </div>
 
-</p>
+    </footer>
 
 
-</div>
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
 
+            <h3>Message Sent</h3>
 
-</section>
-
-
-
-
-
-
-
-
-<!-- INTRODUCTION -->
-
-
-<section class="section">
-
-
-<div class="section-inner section-inner--single">
-
-
-<div class="section-text reveal">
-
-
-<p class="section-eyebrow">
-Advanced Learning
-</p>
-
-
-
-<h2>
-Empowering Professionals Through Technology Training
-</h2>
-
-
-
-<p>
-
-At JKS Soft Tech, we believe learning is a continuous journey. Our advanced training programmes are designed to help students, professionals, and technology enthusiasts build practical skills through hands-on learning and exposure to industry-leading technologies.
-
-</p>
-
-
-
-<p>
-
-Focused on AWS cloud technologies, artificial intelligence, and digital transformation, our programmes combine theoretical foundations with real-world applications to prepare participants for evolving technology careers.
-
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- TRAINING PROGRAMMES -->
-
-
-<section class="section section-alt">
-
-
-<div class="section-inner">
-
-
-<div class="section-text reveal">
-
-
-<p class="section-eyebrow">
-Training Programmes
-</p>
-
-
-
-<h2>
-Industry-Relevant Cloud & AI Training
-</h2>
-
-
-
-<p>
-
-Our programmes provide participants with practical experience in agile environments, software development practices, cloud solutions, and emerging technologies.
-
-</p>
-
-
-
-<p>
-
-Participants gain exposure to technologies including Java, Tibco, MuleSoft, AWS, artificial intelligence, machine learning, and modern digital consulting practices.
-
-</p>
-
-
-
-</div>
-
-
-
-
-<div class="card reveal reveal-delay-1">
-
-
-<img src="./assets/career.png"
-alt="Advanced technology training"
-class="card-image">
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- AWS CLOUD -->
-
-
-<section class="section">
-
-
-<div class="section-inner section-inner--single">
-
-
-<div class="section-text reveal">
-
-
-<p class="section-eyebrow">
-AWS Certification
-</p>
-
-
-
-<h2>
-AWS Certified Cloud Practitioner (CLF-C02)
-</h2>
-
-
-
-<p>
-
-The AWS Certified Cloud Practitioner certification provides a strong foundation in cloud concepts, AWS services, security, architecture, pricing, and support. It is designed for beginners, career changers, and professionals looking to understand cloud technologies.
-
-</p>
-
-
-
-<h3>
-Course Objectives
-</h3>
-
-
-
-<ul class="check-list">
-
-
-<li>
-Understand fundamental AWS Cloud concepts and benefits.
-</li>
-
-
-<li>
-Explain AWS compute, storage, database, and networking services.
-</li>
-
-
-<li>
-Understand AWS security, compliance, monitoring, and governance.
-</li>
-
-
-<li>
-Explore AWS AI/ML services and generative AI capabilities.
-</li>
-
-
-<li>
-Understand AWS pricing, support models, and migration strategies.
-</li>
-
-
-<li>
-Learn the AWS Well-Architected Framework principles.
-</li>
-
-
-</ul>
-
-
-
-<a href="mailto:info@jkssofttech.com"
-class="btn btn-primary">
-
-Register Now
-
-</a>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- AI TRAINING -->
-
-
-<section class="section section-alt">
-
-
-<div class="section-inner section-inner--single">
-
-
-<div class="section-text reveal">
-
-
-<p class="section-eyebrow">
-Artificial Intelligence
-</p>
-
-
-
-
-<h2>
-AWS Certified AI Practitioner (AIF-C01)
-</h2>
-
-
-
-
-<p>
-
-This programme develops the knowledge required to understand artificial intelligence and machine learning using AWS technologies. Participants explore AI fundamentals, generative AI applications, responsible AI practices, and real-world AI solutions.
-
-</p>
-
-
-
-<h3>
-Course Objectives
-</h3>
-
-
-
-
-<ul class="check-list">
-
-
-<li>
-Understand AI and machine learning fundamentals including neural networks and NLP.
-</li>
-
-
-<li>
-Explore generative AI concepts including foundation models, embeddings, and prompt engineering.
-</li>
-
-
-<li>
-Learn how to build and optimise AI applications using AWS services.
-</li>
-
-
-<li>
-Understand responsible AI principles including fairness, transparency, and governance.
-</li>
-
-
-<li>
-Learn AI security, compliance, and data management practices.
-</li>
-
-
-</ul>
-
-
-
-
-<h3>
-AWS Services Covered
-</h3>
-
-
-
-
-<ul class="check-list">
-
-
-<li>
-Amazon Bedrock — Build and scale generative AI applications.
-</li>
-
-
-<li>
-Amazon Q — AI assistant for business productivity.
-</li>
-
-
-<li>
-Amazon SageMaker — Build, train, and deploy machine learning models.
-</li>
-
-
-<li>
-Amazon Comprehend, Rekognition, Transcribe, and Polly — AI-powered services for text, image, and speech processing.
-</li>
-
-
-</ul>
-
-
-
-<a href="mailto:info@jkssofttech.com"
-class="btn btn-primary">
-
-Register Now
-
-</a>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- CTA -->
-
-
-<section class="section">
-
-
-<div class="section-inner section-inner--single"
-style="text-align:center;">
-
-
-
-<div class="section-text reveal"
-style="margin:0 auto;">
-
-
-
-<p class="section-eyebrow"
-style="justify-content:center;">
-
-Start Learning Today
-
-</p>
-
-
-
-
-<h2>
-Ready to build your technology future?
-</h2>
-
-
-
-
-<p>
-
-Join our advanced training programmes and gain the skills required to succeed in cloud, AI, and digital transformation.
-
-</p>
-
-
-
-
-<a href="mailto:info@jkssofttech.com"
-class="btn btn-primary">
-
-Contact Us
-
-</a>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-
-    <div class="footer-inner">
-
-        <div class="footer-brand">
-            <span class="logo-text logo-text--footer">JKS Soft Tech</span>
             <p>
-                JKS Soft Tech Pte. Ltd.<br>
-                Consulting · Technology · Outsourcing.
+                Thank you for contacting us. We will get back to you within
+                <strong>3 business days.</strong>
             </p>
         </div>
+    </div>
+
+    <!-- Chat Button -->
+    <button id="chat-button">
+        💬
+    </button>
 
 
-       <div class="footer-nav-wrapper">
+    <!-- Chat Window -->
+    <div id="chat-box">
 
-            <nav class="footer-links" aria-label="Footer navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="services.html">Services</a>
-                <a href="industries.html">Industries</a>
-                <a href="careers.html">Careers</a>
-                <a href="index.html#contact">Contact</a>
-                
-            </nav>
+        <div class="chat-header">
+            <span>JKS Assistant</span>
+            <button id="close-chat">×</button>
+        </div>
 
 
-            <div class="footer-social">
-
-           
-
-                <div class="footer-social-icons">
-
-                    <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all"
-                       target="_blank"
-                       aria-label="LinkedIn">
-
-                        <img src="./assets/linkedin.png"
-                             alt="LinkedIn">
-                    </a>
-
-
-                    <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw"
-                       target="_blank"
-                       aria-label="Social Media">
-
-                        <img src="./assets/twitter.png"
-                             alt="Social Media">
-                    </a>
-
-
-                    <a href="YOUR_THIRD_SOCIAL_LINK"
-                       target="_blank"
-                       aria-label="Social Media">
-
-                        <img src="./assets/whatsapp.png"
-                             alt="Social Media">
-                    </a>
-
-                </div>
-
+        <div id="chat-content">
+            <div class="bot-message">
+                Hello! How can I help you today?
             </div>
-
         </div>
 
 
-        <p class="footer-copy">
-            © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
-        </p>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask a question...">
 
-    </div>
-
-</footer>
-
-<div id="successModal" class="modal">
-    <div class="modal-content">
-        <button class="modal-close" aria-label="Close">&times;</button>
-
-        <h3>Message Sent</h3>
-
-        <p>
-            Thank you for contacting us. We will get back to you within
-            <strong>3 business days.</strong>
-        </p>
-    </div>
-</div>
-
-<!-- Chat Button -->
-<button id="chat-button">
-    💬
-</button>
-
-
-<!-- Chat Window -->
-<div id="chat-box">
-
-    <div class="chat-header">
-        <span>JKS Assistant</span>
-        <button id="close-chat">×</button>
-    </div>
-
-
-    <div id="chat-content">
-        <div class="bot-message">
-            Hello! How can I help you today?
+            <button id="send-chat">
+                ➤
+            </button>
         </div>
+
     </div>
 
 
-    <div class="chat-input-area">
-        <input 
-            type="text" 
-            id="chat-input" 
-            placeholder="Ask a question..."
-        >
-
-        <button id="send-chat">
-            ➤
-        </button>
-    </div>
-
-</div>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 
 </body>

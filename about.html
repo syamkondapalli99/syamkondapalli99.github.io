@@ -1,405 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us — JKS Soft Tech</title>
-    <meta name="description" content="JKS Soft Tech is a Singapore-based technology and consulting company helping enterprises reimagine their businesses for the digital age.">
+    <meta name="description"
+        content="JKS Soft Tech is a Singapore-based technology and consulting company helping enterprises reimagine their businesses for the digital age.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <!-- HEADER / NAV -->
+    <header class="header" role="banner">
+        <div class="header-inner">
 
-<!-- HEADER / NAV -->
-<header class="header" role="banner">
-
-    <div class="header-inner">
-
-        <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
-            <img src="./assets/jksLogo.jpg" 
-                 alt="JKS Soft Tech logo" 
-                 class="logo-img">
-        </a>
-
-
-        <button class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="nav-menu">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-        <nav id="nav-menu" 
-             class="nav" 
-             role="navigation" 
-             aria-label="Main navigation">
-
-
-            <!-- Home -->
-            <a href="index.html"
-               tabindex="1"
-               class="nav-link ">
-                Home
+            <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
+                <img src="./assets/jksLogo.jpg" alt="JKS Soft Tech logo" class="logo-img">
             </a>
 
-            <!-- About -->
-            <div class="nav-item dropdown">
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-                <a href="about.html"
-                   class="nav-link">
+            <nav id="nav-menu" class="nav" role="navigation" aria-label="Main navigation">
+                <!-- Home -->
+                <a href="index.html" tabindex="1" class="nav-link">
+                    Home
+                </a>
+
+                <!-- About: no dropdown -->
+                <a href="about.html" tabindex="2" class="nav-link">
                     About Us
                 </a>
 
-
-                <div class="dropdown-menu">
-
-                    <a href="aboutExtra.html">
-                        Our Story
+                <!-- Services -->
+                <div class="nav-item dropdown">
+                    <a href="services.html" tabindex="3" class="nav-link">
+                        Services
                     </a>
 
+                    <div class="dropdown-menu">
+                        <a href="consulting.html">Consulting</a>
+                        <a href="technology.html">Technology</a>
+                        <a href="outsourcing.html">Outsourcing</a>
+                    </div>
                 </div>
 
-            </div>
-
-            <!-- Services -->
-            <div class="nav-item dropdown">
-
-                <a href="services.html"
-                   tabindex="3"
-                   class="nav-link">
-                    Services
+                <!-- Industries -->
+                <a href="industries.html" tabindex="4" class="nav-link">
+                    Industries
                 </a>
 
-
-                <div class="dropdown-menu">
-
-                    <a href="consulting.html">
-                        Consulting
+                <!-- Careers -->
+                <div class="nav-item dropdown is-active">
+                    <a href="careers.html" tabindex="5" class="nav-link">
+                        Careers
                     </a>
 
-
-                    <a href="technology.html">
-                        Technology
-                    </a>
-
-
-                    <a href="outsourcing.html">
-                        Outsourcing
-                    </a>
-
+                    <div class="dropdown-menu">
+                        <a href="internship.html">Internship</a>
+                        <a href="advanced-training.html">Advanced Training</a>
+                        <a href="training-schedule.html">Training Schedule</a>
+                    </div>
                 </div>
 
-            </div>
-
-
-            <!-- Industries -->
-            <a href="industries.html"
-               tabindex="4"
-               class="nav-link">
-                Industries
-            </a>
-
-            <!-- Careers -->
-            <div class="nav-item dropdown is-active" >
-
-
-                <a href="careers.html"
-                   tabindex="5"
-                   class="nav-link">
-                    Careers
+                <!-- Contact -->
+                <a href="index.html#contact" tabindex="6" class="nav-link">
+                    Contact
                 </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero about-hero" aria-label="About Us introduction">
+        <div class="page-hero-inner">
+            <p class="hero-eyebrow">About Us</p>
+            <h1>Helping enterprises reimagine their businesses with AI for the digital age.</h1>
+            <p class="page-hero-lede">Helping enterprises reimagine their businesses for the digital age
+                We are a next-generation technology and consulting company leveraging Artificial Intelligence and modern
+                digital solutions to drive innovation, efficiency, and growth.</p>
+        </div>
+    </section>
 
 
-                <div class="dropdown-menu">
 
+    <!-- OUR STORY -->
+    <section class="section section-alt" aria-labelledby="story-heading">
+        <div class="section-inner">
+            <div class="section-text reveal">
+                <p class="section-eyebrow">Our Story</p>
+                <h2 id="story-heading">Built around Digital Foundation</h2>
+                <p>JKS Soft Tech enables global enterprises to transform their businesses via Digital Foundation — a
+                    modernised infrastructure stack built on hybrid cloud, software-defined networks, the digital
+                    workplace, and the other elements that make up a genuinely digital business.</p>
+                <p>Through our co-innovation labs and delivery capabilities spanning two countries, we deliver holistic
+                    services across industry verticals to leading enterprises, including names within the Fortune 500 of
+                    the Global 2000.</p>
+            </div>
 
-                    <a href="internship.html">
-                        Internship
-                    </a>
+            <div class="reveal reveal-delay-1 image-card">
+                <img src="./assets/aboutComp.jpg" alt="JKS Soft Tech digital innovation workspace"
+                    class="about-story-image">
 
+                <a href="aboutExtra.html" class="btn btn-primary read-more-btn">
+                    Read More →
+                </a>
+                </a>
+            </div>
+        </div>
+    </section>
 
-                    <a href="advanced-training.html">
-                        Advanced Training
-                    </a>
+    <!-- DRIVING INNOVATION... -->
+    <section class="section" aria-labelledby="innovation-heading">
+        <div class="section-inner-single">
 
+            <div class="section-text reveal" style="max-width:750px; margin-bottom:50px;">
+                <p class="section-eyebrow">What We Do</p>
+                <h2 id="innovation-heading">Driving Innovation, Collaboration, and Business Transformation</h2>
+            </div>
 
-                    <a href="training-schedule.html">
-                        Training Schedule
-                    </a>
+            <div class="what-we-do-grid">
 
-
+                <div class="wwd-card reveal">
+                    <span class="wwd-number">01</span>
+                    <h3>What We Do</h3>
+                    <p>We play a key role in business transformation, hybrid workplace strategy, and technology
+                        implementation, delivering solutions that create real impact.</p>
                 </div>
 
+                <div class="wwd-card reveal reveal-delay-1">
+                    <span class="wwd-number">02</span>
+                    <h3>How We Work</h3>
+                    <p>Our delivery teams combine experience, flexibility, quality, and cost efficiency to provide
+                        consistently strong outcomes for our clients.</p>
+                </div>
+
+                <div class="wwd-card reveal reveal-delay-2">
+                    <span class="wwd-number">03</span>
+                    <h3>Who We Partner With</h3>
+                    <p>We collaborate with forward-thinking organisations to design and deliver tailored solutions that
+                        address unique business challenges.</p>
+                </div>
+
+                <div class="wwd-card reveal reveal-delay-3">
+                    <span class="wwd-number">04</span>
+                    <h3>Ahead of the Curve</h3>
+                    <p>Powered by strong technology capabilities and exceptional talent, we stay ahead through an
+                        employee-first culture that empowers people to go beyond expectations and deliver lasting value.
+                    </p>
+                </div>
 
             </div>
 
-            <!-- Contact -->
-            <a href="index.html#contact"
-               tabindex="6"
-               class="nav-link">
-                Contact
-            </a>
-
-
-
-        </nav>
-
-
-    </div>
-
-</header>
-
-<!-- PAGE HERO -->
-<section class="page-hero about-hero" aria-label="About Us introduction">
-    <div class="page-hero-inner">
-        <p class="hero-eyebrow">About Us</p>
-        <h1>Helping enterprises reimagine their businesses with AI for the digital age</h1>
-        <p class="page-hero-lede">Helping enterprises reimagine their businesses for the digital age
-We are a next-generation technology and consuaASlting company leveraging Artificial Intelligence and modern digital solutions to drive innovation, efficiency, and growth.</p>
-    </div>
-</section>
-
-
-
-<!-- OUR STORY -->
-<section class="section section-alt" aria-labelledby="story-heading">
-    <div class="section-inner">
-        <div class="section-text reveal">
-            <p class="section-eyebrow">Our Story</p>
-            <h2 id="story-heading">Built around Digital Foundation</h2>
-            <p>JKS Soft Tech enables global enterprises to transform their businesses via Digital Foundation — a modernised infrastructure stack built on hybrid cloud, software-defined networks, the digital workplace, and the other elements that make up a genuinely digital business.</p>
-            <p>Through our co-innovation labs and delivery capabilities spanning two countries, we deliver holistic services across industry verticals to leading enterprises, including names within the Fortune 500 of the Global 2000.</p>
         </div>
-
-        <div class="reveal reveal-delay-1 image-card">
-    <img src="./assets/aboutComp.jpg" alt="JKS Soft Tech digital innovation workspace" class="about-story-image">
-
-    <a href="aboutExtra.html" class="btn btn-primary read-more-btn">
-    Read More →
-</a>
-    </a>
-</div>
-    </div>
-</section>
-
-<!-- DRIVING INNOVATION... -->
-<section class="section" aria-labelledby="innovation-heading">
-    <div class="section-inner">
-
-        <div class="section-text reveal">
-            <p class="section-eyebrow">What We Do</p>
-            <h2 id="innovation-heading">Driving Innovation, Collaboration, and Business Transformation</h2>
-            <p><strong> What We Do:</strong></p>
-            <p>We play a key role in business transformation, hybrid workplace strategy, and technology implementation, delivering solutions that create real impact.</p>
-
-            <p><strong> How We Work:</strong></p>
-            <p>Our delivery teams combine experience, flexibility, quality, and cost efficiency to provide consistently strong outcomes for our clients.</p>
-
-           
-        </div>
- 
-       <div class="section-text-right reveal reveal-delay-1">
-    <p><strong>Who We Partner With:</strong></p>
-    <p>We collaborate with forward-thinking organisations to design and deliver tailored solutions that address unique business challenges.</p>
-
-    <p style="margin-top:25px;"><strong>Ahead of the Curve:</strong></p>
-    <p>Powered by strong technology capabilities and exceptional talent, we stay ahead through an employee-first culture that empowers people to go beyond expectations and deliver lasting value.</p>
-</div>
-</div>
-
-    </div>
-</section>
+    </section>
 
 
-<!-- DIGITAL READINESS 2.0 -->
-<section class="section section-alt" aria-labelledby="readiness-heading">
-    <div class="section-inner">
+    <!-- DIGITAL READINESS 2.0 -->
+    <section class="section section-alt" aria-labelledby="readiness-heading">
+        <div class="section-inner">
 
-        <!-- MOVED CARD FIRST -->
-<div class="reveal reveal-delay-1">
-    <img src="./assets/digital-readiness-2.0.png" 
-         alt="JKS Soft Tech philosophy" 
-         class="about-story-image about-story-image--large">
-</div>
+            <!-- MOVED CARD FIRST -->
+            <div class="reveal reveal-delay-1">
+                <img src="./assets/digital-readiness-2.0.png" alt="JKS Soft Tech philosophy"
+                    class="about-story-image about-story-image--large">
+            </div>
 
-        <!-- MOVED TEXT SECOND -->
-        <div class="section-text reveal">
-            <p class="section-eyebrow">Our Philosophy</p>
-            <h2 id="readiness-heading">Digital Readiness 2.0</h2>
-            <p>Our consultancy capabilities, application services, and digital operations work together as the backbone of our three business units — helping enterprises navigate the digital age with ease.</p>
-            <p>It's the core of our Digital Readiness 2.0 focus: offering holistic services that meet a client's present technology needs, while preparing them to be future-ready.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- EMPLOYEE-FIRST CULTURE -->
-<section class="section" aria-labelledby="culture-heading">
-    <div class="section-inner">
-        <div class="section-text reveal">
-            <p class="section-eyebrow">Our Culture</p>
-            <h2 id="culture-heading">An employee-first management philosophy</h2>
-            <p>Behind our technology capabilities are some of the world's finest technology talent — driven by a hallmark "employee-first" philosophy that brings the future to our customers.</p>
-            <p>Our culture encourages employees to deliver value to customers beyond contractual obligations. A mature framework of policies, processes, and tools empowers our people, rather than simply managing them.</p>
-        </div>
-        <div class="card reveal reveal-delay-1">
-            <p class="field-label">What this means for clients</p> 
-          <ul class="check-list" aria-label="Culture commitments">
-                <li>Delivery teams that stay with the engagement, not rotate off it</li>
-                <li>Institutional memory that carries from phase one into phase two</li>
-                <li>Diversity, social responsibility, sustainability, and education woven into how we work</li> 
-            </ul> 
-            
+            <!-- MOVED TEXT SECOND -->
+            <div class="section-text reveal">
+                <p class="section-eyebrow">Our Philosophy</p>
+                <h2 id="readiness-heading">Digital Readiness 2.0</h2>
+                <p>Our consultancy capabilities, application services, and digital operations work together as the
+                    backbone of our three business units — helping enterprises navigate the digital age with ease.</p>
+                <p>It's the core of our Digital Readiness 2.0 focus: offering holistic services that meet a client's
+                    present technology needs, while preparing them to be future-ready.</p>
+            </div>
 
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- EMPLOYEE-FIRST CULTURE -->
+    <section class="section" aria-labelledby="culture-heading">
+        <div class="section-inner">
+            <div class="section-text reveal">
+                <p class="section-eyebrow">Our Culture</p>
+                <h2 id="culture-heading">An employee-first management philosophy</h2>
+                <p>Behind our technology capabilities are some of the world's finest technology talent — driven by a
+                    hallmark "employee-first" philosophy that brings the future to our customers.</p>
+                <p>Our culture encourages employees to deliver value to customers beyond contractual obligations. A
+                    mature framework of policies, processes, and tools empowers our people, rather than simply managing
+                    them.</p>
+            </div>
+            <div class="card reveal reveal-delay-1">
+                <p class="field-label">What this means for clients</p>
+                <ul class="check-list" aria-label="Culture commitments">
+                    <li>Delivery teams that stay with the engagement, not rotate off it</li>
+                    <li>Institutional memory that carries from phase one into phase two</li>
+                    <li>Diversity, social responsibility, sustainability, and education woven into how we work</li>
+                </ul>
 
 
-<!-- CONTACT CTA -->
-<section class="section section-alt" aria-labelledby="about-cta-heading">
-    <div class="section-inner section-inner--single" style="text-align:center;">
-        <div class="section-text reveal" style="margin:0 auto;">
-            <p class="section-eyebrow" style="justify-content:center;">Let's Talk</p>
-            <h2 id="about-cta-heading">Want to know more about how we work?</h2>
-            <p>Reach out and a person on the delivery bench will get back to you directly.</p>
-            <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
+    <!-- CONTACT CTA -->
+    <section class="section section-alt" aria-labelledby="about-cta-heading">
+        <div class="section-inner section-inner--single" style="text-align:center;">
+            <div class="section-text reveal" style="margin:0 auto;">
+                <p class="section-eyebrow" style="justify-content:center;">Let's Talk</p>
+                <h2 id="about-cta-heading">Want to know more about how we work?</h2>
+                <p>Reach out and a person on the delivery bench will get back to you directly.</p>
+                <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="footer-inner">
 
-        <div class="footer-brand">
-            <span class="logo-text logo-text--footer">JKS Soft Tech</span>
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <span class="logo-text logo-text--footer">JKS Soft Tech</span>
+                <p>
+                    JKS Soft Tech Pte. Ltd.<br>
+                    Consulting · Technology · Outsourcing.
+                </p>
+            </div>
+
+            <div class="footer-nav-wrapper">
+
+                <div class="footer-nav-contact">
+
+                    <nav class="footer-links" aria-label="Footer navigation">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="industries.html">Industries</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="index.html#contact">Contact</a>
+                    </nav>
+
+                    <div class="footer-contact">
+                        <p><strong>Contact Us</strong></p>
+                        <p>Email: <a href="mailto:info@jkssofttech.com">info@jkssofttech.com</a></p>
+                        <p>Phone: <a href="tel:+6582688457">+65 8268 8457</a></p>
+                    </div>
+
+                </div>
+
+                <div class="footer-social">
+                    <div class="footer-social-icons">
+
+                        <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all" target="_blank"
+                            aria-label="LinkedIn">
+                            <img src="./assets/linkedin.png" alt="LinkedIn">
+                        </a>
+
+                        <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw" target="_blank"
+                            aria-label="Twitter">
+                            <img src="./assets/twitter.png" alt="Twitter">
+                        </a>
+
+                        <a href="YOUR_THIRD_SOCIAL_LINK" target="_blank" aria-label="WhatsApp">
+                            <img src="./assets/whatsapp.png" alt="WhatsApp">
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="footer-copy">
+                © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ChatBot -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
+
+            <h3>Message Sent</h3>
+
             <p>
-                JKS Soft Tech Pte. Ltd.<br>
-                Consulting · Technology · Outsourcing.
+                Thank you for contacting us. We will get back to you within
+                <strong>3 business days.</strong>
             </p>
         </div>
+    </div>
+
+    <!-- Chat Button -->
+    <button id="chat-button">
+        💬
+    </button>
 
 
-        <div class="footer-nav-wrapper">
+    <!-- Chat Window -->
+    <div id="chat-box">
 
-            <nav class="footer-links" aria-label="Footer navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="services.html">Services</a>
-                <a href="industries.html">Industries</a>
-                <a href="careers.html">Careers</a>
-                <a href="index.html#contact">Contact</a>
-                
-            </nav>
+        <div class="chat-header">
+            <span>JKS Assistant</span>
+            <button id="close-chat">×</button>
+        </div>
 
 
-            <div class="footer-social">
-
-           
-
-                <div class="footer-social-icons">
-
-                    <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all"
-                       target="_blank"
-                       aria-label="LinkedIn">
-
-                        <img src="./assets/linkedin.png"
-                             alt="LinkedIn">
-                    </a>
-
-
-                    <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw"
-                       target="_blank"
-                       aria-label="Social Media">
-
-                        <img src="./assets/twitter.png"
-                             alt="Social Media">
-                    </a>
-
-
-                    <a href="YOUR_THIRD_SOCIAL_LINK"
-                       target="_blank"
-                       aria-label="Social Media">
-
-                        <img src="./assets/whatsapp.png"
-                             alt="Social Media">
-                    </a>
-
-                </div>
-
+        <div id="chat-content">
+            <div class="bot-message">
+                Hello! How can I help you today?
             </div>
-
         </div>
 
 
-        <p class="footer-copy">
-            © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
-        </p>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask a question...">
 
-    </div>
-
-</footer>
-
-<!-- ChatBot -->
-<div id="successModal" class="modal">
-    <div class="modal-content">
-        <button class="modal-close" aria-label="Close">&times;</button>
-
-        <h3>Message Sent</h3>
-
-        <p>
-            Thank you for contacting us. We will get back to you within
-            <strong>3 business days.</strong>
-        </p>
-    </div>
-</div>
-
-<!-- Chat Button -->
-<button id="chat-button">
-    💬
-</button>
-
-
-<!-- Chat Window -->
-<div id="chat-box">
-
-    <div class="chat-header">
-        <span>JKS Assistant</span>
-        <button id="close-chat">×</button>
-    </div>
-
-
-    <div id="chat-content">
-        <div class="bot-message">
-            Hello! How can I help you today?
+            <button id="send-chat">
+                ➤
+            </button>
         </div>
+
     </div>
 
-
-    <div class="chat-input-area">
-        <input 
-            type="text" 
-            id="chat-input" 
-            placeholder="Ask a question..."
-        >
-
-        <button id="send-chat">
-            ➤
-        </button>
-    </div>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
-

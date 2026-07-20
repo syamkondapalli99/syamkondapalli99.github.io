@@ -1,427 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JKS Soft Tech — Consulting, Technology &amp; Outsourcing</title>
-    <meta name="description" content="JKS Soft Tech is a Singapore-based technology consulting and integration partner — Consulting, Technology, and Outsourcing for enterprise digital transformation.">
+    <meta name="description"
+        content="JKS Soft Tech is a Singapore-based technology consulting and integration partner — Consulting, Technology, and Outsourcing for enterprise digital transformation.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- HEADER / NAV -->
+    <header class="header" role="banner">
+        <div class="header-inner">
 
-
-<!-- HEADER / NAV -->
-<header class="header" role="banner">
-
-    <div class="header-inner">
-
-        <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
-            <img src="./assets/jksLogo.jpg" 
-                 alt="JKS Soft Tech logo" 
-                 class="logo-img">
-        </a>
-
-
-        <button class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="nav-menu">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-        <nav id="nav-menu" 
-             class="nav" 
-             role="navigation" 
-             aria-label="Main navigation">
-
-
-            <!-- Home -->
-            <a href="index.html"
-               tabindex="1"
-               class="nav-link ">
-                Home
+            <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
+                <img src="./assets/jksLogo.jpg" alt="JKS Soft Tech logo" class="logo-img">
             </a>
 
-            <!-- About -->
-            <div class="nav-item dropdown">
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-                <a href="about.html"
-                   class="nav-link">
+            <nav id="nav-menu" class="nav" role="navigation" aria-label="Main navigation">
+                <!-- Home -->
+                <a href="index.html" tabindex="1" class="nav-link">
+                    Home
+                </a>
+
+                <!-- About: no dropdown -->
+                <a href="about.html" tabindex="2" class="nav-link">
                     About Us
                 </a>
 
-
-                <div class="dropdown-menu">
-
-                    <a href="aboutExtra.html">
-                        Our Story
+                <!-- Services -->
+                <div class="nav-item dropdown">
+                    <a href="services.html" tabindex="3" class="nav-link">
+                        Services
                     </a>
 
+                    <div class="dropdown-menu">
+                        <a href="consulting.html">Consulting</a>
+                        <a href="technology.html">Technology</a>
+                        <a href="outsourcing.html">Outsourcing</a>
+                    </div>
                 </div>
 
-            </div>
-
-            <!-- Services -->
-            <div class="nav-item dropdown">
-
-                <a href="services.html"
-                   tabindex="3"
-                   class="nav-link">
-                    Services
+                <!-- Industries -->
+                <a href="industries.html" tabindex="4" class="nav-link">
+                    Industries
                 </a>
 
-
-                <div class="dropdown-menu">
-
-                    <a href="consulting.html">
-                        Consulting
+                <!-- Careers -->
+                <div class="nav-item dropdown is-active">
+                    <a href="careers.html" tabindex="5" class="nav-link">
+                        Careers
                     </a>
 
-
-                    <a href="technology.html">
-                        Technology
-                    </a>
-
-
-                    <a href="outsourcing.html">
-                        Outsourcing
-                    </a>
-
+                    <div class="dropdown-menu">
+                        <a href="internship.html">Internship</a>
+                        <a href="advanced-training.html">Advanced Training</a>
+                        <a href="training-schedule.html">Training Schedule</a>
+                    </div>
                 </div>
 
-            </div>
-
-
-            <!-- Industries -->
-            <a href="industries.html"
-               tabindex="4"
-               class="nav-link">
-                Industries
-            </a>
-
-            <!-- Careers -->
-            <div class="nav-item dropdown 
-            
-            
-            " >
-
-
-                <a href="careers.html"
-                   tabindex="5"
-                   class="nav-link">
-                    Careers
+                <!-- Contact -->
+                <a href="index.html#contact" tabindex="6" class="nav-link">
+                    Contact
                 </a>
-
-
-                <div class="dropdown-menu">
-
-
-                    <a href="internship.html">
-                        Internship
-                    </a>
-
-
-                    <a href="advanced-training.html">
-                        Advanced Training
-                    </a>
-
-
-                    <a href="training-schedule.html">
-                        Training Schedule
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-            <!-- Contact -->
-            <a href="index.html#contact"
-               tabindex="6"
-               class="nav-link">
-                Contact
-            </a>
-
-
-
-        </nav>
-
-
-    </div>
-
-</header>
-<!-- ===============================
+            </nav>
+        </div>
+    </header>
+    <!-- ===============================
      OUTSOURCING HERO
 ================================ -->
 
-<section class="outsourcing-hero">
+    <section class="outsourcing-hero">
 
-    <div class="outsourcing-overlay"></div>
+        <div class="outsourcing-overlay"></div>
 
-    <div class="outsourcing-hero-content">
+        <div class="outsourcing-hero-content">
 
-       <p class="hero-eyebrow">Outsourcing Services</p>
-        <h1>
-            Reliable Technology Delivery
-            <span>Beyond Boundaries</span>
-        </h1>
+            <p class="hero-eyebrow">Outsourcing Services</p>
+            <h1>
+                Reliable Technology Delivery
+                <span>Beyond Boundaries</span>
+            </h1>
 
-        <p>
-            With over 5 years of experience specialising in offshore
-            software outsourcing, we deliver high-quality solutions
-            that help businesses improve efficiency, scalability,
-            and operational performance.
-        </p>
+            <p>
+                With over 5 years of experience specialising in offshore
+                software outsourcing, we deliver high-quality solutions
+                that help businesses improve efficiency, scalability,
+                and operational performance.
+            </p>
 
-    </div>
+        </div>
 
-</section>
+    </section>
 
 
 
-<!-- ===============================
+    <!-- ===============================
      OUTSOURCING CONTENT
 ================================ -->
 
-<section class="outsourcing-section">
+    <section class="outsourcing-section">
 
-    <div class="outsourcing-container">
-
-
-        <div class="outsourcing-intro">
-
-            <h2>
-                Flexible outsourcing solutions
-                built for business growth
-            </h2>
-
-            <p>
-                We partner with organisations worldwide to provide
-                reliable outsourcing services supported by experienced
-                teams, proven processes, and a commitment to quality.
-            </p>
-
-        </div>
+        <div class="outsourcing-container">
 
 
+            <div class="outsourcing-intro">
 
-        <div class="outsourcing-grid">
-
-
-            <article class="outsourcing-card">
-
-                <div class="outsourcing-icon">
-                    01
-                </div>
-
-
-                <h3>
-                    Services
-                </h3>
-
+                <h2>
+                    Flexible outsourcing solutions
+                    built for business growth
+                </h2>
 
                 <p>
-                    We provide comprehensive outsourcing solutions
-                    designed to support critical business functions
-                    and technology operations.
+                    We partner with organisations worldwide to provide
+                    reliable outsourcing services supported by experienced
+                    teams, proven processes, and a commitment to quality.
                 </p>
 
-
-                <ul>
-                    <li>Application Outsourcing</li>
-                    <li>Business Process Outsourcing</li>
-                    <li>Customer Contact Services</li>
-                    <li>Finance & Accounting Support</li>
-                    <li>Human Resources Solutions</li>
-                    <li>Learning & Training Services</li>
-                    <li>Infrastructure Outsourcing</li>
-                </ul>
-
-
-            </article>
+            </div>
 
 
 
+            <div class="outsourcing-grid">
 
 
-            <article class="outsourcing-card">
+                <article class="outsourcing-card">
 
-                <div class="outsourcing-icon">
-                    02
+                    <div class="outsourcing-icon">
+                        01
+                    </div>
+
+
+                    <h3>
+                        Services
+                    </h3>
+
+
+                    <p>
+                        We provide comprehensive outsourcing solutions
+                        designed to support critical business functions
+                        and technology operations.
+                    </p>
+
+
+                    <ul>
+                        <li>Application Outsourcing</li>
+                        <li>Business Process Outsourcing</li>
+                        <li>Customer Contact Services</li>
+                        <li>Finance & Accounting Support</li>
+                        <li>Human Resources Solutions</li>
+                        <li>Learning & Training Services</li>
+                        <li>Infrastructure Outsourcing</li>
+                    </ul>
+
+
+                </article>
+
+
+
+
+
+                <article class="outsourcing-card">
+
+                    <div class="outsourcing-icon">
+                        02
+                    </div>
+
+
+                    <h3>
+                        Contract Models
+                    </h3>
+
+
+                    <p>
+                        We provide flexible engagement models that
+                        adapt to your business requirements and
+                        project objectives.
+                    </p>
+
+
+                    <ul>
+                        <li>
+                            Fixed-Bid (Project-Based) Contract
+                        </li>
+
+                        <li>
+                            Time & Material-Based Contract
+                        </li>
+
+                        <li>
+                            Dedicated Team Contract
+                        </li>
+
+                    </ul>
+
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <span class="logo-text logo-text--footer">JKS Soft Tech</span>
+                <p>
+                    JKS Soft Tech Pte. Ltd.<br>
+                    Consulting · Technology · Outsourcing.
+                </p>
+            </div>
+
+            <div class="footer-nav-wrapper">
+
+                <div class="footer-nav-contact">
+
+                    <nav class="footer-links" aria-label="Footer navigation">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="industries.html">Industries</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="index.html#contact">Contact</a>
+                    </nav>
+
+                    <div class="footer-contact">
+                        <p><strong>Contact Us</strong></p>
+                        <p>Email: <a href="mailto:info@jkssofttech.com">info@jkssofttech.com</a></p>
+                        <p>Phone: <a href="tel:+6582688457">+65 8268 8457</a></p>
+                    </div>
+
                 </div>
 
+                <div class="footer-social">
+                    <div class="footer-social-icons">
 
-                <h3>
-                    Contract Models
-                </h3>
+                        <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all" target="_blank"
+                            aria-label="LinkedIn">
+                            <img src="./assets/linkedin.png" alt="LinkedIn">
+                        </a>
 
+                        <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw" target="_blank"
+                            aria-label="Twitter">
+                            <img src="./assets/twitter.png" alt="Twitter">
+                        </a>
 
-                <p>
-                    We provide flexible engagement models that
-                    adapt to your business requirements and
-                    project objectives.
-                </p>
+                        <a href="YOUR_THIRD_SOCIAL_LINK" target="_blank" aria-label="WhatsApp">
+                            <img src="./assets/whatsapp.png" alt="WhatsApp">
+                        </a>
 
-
-                <ul>
-                    <li>
-                        Fixed-Bid (Project-Based) Contract
-                    </li>
-
-                    <li>
-                        Time & Material-Based Contract
-                    </li>
-
-                    <li>
-                        Dedicated Team Contract
-                    </li>
-
-                </ul>
-
-
-            </article>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-
-    <div class="footer-inner">
-
-        <div class="footer-brand">
-            <span class="logo-text logo-text--footer">JKS Soft Tech</span>
-            <p>
-                JKS Soft Tech Pte. Ltd.<br>
-                Consulting · Technology · Outsourcing.
-            </p>
-        </div>
-
-
-      <div class="footer-nav-wrapper">
-
-            <nav class="footer-links" aria-label="Footer navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="services.html">Services</a>
-                <a href="industries.html">Industries</a>
-                <a href="careers.html">Careers</a>
-                <a href="index.html#contact">Contact</a>
-                
-            </nav>
-
-
-            <div class="footer-social">
-
-           
-
-                <div class="footer-social-icons">
-
-                    <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all"
-                       target="_blank"
-                       aria-label="LinkedIn">
-
-                        <img src="./assets/linkedin.png"
-                             alt="LinkedIn">
-                    </a>
-
-
-                    <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw"
-                       target="_blank"
-                       aria-label="Social Media">
-
-                        <img src="./assets/twitter.png"
-                             alt="Social Media">
-                    </a>
-
-
-                    <a href="YOUR_THIRD_SOCIAL_LINK"
-                       target="_blank"
-                       aria-label="Social Media">
-
-                        <img src="./assets/whatsapp.png"
-                             alt="Social Media">
-                    </a>
-
+                    </div>
                 </div>
 
             </div>
 
+            <p class="footer-copy">
+                © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
+            </p>
+
         </div>
 
-
-        <p class="footer-copy">
-            © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
-        </p>
-
-    </div>
-
-</footer>
+    </footer>
 
 
-<div id="successModal" class="modal">
-    <div class="modal-content">
-        <button class="modal-close" aria-label="Close">&times;</button>
 
-        <h3>Message Sent</h3>
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
 
-        <p>
-            Thank you for contacting us. We will get back to you within
-            <strong>3 business days.</strong>
-        </p>
-    </div>
-</div>
+            <h3>Message Sent</h3>
 
-<!-- Chat Button -->
-<button id="chat-button">
-    💬
-</button>
-
-
-<!-- Chat Window -->
-<div id="chat-box">
-
-    <div class="chat-header">
-        <span>JKS Assistant</span>
-        <button id="close-chat">×</button>
-    </div>
-
-
-    <div id="chat-content">
-        <div class="bot-message">
-            Hello! How can I help you today?
+            <p>
+                Thank you for contacting us. We will get back to you within
+                <strong>3 business days.</strong>
+            </p>
         </div>
     </div>
 
+    <!-- Chat Button -->
+    <button id="chat-button">
+        💬
+    </button>
 
-    <div class="chat-input-area">
-        <input 
-            type="text" 
-            id="chat-input" 
-            placeholder="Ask a question..."
-        >
 
-        <button id="send-chat">
-            ➤
-        </button>
+    <!-- Chat Window -->
+    <div id="chat-box">
+
+        <div class="chat-header">
+            <span>JKS Assistant</span>
+            <button id="close-chat">×</button>
+        </div>
+
+
+        <div id="chat-content">
+            <div class="bot-message">
+                Hello! How can I help you today?
+            </div>
+        </div>
+
+
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask a question...">
+
+            <button id="send-chat">
+                ➤
+            </button>
+        </div>
+
     </div>
 
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

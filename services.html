@@ -1,552 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services — JKS Soft Tech</title>
-    <meta name="description" content="Consulting, Technology, and Outsourcing services from JKS Soft Tech — strategy, systems integration, and long-term delivery for enterprise digital transformation.">
+    <meta name="description"
+        content="Consulting, Technology, and Outsourcing services from JKS Soft Tech — strategy, systems integration, and long-term delivery for enterprise digital transformation.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<!-- HEADER / NAV -->
-<!-- HEADER / NAV -->
-<header class="header" role="banner">
+    <!-- HEADER / NAV -->
+    <header class="header" role="banner">
+        <div class="header-inner">
 
-    <div class="header-inner">
-
-        <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
-            <img src="./assets/jksLogo.jpg" 
-                 alt="JKS Soft Tech logo" 
-                 class="logo-img">
-        </a>
-
-
-        <button class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="nav-menu">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-        <nav id="nav-menu" 
-             class="nav" 
-             role="navigation" 
-             aria-label="Main navigation">
-
-
-            <!-- Home -->
-            <a href="index.html"
-               tabindex="1"
-               class="nav-link ">
-                Home
+            <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
+                <img src="./assets/jksLogo.jpg" alt="JKS Soft Tech logo" class="logo-img">
             </a>
 
-            <!-- About -->
-            <div class="nav-item dropdown">
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-                <a href="about.html"
-                   class="nav-link">
+            <nav id="nav-menu" class="nav" role="navigation" aria-label="Main navigation">
+                <!-- Home -->
+                <a href="index.html" tabindex="1" class="nav-link">
+                    Home
+                </a>
+
+                <!-- About: no dropdown -->
+                <a href="about.html" tabindex="2" class="nav-link">
                     About Us
                 </a>
 
-
-                <div class="dropdown-menu">
-
-                    <a href="aboutExtra.html">
-                        Our Story
+                <!-- Services -->
+                <div class="nav-item dropdown">
+                    <a href="services.html" tabindex="3" class="nav-link">
+                        Services
                     </a>
 
+                    <div class="dropdown-menu">
+                        <a href="consulting.html">Consulting</a>
+                        <a href="technology.html">Technology</a>
+                        <a href="outsourcing.html">Outsourcing</a>
+                    </div>
                 </div>
 
-            </div>
-
-            <!-- Services -->
-            <div class="nav-item dropdown">
-
-                <a href="services.html"
-                   tabindex="3"
-                   class="nav-link">
-                    Services
+                <!-- Industries -->
+                <a href="industries.html" tabindex="4" class="nav-link">
+                    Industries
                 </a>
 
-
-                <div class="dropdown-menu">
-
-                    <a href="consulting.html">
-                        Consulting
+                <!-- Careers -->
+                <div class="nav-item dropdown is-active">
+                    <a href="careers.html" tabindex="5" class="nav-link">
+                        Careers
                     </a>
 
-
-                    <a href="technology.html">
-                        Technology
-                    </a>
-
-
-                    <a href="outsourcing.html">
-                        Outsourcing
-                    </a>
-
+                    <div class="dropdown-menu">
+                        <a href="internship.html">Internship</a>
+                        <a href="advanced-training.html">Advanced Training</a>
+                        <a href="training-schedule.html">Training Schedule</a>
+                    </div>
                 </div>
 
-            </div>
+                <!-- Contact -->
+                <a href="index.html#contact" tabindex="6" class="nav-link">
+                    Contact
+                </a>
+            </nav>
+        </div>
+    </header>
 
 
-            <!-- Industries -->
-            <a href="industries.html"
-               tabindex="4"
-               class="nav-link">
-                Industries
-            </a>
+    <!-- SERVICES HERO -->
+    <section class="outsourcing-hero services-page-hero">
+        <div class="outsourcing-overlay"></div>
 
-            <!-- Careers -->
-            <div class="nav-item dropdown" >
+        <div class="outsourcing-hero-content">
+            <p class="hero-eyebrow">Services</p>
+
+            <h1>
+                One relationship,
+                <span>three ways to work with us</span>
+            </h1>
+
+            <p>
+                Every engagement draws on the same delivery bench. We focus on
+                the issues and opportunities that matter most.
+            </p>
+        </div>
+    </section>
 
 
-                <a href="careers.html"
-                   tabindex="5"
-                   class="nav-link">
-                    Careers
+    <!-- CONSULTING -->
+    <section id="consulting" class="section" aria-labelledby="consulting-heading">
+        <div class="section-inner">
+
+            <div class="section-text reveal">
+                <p class="section-eyebrow">Consulting</p>
+
+                <h2 id="consulting-heading">
+                    Start with the right architecture
+                </h2>
+
+                <p>
+                    Strategy and architecture work for teams deciding what to build, buy, or retire.
+                    We get into the org chart, not just the tech stack, so recommendations survive
+                    contact with reality.
+                </p>
+
+                <p>
+                    We bring deep, functional expertise, but are known for our holistic perspective —
+                    capturing value across the boundaries and silos of any organisation, rather than
+                    optimising individual pieces in isolation.
+                </p>
+
+                <a href="consulting.html" class="btn btn-primary btn-read-more">
+                    Read More →
                 </a>
 
-
-                <div class="dropdown-menu">
-
-
-                    <a href="internship.html">
-                        Internship
-                    </a>
+            </div>
 
 
-                    <a href="advanced-training.html">
-                        Advanced Training
-                    </a>
+            <div class="card reveal reveal-delay-1 consulting-image-card">
 
+                <img src="./assets/handshake-higher-resolution.png" alt="Consulting and technology architecture"
+                    class="consulting-image">
 
-                    <a href="training-schedule.html">
-                        Training Schedule
-                    </a>
+                <div class="consulting-details">
+                    <p class="field-label">What's included</p>
 
-
+                    <ul class="check-list" aria-label="Consulting services">
+                        <li>Digital foundation &amp; roadmap</li>
+                        <li>Integration &amp; systems architecture</li>
+                        <li>Technology due diligence</li>
+                        <li>Corporate finance &amp; M&amp;A support</li>
+                        <li>Digital maturity assessment</li>
+                    </ul>
                 </div>
 
+                <a href="index.html#contact" class="btn btn-primary btn-full">
+                    Book a Consulting Call
+                </a>
 
             </div>
 
-            <!-- Contact -->
-            <a href="index.html#contact"
-               tabindex="6"
-               class="nav-link">
-                Contact
-            </a>
-
-
-
-        </nav>
-
-
-    </div>
-
-</header>
-
-
-<!-- PAGE HERO -->
-<section class="page-hero services-hero" aria-label="Services introduction">
-    <div class="page-hero-inner">
-        <p class="hero-eyebrow">Services</p>
-        <h1>One relationship, three ways to work with us</h1>
-        <p class="page-hero-lede">
-            Every engagement draws on the same delivery bench. We focus on the issues and opportunities that matter most.
-        </p>
-    </div>
-</section>
-
-
-<!-- CONSULTING -->
-<section id="consulting" class="section" aria-labelledby="consulting-heading">
-    <div class="section-inner">
-
-        <div class="section-text reveal">
-            <p class="section-eyebrow">Consulting</p>
-
-            <h2 id="consulting-heading">
-                Start with the right architecture
-            </h2>
-
-            <p>
-                Strategy and architecture work for teams deciding what to build, buy, or retire. 
-                We get into the org chart, not just the tech stack, so recommendations survive 
-                contact with reality.
-            </p>
-
-            <p>
-                We bring deep, functional expertise, but are known for our holistic perspective — 
-                capturing value across the boundaries and silos of any organisation, rather than 
-                optimising individual pieces in isolation.
-            </p>
-
-     <a href="consulting.html" class="btn btn-primary btn-read-more">
-    Read More →
-</a>
-
         </div>
+    </section>
 
+    <!-- TECHNOLOGY -->
+    <section id="technology" class="section section-alt" aria-labelledby="technology-heading">
+        <div class="section-inner">
 
-        <div class="card reveal reveal-delay-1 consulting-image-card">
+            <div class="section-text reveal">
 
-            <img 
-                src="./assets/handshake-higher-resolution.png" 
-                alt="Consulting and technology architecture"
-                class="consulting-image"
-            >
+                <p class="section-eyebrow">Technology</p>
 
-            <div class="consulting-details">
-                <p class="field-label">What's included</p>
+                <h2 id="technology-heading">
+                    Build on middleware you already trust
+                </h2>
 
-                <ul class="check-list" aria-label="Consulting services">
-                    <li>Digital foundation &amp; roadmap</li>
-                    <li>Integration &amp; systems architecture</li>
-                    <li>Technology due diligence</li>
-                    <li>Corporate finance &amp; M&amp;A support</li>
-                    <li>Digital maturity assessment</li>
-                </ul>
+                <p>
+                    Hands-on build and implementation across the platforms enterprises already run on —
+                    middleware, APIs, cloud, and the automation that connects them.
+                </p>
+
+                <p>
+                    If you're already living in the cloud, we help you maximise that investment:
+                    modern architecture techniques that improve business continuity and reduce
+                    operational risk, guided by a framework that reads the digital trends shaping
+                    your industry five, ten, even twenty years out.
+                </p>
+
+                <a href="technology.html" class="btn btn-primary btn-read-more">
+                    Read More →
+                </a>
+
             </div>
 
-            <a href="index.html#contact" class="btn btn-primary btn-full">
-                Book a Consulting Call
-            </a>
 
-        </div>
+            <div class="card reveal reveal-delay-1">
 
-    </div>
-</section>
+                <div class="code-scene" aria-hidden="true">
 
-<!-- TECHNOLOGY -->
-<section id="technology" class="section section-alt" aria-labelledby="technology-heading">
-    <div class="section-inner">
+                    <div class="code-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-        <div class="section-text reveal">
-
-            <p class="section-eyebrow">Technology</p>
-
-            <h2 id="technology-heading">
-                Build on middleware you already trust
-            </h2>
-
-            <p>
-                Hands-on build and implementation across the platforms enterprises already run on — 
-                middleware, APIs, cloud, and the automation that connects them.
-            </p>
-
-            <p>
-                If you're already living in the cloud, we help you maximise that investment: 
-                modern architecture techniques that improve business continuity and reduce 
-                operational risk, guided by a framework that reads the digital trends shaping 
-                your industry five, ten, even twenty years out.
-            </p>
-
-<a href="technology.html" class="btn btn-primary btn-read-more">
-    Read More   →
-</a>
-
-        </div>
-
-
-        <div class="card reveal reveal-delay-1">
-
-            <div class="code-scene" aria-hidden="true">
-
-                <div class="code-dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-                <pre class="code-lines"><span class="code-line l1"><span class="code-kw">const</span> integration = connect(<span class="code-str">'TIBCO'</span>, <span class="code-str">'MuleSoft'</span>);</span>
+                    <pre class="code-lines"><span class="code-line l1"><span class="code-kw">const</span> integration = connect(<span class="code-str">'TIBCO'</span>, <span class="code-str">'MuleSoft'</span>);</span>
 <span class="code-line l2">await integration.<span class="code-fn">sync</span>(apiGateway);</span>
 <span class="code-line l3">cloud.<span class="code-fn">deploy</span>(integration);</span>
 <span class="code-line l4"><span class="code-comment">// systems, talking to each other</span></span></pre>
 
+                </div>
+
+
+                <p class="field-label">What's included</p>
+
+                <ul class="check-list" aria-label="Technology services">
+                    <li>TIBCO &amp; MuleSoft implementation</li>
+                    <li>API design &amp; delivery</li>
+                    <li>Cloud migration &amp; hybrid infrastructure</li>
+                    <li>Microservices &amp; systems architecture</li>
+                    <li>Digital maturity tooling</li>
+                </ul>
+
+
+                <a href="#capabilities" class="btn btn-primary btn-full">
+                    See Our Tech Stack
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- OUTSOURCING -->
+    <section id="outsourcing" class="section" aria-labelledby="outsourcing-heading">
+
+        <div class="section-inner">
+
+            <div class="section-text reveal">
+
+                <p class="section-eyebrow">Outsourcing</p>
+
+                <h2 id="outsourcing-heading">
+                    Delivery teams that stay with the roadmap
+                </h2>
+
+                <p>
+                    Dedicated delivery teams that sit inside your roadmap long-term — for the ongoing
+                    work that needs continuity more than a one-off project. With years of experience
+                    specialising in offshore software outsourcing, we bring the same quality bar to
+                    every engagement.
+                </p>
+
+
+                <a href="outsourcing.html" class="btn btn-primary btn-read-more">
+                    Read More →
+                </a>
+
             </div>
 
 
-            <p class="field-label">What's included</p>
+            <div class="card quote-card outsourcing-card reveal reveal-delay-1">
 
-            <ul class="check-list" aria-label="Technology services">
-                <li>TIBCO &amp; MuleSoft implementation</li>
-                <li>API design &amp; delivery</li>
-                <li>Cloud migration &amp; hybrid infrastructure</li>
-                <li>Microservices &amp; systems architecture</li>
-                <li>Digital maturity tooling</li>
-            </ul>
+                <img src="./assets/team.jpg" alt="Long term outsourcing delivery team" class="outsourcing-card-image">
 
+                <a href="index.html#contact" class="btn btn-primary btn-full">
+                    Talk About Long-Term Delivery
+                </a>
 
-            <a href="#capabilities" class="btn btn-primary btn-full">
-                See Our Tech Stack
-            </a>
+            </div>
 
         </div>
+        <div class="section-inner" style="margin-top:48px;">
+            <div class="section-text reveal" style="grid-column: span 2;">
+                <p class="field-label">Our outsourcing coverage</p>
+                <div class="accordion" aria-label="Outsourcing coverage">
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-trigger" aria-expanded="false">
+                            Application Outsourcing
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="accordion-panel-inner">
+                                <p>Ongoing management and improvement of business applications to ensure they remain
+                                    secure, reliable, and aligned with evolving business needs. Dedicated teams handle
+                                    application support, maintenance, enhancements, performance optimization, and
+                                    modernization, helping organizations maximize the value and lifespan of their
+                                    applications while reducing operational complexity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-trigger" aria-expanded="false">
+                            Business Process Outsourcing
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="accordion-panel-inner">
+                                <p>Business process outsourcing enables organizations to streamline essential operations
+                                    by transferring specific business functions to a dedicated team. Services such as
+                                    customer support, finance and accounting, and human resources management are handled
+                                    efficiently, allowing internal teams to focus on strategic initiatives while
+                                    improving productivity, accuracy, and operational efficiency.p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-trigger" aria-expanded="false">
+                            Infrastructure Outsourcing
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="accordion-panel-inner">
+                                <p>Infrastructure outsourcing provides comprehensive management of the technology
+                                    environment that supports business systems and applications. Dedicated teams oversee
+                                    monitoring, maintenance, security, and performance optimization to ensure high
+                                    availability, reliability, and scalability, reducing dependency on individual
+                                    in-house specialists while keeping operations running smoothly.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-trigger" aria-expanded="false">
+                            Learning &amp; Training
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="accordion-panel-inner">
+                                <p>Learning and training programmes designed to strengthen internal capabilities and
+                                    support continuous professional development. Through structured knowledge sharing,
+                                    hands-on guidance, and skill-building initiatives, teams gain the expertise needed
+                                    to adopt new technologies and improve processes. Our approach ensures knowledge is
+                                    transferred effectively throughout the engagement, empowering internal teams to grow
+                                    independently rather than relying solely on external support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
-</section>
+
+    <!-- CAPABILITIES -->
+    <section id="capabilities" class="section section-alt" aria-labelledby="stack-heading">
+        <div class="section-inner section-inner--single">
+            <div class="section-text reveal">
+                <p class="section-eyebrow">Capabilities</p>
+                <h2 id="stack-heading">The stack we build on</h2>
+                <p>Certified across the platforms enterprises already depend on.</p>
+            </div>
+            <div class="chip-grid reveal reveal-delay-1" aria-label="Technology capabilities">
+                <span class="chip">TIBCO</span>
+                <span class="chip">MuleSoft</span>
+                <span class="chip">REST &amp; SOAP APIs</span>
+                <span class="chip">Microservices</span>
+                <span class="chip">AWS</span>
+                <span class="chip">Google Cloud Platform</span>
+                <span class="chip">DigitalOcean</span>
+                <span class="chip">Azure</span>
+                <span class="chip">SOA</span>
+                <span class="chip">IoT</span>
+                <span class="chip">DevOps</span>
+                <span class="chip">Process Automation</span>
+                <span class="chip">Advanced Analytics</span>
+                <span class="chip">Data Science</span>
+                <span class="chip">Digital Payments</span>
+            </div>
+        </div>
+    </section>
 
 
-<!-- OUTSOURCING -->
-<section id="outsourcing" class="section" aria-labelledby="outsourcing-heading">
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
 
-    <div class="section-inner">
+        <div class="footer-inner">
 
-        <div class="section-text reveal">
+            <div class="footer-brand">
+                <span class="logo-text logo-text--footer">JKS Soft Tech</span>
+                <p>
+                    JKS Soft Tech Pte. Ltd.<br>
+                    Consulting · Technology · Outsourcing.
+                </p>
+            </div>
 
-            <p class="section-eyebrow">Outsourcing</p>
+            <div class="footer-nav-wrapper">
 
-            <h2 id="outsourcing-heading">
-                Delivery teams that stay with the roadmap
-            </h2>
+                <div class="footer-nav-contact">
 
-            <p>
-                Dedicated delivery teams that sit inside your roadmap long-term — for the ongoing 
-                work that needs continuity more than a one-off project. With years of experience 
-                specialising in offshore software outsourcing, we bring the same quality bar to 
-                every engagement.
+                    <nav class="footer-links" aria-label="Footer navigation">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="industries.html">Industries</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="index.html#contact">Contact</a>
+                    </nav>
+
+                    <div class="footer-contact">
+                        <p><strong>Contact Us</strong></p>
+                        <p>Email: <a href="mailto:info@jkssofttech.com">info@jkssofttech.com</a></p>
+                        <p>Phone: <a href="tel:+6582688457">+65 8268 8457</a></p>
+                    </div>
+
+                </div>
+
+                <div class="footer-social">
+                    <div class="footer-social-icons">
+
+                        <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all" target="_blank"
+                            aria-label="LinkedIn">
+                            <img src="./assets/linkedin.png" alt="LinkedIn">
+                        </a>
+
+                        <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw" target="_blank"
+                            aria-label="Twitter">
+                            <img src="./assets/twitter.png" alt="Twitter">
+                        </a>
+
+                        <a href="YOUR_THIRD_SOCIAL_LINK" target="_blank" aria-label="WhatsApp">
+                            <img src="./assets/whatsapp.png" alt="WhatsApp">
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="footer-copy">
+                © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
             </p>
 
-
-  <a href="outsourcing.html" class="btn btn-primary btn-read-more">
-    Read More  →
-</a>
-
         </div>
 
+    </footer>
 
-        <div class="card quote-card outsourcing-card reveal reveal-delay-1">
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
 
-            <img 
-                src="./assets/team.jpg" 
-                alt="Long term outsourcing delivery team"
-                class="outsourcing-card-image"
-            >
+            <h3>Message Sent</h3>
 
-            <a href="index.html#contact" class="btn btn-primary btn-full">
-                Talk About Long-Term Delivery
-            </a>
-
-        </div>
-
-    </div>
-    <div class="section-inner" style="margin-top:48px;">
-        <div class="section-text reveal" style="grid-column: span 2;">
-            <p class="field-label">Our outsourcing coverage</p>
-            <div class="accordion" aria-label="Outsourcing coverage">
-                <div class="accordion-item">
-                    <button type="button" class="accordion-trigger" aria-expanded="false">
-                        Application Outsourcing
-                        <span class="accordion-icon" aria-hidden="true"></span>
-                    </button>
-                    <div class="accordion-panel">
-                        <div class="accordion-panel-inner">
-                            <p>Ongoing management and improvement of business applications to ensure they remain secure, reliable, and aligned with evolving business needs. Dedicated teams handle application support, maintenance, enhancements, performance optimization, and modernization, helping organizations maximize the value and lifespan of their applications while reducing operational complexity.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button type="button" class="accordion-trigger" aria-expanded="false">
-                        Business Process Outsourcing
-                        <span class="accordion-icon" aria-hidden="true"></span>
-                    </button>
-                    <div class="accordion-panel">
-                        <div class="accordion-panel-inner">
-                            <p>Business process outsourcing enables organizations to streamline essential operations by transferring specific business functions to a dedicated team. Services such as customer support, finance and accounting, and human resources management are handled efficiently, allowing internal teams to focus on strategic initiatives while improving productivity, accuracy, and operational efficiency.p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button type="button" class="accordion-trigger" aria-expanded="false">
-                        Infrastructure Outsourcing
-                        <span class="accordion-icon" aria-hidden="true"></span>
-                    </button>
-                    <div class="accordion-panel">
-                        <div class="accordion-panel-inner">
-                            <p>Infrastructure outsourcing provides comprehensive management of the technology environment that supports business systems and applications. Dedicated teams oversee monitoring, maintenance, security, and performance optimization to ensure high availability, reliability, and scalability, reducing dependency on individual in-house specialists while keeping operations running smoothly.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button type="button" class="accordion-trigger" aria-expanded="false">
-                        Learning &amp; Training
-                        <span class="accordion-icon" aria-hidden="true"></span>
-                    </button>
-                    <div class="accordion-panel">
-                        <div class="accordion-panel-inner">
-                            <p>Learning and training programmes designed to strengthen internal capabilities and support continuous professional development. Through structured knowledge sharing, hands-on guidance, and skill-building initiatives, teams gain the expertise needed to adopt new technologies and improve processes. Our approach ensures knowledge is transferred effectively throughout the engagement, empowering internal teams to grow independently rather than relying solely on external support.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- CAPABILITIES -->
-<section id="capabilities" class="section section-alt" aria-labelledby="stack-heading">
-    <div class="section-inner section-inner--single">
-        <div class="section-text reveal">
-            <p class="section-eyebrow">Capabilities</p>
-            <h2 id="stack-heading">The stack we build on</h2>
-            <p>Certified across the platforms enterprises already depend on.</p>
-        </div>
-        <div class="chip-grid reveal reveal-delay-1" aria-label="Technology capabilities">
-            <span class="chip">TIBCO</span>
-            <span class="chip">MuleSoft</span>
-            <span class="chip">REST &amp; SOAP APIs</span>
-            <span class="chip">Microservices</span>
-            <span class="chip">AWS</span>
-            <span class="chip">Google Cloud Platform</span>
-            <span class="chip">DigitalOcean</span>
-            <span class="chip">Azure</span>
-            <span class="chip">SOA</span>
-            <span class="chip">IoT</span>
-            <span class="chip">DevOps</span>
-            <span class="chip">Process Automation</span>
-            <span class="chip">Advanced Analytics</span>
-            <span class="chip">Data Science</span>
-            <span class="chip">Digital Payments</span>
-        </div>
-    </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-
-    <div class="footer-inner">
-
-        <div class="footer-brand">
-            <span class="logo-text logo-text--footer">JKS Soft Tech</span>
             <p>
-                JKS Soft Tech Pte. Ltd.<br>
-                Consulting · Technology · Outsourcing.
+                Thank you for contacting us. We will get back to you within
+                <strong>3 business days.</strong>
             </p>
         </div>
+    </div>
+
+    <!-- Chat Button -->
+    <button id="chat-button">
+        💬
+    </button>
 
 
-      <div class="footer-nav-wrapper">
+    <!-- Chat Window -->
+    <div id="chat-box">
 
-            <nav class="footer-links" aria-label="Footer navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="services.html">Services</a>
-                <a href="industries.html">Industries</a>
-                <a href="careers.html">Careers</a>
-                <a href="index.html#contact">Contact</a>
-                
-            </nav>
+        <div class="chat-header">
+            <span>JKS Assistant</span>
+            <button id="close-chat">×</button>
+        </div>
 
 
-            <div class="footer-social">
-
-           
-
-                <div class="footer-social-icons">
-
-                    <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all"
-                       target="_blank"
-                       aria-label="LinkedIn">
-
-                        <img src="./assets/linkedin.png"
-                             alt="LinkedIn">
-                    </a>
-
-
-                    <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw"
-                       target="_blank"
-                       aria-label="Social Media">
-
-                        <img src="./assets/twitter.png"
-                             alt="Social Media">
-                    </a>
-
-
-                    <a href="YOUR_THIRD_SOCIAL_LINK"
-                       target="_blank"
-                       aria-label="Social Media">
-
-                        <img src="./assets/whatsapp.png"
-                             alt="Social Media">
-                    </a>
-
-                </div>
-
+        <div id="chat-content">
+            <div class="bot-message">
+                Hello! How can I help you today?
             </div>
-
         </div>
 
 
-        <p class="footer-copy">
-            © 2018 JKS Soft Tech Pte. Ltd. All rights reserved.
-        </p>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask a question...">
 
-    </div>
-
-</footer>
-<div id="successModal" class="modal">
-    <div class="modal-content">
-        <button class="modal-close" aria-label="Close">&times;</button>
-
-        <h3>Message Sent</h3>
-
-        <p>
-            Thank you for contacting us. We will get back to you within
-            <strong>3 business days.</strong>
-        </p>
-    </div>
-</div>
-
-<!-- Chat Button -->
-<button id="chat-button">
-    💬
-</button>
-
-
-<!-- Chat Window -->
-<div id="chat-box">
-
-    <div class="chat-header">
-        <span>JKS Assistant</span>
-        <button id="close-chat">×</button>
-    </div>
-
-
-    <div id="chat-content">
-        <div class="bot-message">
-            Hello! How can I help you today?
+            <button id="send-chat">
+                ➤
+            </button>
         </div>
+
     </div>
 
 
-    <div class="chat-input-area">
-        <input 
-            type="text" 
-            id="chat-input" 
-            placeholder="Ask a question..."
-        >
-
-        <button id="send-chat">
-            ➤
-        </button>
-    </div>
-
-</div>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
