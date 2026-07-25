@@ -205,52 +205,61 @@ if (partnersTrack && partnerPrev && partnerNext) {
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
+
     contactForm.addEventListener("submit", async function (e) {
 
         e.preventDefault();
 
-        const name = document.getElementById("full-name").value;
-        const email = document.getElementById("email").value;
-        const phone = document.getElementById("phone").value;
-        const enquiryType = document.getElementById("enquiry-type").value;
-        const message = document.getElementById("message").value;
 
-        // ADD THIS HERE
-console.log("DATA SENT TO LAMBDA:", {
-    name,
-    email,
-    phone,
-    enquiryType,
-    message
-});
+        const enquiryDropdown = document.getElementById("enquiry-type");
+
+
+        const data = {
+
+            name: document.getElementById("full-name").value,
+
+            email: document.getElementById("email").value,
+
+            phone: document.getElementById("phone").value,
+
+
+            // Gets visible text instead of value
+            enquiryType: enquiryDropdown.options[enquiryDropdown.selectedIndex].text,
+
+
+            message: document.getElementById("message").value
+
+        };
+
+
+        console.log("DATA SENT TO LAMBDA:", data);
+
 
 
         try {
 
-
             const response = await fetch(
                 "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
                 {
+
                     method: "POST",
 
                     headers: {
                         "Content-Type": "application/json"
                     },
 
-                    body: JSON.stringify({
-                        name,
-                        email,
-                        phone,
-                        enquiryType,
-                        message
-                    })
+
+                    body: JSON.stringify(data)
+
                 }
             );
 
 
             const result = await response.json();
 
+
             console.log("Lambda response:", result);
+
 
 
             if (response.ok) {
@@ -275,7 +284,9 @@ console.log("DATA SENT TO LAMBDA:", {
 
         }
 
+
     });
+
 }
 
 const modal = document.getElementById("successModal");
