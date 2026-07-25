@@ -226,7 +226,9 @@ if (contactForm) {
         // Send email in background
         try {
 
-            const response = await fetch("http://localhost:3000/send-email", {
+            const response = await fetch("https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
+                
+            {
 
                 method: "POST",
 
@@ -880,59 +882,3 @@ if (messageCounterBox) {
 
 }
 
-document
-.getElementById("contactForm")
-.addEventListener("submit", async function(e){
-
-    e.preventDefault();
-
-    const data = {
-        name: this.name.value,
-        email: this.email.value,
-        phone: this.phone.value,
-        enquiryType: this.enquiryType.value,
-        message: this.message.value
-    };
-
-
-    try {
-
-        const response = await fetch(
-            "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
-            {
-                method: "POST",
-                headers:{
-                    "Content-Type":"application/json"
-                },
-                body: JSON.stringify(data)
-            }
-        );
-
-
-        if(response.ok){
-
-            // open your existing success modal
-            document
-            .getElementById("successModal")
-            .classList.add("show");
-
-
-            this.reset();
-
-        } 
-        else {
-
-            alert("Something went wrong. Please try again.");
-
-        }
-
-
-    } catch(error){
-
-        console.log(error);
-
-        alert("Unable to send message.");
-
-    }
-
-});
