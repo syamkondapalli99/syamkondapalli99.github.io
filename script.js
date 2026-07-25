@@ -268,7 +268,7 @@ if (contactForm) {
 
                 contactForm.reset();
 
-            } 
+            }
             else {
 
                 alert("Something went wrong. Please try again.");
@@ -276,7 +276,7 @@ if (contactForm) {
             }
 
 
-        } catch(error) {
+        } catch (error) {
 
             console.error("Email failed:", error);
 
@@ -437,15 +437,15 @@ function getBotResponse(message) {
         message.includes("what can you provide")
     ) {
 
-        return `We provide AI solutions, website development, software consulting, cloud solutions, and customised technology solutions for businesses.
+        return `
+We provide AI solutions, website development, software consulting, cloud solutions, and customised technology solutions for businesses.
 
-FOr more information please visit our Services page:
-<a href="services.html" class="chat-link">
+For more information please visit our Services page<a href="services.html" class="chat-link-button">
     here
-</a>.`;
+</a>.
+`;
+
     }
-
-
 
     // Website development
     else if (
@@ -532,21 +532,27 @@ FOr more information please visit our Services page:
 
 
     // Contact
-    else if (
-        message.includes("contact") ||
-        message.includes("phone") ||
-        message.includes("reach") ||
-        message.includes("talk")
-    ) {
+else if (
+    message.includes("contact") ||
+    message.includes("phone") ||
+    message.includes("reach") ||
+    message.includes("talk")
+) {
 
-        return `You can contact us through our enquiry form or email us at 
+    return `You can contact us through our enquiry form or email us at 
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@jkssofttech.com" 
        target="_blank" 
        class="email-link">
        info@jkssofttech.com
-    </a>. Our team will respond within 3 business days.`;
+    </a>.
 
-    }
+    You can also fill out the Contact Us form<a href="index.html#contact" class="chat-link-button">
+        here
+    </a>.
+
+    Our team will respond within 3 business days.`;
+
+}
 
 
     // Location
@@ -622,7 +628,201 @@ FOr more information please visit our Services page:
 
     }
 
+    //  Consulting////
+    else if (
+        message.includes("consulting") ||
+        message.includes("consultation") ||
+        message.includes("consultant") ||
+        message.includes("business advice")
+    ) {
 
+        return `
+We provide technology and business consulting to help businesses choose the right solutions, improve processes, and achieve their goals. Let us know what you need assistance with.
+
+For more information please visit our Consulting page<a href="consulting.html" class="chat-link-button">
+    here
+</a>.
+`;
+    }
+
+    // Technology////
+    else if (
+        message.includes("technology") ||
+        message.includes("tech") ||
+        message.includes("digital") ||
+        message.includes("software") ||
+        message.includes("system") ||
+        message.includes("application") ||
+        message.includes("app") ||
+        message.includes("platform") ||
+        message.includes("website") ||
+        message.includes("web") ||
+        message.includes("cloud") ||
+        message.includes("it") ||
+        message.includes("innovation") ||
+        message.includes("digital transformation")
+    ) {
+
+        return `
+We provide a range of technology solutions, including software development, website and web application development, AI solutions, cloud services, automation, and customised digital solutions. Let us know what you're looking for, and we'll be happy to help!
+
+For more information on technology please visit our Technology page<a href="technology.html" class="chat-link-button">
+    here
+</a>.
+
+For more information on Artificial Intelligence please visit our Artificial Intelligence page<a href="ai.html" class="chat-link-button">
+    here
+</a>.
+`;
+
+    }
+
+    //  Outsourcing////
+    else if (
+        message.includes("outsourcing") ||
+        message.includes("resource outsourcing") ||
+        message.includes("outsource")
+
+    ) {
+
+        return `
+We offer outsourcing services to help businesses access skilled professionals for software development, IT projects, and technology solutions. Whether you need a dedicated team or additional technical expertise, we're here to help.
+
+For more information please visit our Outsourcing page<a href="outsourcing.html" class="chat-link-button">
+    here
+</a>.
+`;
+    }
+
+    else if (
+        message.includes("What outsourcing services do you offer?") ||
+        message.includes("Outsourcong services")
+
+
+    ) {
+
+        return `
+We provide outsourcing services such as dedicated development teams, software development, IT support, project management, and customised technology solutions tailored to your business needs. Feel free to tell us about your project, and we'll recommend the best approach.
+
+For more information please visit our Outsourcing page<a href="outsourcing.html" class="chat-link-button">
+    here
+</a>.
+`;
+    }
+
+    // Industries
+    else if (
+        message.includes("industry") ||
+        message.includes("industries") ||
+        message.includes("sector") ||
+        message.includes("business sector") ||
+        message.includes("market") ||
+        message.includes("business type") ||
+        message.includes("who are your clients") ||
+        message.includes("target industries")
+    ) {
+
+        return `
+JKS Soft Tech works across multiple industries, with strong expertise in financial services, fintech, digital payments, and high-tech sectors. We help organisations modernise systems, build digital solutions, and improve business operations through technology.
+
+For more information please visit our Outsourcing page<a href="industries.html" class="chat-link-button">
+    here
+</a>.
+    
+`;
+    }
+
+    // Industries
+    else if (
+        message.includes("bank") ||
+        message.includes("banks") ||
+        message.includes("banking industry")
+
+    ) {
+
+        return `
+We support the banking industry with digital transformation, financial technology solutions, API-driven architectures, and modern systems that help create seamless experiences for customers and businesses.
+
+For more information please visit our Outsourcing page<a href="industries.html" class="chat-link-button">
+    here
+</a>.
+    
+`;
+    }
+
+    // Industries
+    else if (
+        message.includes("fintech")
+
+    ) {
+
+        return `
+We help fintech businesses build secure and scalable platforms, including digital payments, financial applications, API integrations, and technology solutions designed for growth.
+
+For more information please visit our Outsourcing page<a href="industries.html" class="chat-link-button">
+    here
+</a>.
+    
+`;
+    }
+
+    // Career
+    else if (
+        message.includes("career") ||
+        message.includes("careers")
+
+    ) {
+
+        return `
+JKS Soft Tech provides opportunities for students, graduates, and professionals to grow their skills through internships, training programmes, and career development opportunities.
+
+For more information please visit our Careers page<a href="careers.html" class="chat-link-button">
+    here
+</a>.
+    
+`;
+    }
+
+    // Internship
+    else if (
+        message.includes("internship") ||
+        message.includes("intern") ||
+        message.includes("student") ||
+        message.includes("fresher") ||
+        message.includes("graduate")
+
+    ) {
+
+        return `
+We offer internship programmes that provide hands-on experience through real-world projects, software development, consulting, digital transformation, and exposure to industry practices.
+
+For more information please visit our Careers page<a href="internship.html" class="chat-link-button">
+    here
+</a>.
+    
+`;
+    }
+
+    // Training
+    else if (
+        message.includes("training") ||
+        message.includes("course") ||
+        message.includes("learning") ||
+        message.includes("skill development") ||
+        message.includes("upskill") ||
+       message.includes("certification")
+   
+    ) {
+
+        return `
+We offer advanced training programmes designed to help students and professionals build skills in emerging technologies, software development, AI, cloud solutions, and enterprise systems.
+
+For more information please visit our Careers page<a href="advanced-training.html" class="chat-link-button">
+    here
+</a>.
+    
+`;
+    }
 
     // Thank you
     else if (
