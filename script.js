@@ -218,6 +218,14 @@ if (contactForm) {
 
         try {
 
+            console.log({
+    name,
+    email,
+    phone,
+    enquiryType,
+    message
+});
+
             const response = await fetch(
                 "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
                 {
