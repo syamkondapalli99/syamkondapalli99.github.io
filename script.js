@@ -215,16 +215,18 @@ if (contactForm) {
         const enquiryType = document.getElementById("enquiry-type").value;
         const message = document.getElementById("message").value;
 
-
-        try {
-
-            console.log({
+        // ADD THIS HERE
+console.log("DATA SENT TO LAMBDA:", {
     name,
     email,
     phone,
     enquiryType,
     message
 });
+
+
+        try {
+
 
             const response = await fetch(
                 "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
