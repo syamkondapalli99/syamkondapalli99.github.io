@@ -216,50 +216,57 @@ if (contactForm) {
         const message = document.getElementById("message").value;
 
 
-        // Show popup immediately
-        showSuccessPopup();
-
-        // Clear form immediately
-        contactForm.reset();
-
-
-        // Send email in background
         try {
 
-            const response = await fetch("https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
-                
-            {
+            const response = await fetch(
+                "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
+                {
+                    method: "POST",
 
-                method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
-
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    enquiryType: enquiryType,
-                    message: message
-                })
-
-            });
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        phone,
+                        enquiryType,
+                        message
+                    })
+                }
+            );
 
 
             const result = await response.json();
 
-            console.log(result);
+            console.log("Lambda response:", result);
+
+
+            if (response.ok) {
+
+                showSuccessPopup();
+
+                contactForm.reset();
+
+            } 
+            else {
+
+                alert("Something went wrong. Please try again.");
+
+            }
+
 
         } catch(error) {
 
-            console.log("Email failed:", error);
+            console.error("Email failed:", error);
+
+            alert("Unable to send message.");
 
         }
 
-    }); // closes addEventListener
-
-} // closes if(contactForm)
+    });
+}
 
 const modal = document.getElementById("successModal");
 const closeBtn = document.querySelector(".modal-close");
