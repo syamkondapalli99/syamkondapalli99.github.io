@@ -50,6 +50,7 @@ body {
     color: var(--text);
     background: #ffffff;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 :focus-visible {
@@ -433,6 +434,7 @@ header {
     .hero-slider .hero-inner h1 {
         font-size: clamp(1.8rem, 7vw, 2.4rem);
         max-width: 100%;
+        white-space: normal;
     }
 
     .hero-slider .hero-inner p {
@@ -461,6 +463,13 @@ header {
     text-align: center;
     max-width: 12ch;
     min-height: 2.3em;
+}
+
+@media (max-width: 600px) {
+    .hero-slider .hero-inner .hero-title {
+        max-width: 100%;
+        white-space: normal;
+    }
 }
 
 /* ---------- Stats ---------- */
@@ -1851,6 +1860,31 @@ textarea:focus {
     font-weight: 600;
 }
 
+/* Mobile: dropdowns become static, expanded inline under the nav link
+   instead of an absolutely-positioned hover flyout (which breaks on touch) */
+@media (max-width: 600px) {
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        border: none;
+        border-left: 2px solid var(--sky);
+        border-radius: 0;
+        margin-left: 12px;
+        width: 100%;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu,
+    .nav-item.dropdown:focus-within .dropdown-menu {
+        display: block;
+    }
+
+    .nav-item.dropdown.is-active .dropdown-menu,
+    .nav-item.dropdown.open .dropdown-menu {
+        display: block;
+    }
+}
+
 
 
 
@@ -2059,6 +2093,23 @@ textarea:focus {
     font-size: 1.1rem;
 }
 
+@media (max-width: 600px) {
+    .partner-slide {
+        flex: 0 0 calc((100% - 1.25rem) / 2);
+        height: 100px;
+        padding: 0.75rem 1rem;
+    }
+
+    .partner-slide img {
+        width: 100px;
+        height: 60px;
+    }
+
+    .partners-carousel {
+        gap: 0.5rem;
+    }
+}
+
 
 .consulting-image-card {
     display: flex;
@@ -2112,6 +2163,20 @@ textarea:focus {
     object-fit: cover;
     border-radius: 16px;
     display: block;
+}
+
+@media (max-width: 600px) {
+    .quote-card-image {
+        height: 200px;
+    }
+
+    .outsourcing-card-image {
+        height: 160px;
+    }
+
+    .consulting-image {
+        height: 130px;
+    }
 }
 
 /* Match the existing input fields */
@@ -2227,6 +2292,13 @@ textarea:focus {
 
 .modal-close:hover {
     color: var(--teal);
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 92%;
+        padding: 30px 20px;
+    }
 }
 
 /* Floating chat button */
@@ -2394,6 +2466,28 @@ textarea:focus {
 
     cursor: pointer;
 
+}
+
+/* Chat widget on small screens: fill width instead of a fixed 350px box,
+   and shrink the floating button slightly so it never overlaps content */
+@media (max-width: 480px) {
+    #chat-box {
+        right: 12px;
+        left: 12px;
+        bottom: 90px;
+        width: auto;
+        max-width: none;
+        height: 65vh;
+        max-height: 500px;
+    }
+
+    #chat-button {
+        bottom: 18px;
+        right: 18px;
+        width: 54px;
+        height: 54px;
+        font-size: 24px;
+    }
 }
 
 .email-link {
@@ -3004,7 +3098,7 @@ textarea:focus {
 
 .transformation-intro h2 {
     color: #003554;
-    font-size: 48px;
+    font-size: clamp(1.8rem, 4.5vw, 48px);
     line-height: 1.2;
     margin: 20px 0;
 }
@@ -3017,7 +3111,7 @@ textarea:focus {
 .transformation-intro p {
 
     color: #d7e5ec;
-    font-size: 18px;
+    font-size: clamp(0.95rem, 2vw, 18px);
     line-height: 1.8;
 
 }
@@ -3101,7 +3195,7 @@ textarea:focus {
 
 .transform-card h3 {
 
-    font-size: 28px;
+    font-size: clamp(1.3rem, 3vw, 28px);
     margin: 10px 0 15px;
 
 }
@@ -3115,6 +3209,124 @@ textarea:focus {
 
 }
 
+/* =============================================
+   IMAGE-TOPPED CAPABILITY CARDS (AI section)
+============================================= */
+.wwd-card.has-image {
+    padding: 0;
+    overflow: hidden;
+}
+
+.wwd-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.wwd-card.has-image .wwd-body {
+    padding: 26px 28px 30px;
+}
+
+.wwd-card.has-image .wwd-number {
+    margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+    .wwd-image {
+        height: 160px;
+    }
+
+    .wwd-card.has-image .wwd-body {
+        padding: 20px 20px 24px;
+    }
+}
+
+/* =============================================
+   ZIGZAG FEATURE ROWS (IT / Digital section)
+============================================= */
+.feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 50px 0;
+    border-bottom: 1px solid #dce7ee;
+}
+
+.feature-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.feature-row:first-child {
+    padding-top: 0;
+}
+
+.feature-row.reverse .feature-image {
+    order: 2;
+}
+
+.feature-row.reverse .feature-content {
+    order: 1;
+}
+
+.feature-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 53, 84, 0.08);
+}
+
+.feature-content .capability-number {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.feature-content h3 {
+    color: var(--navy);
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+    .feature-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 36px 0;
+    }
+
+    .feature-row.reverse .feature-image,
+    .feature-row.reverse .feature-content {
+        order: unset;
+    }
+
+    .feature-image img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-image img {
+        height: 190px;
+        border-radius: 14px;
+    }
+
+    .feature-row {
+        padding: 28px 0;
+    }
+}
+
+#ai {
+    margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+    #ai {
+        margin-top: 36px;
+    }
+}
 
 
 /* JOURNEY */
@@ -3210,6 +3422,20 @@ textarea:focus {
 
 }
 
+@media (max-width: 600px) {
+    .journey {
+        margin-top: 60px;
+        margin-bottom: 70px;
+        gap: 4px;
+    }
+
+    .journey-step span {
+        width: 46px;
+        height: 46px;
+        font-size: 0.9rem;
+    }
+}
+
 /* =================================
    DIGITAL TRANSFORMATION BANNER
 ================================= */
@@ -3282,7 +3508,7 @@ textarea:focus {
 
 .digital-banner-content h2 {
 
-    font-size: 42px;
+    font-size: clamp(1.6rem, 5vw, 42px);
     line-height: 1.2;
     color: #FFFFFF;
     /* brighter heading */
@@ -3293,7 +3519,7 @@ textarea:focus {
 
 .digital-banner-content h2 {
 
-    font-size: 38px;
+    font-size: clamp(1.5rem, 4.5vw, 38px);
 
     line-height: 1.2;
 
@@ -3340,7 +3566,7 @@ textarea:focus {
 }
 
 .digital-banner-content p {
-    font-size: 18px;
+    font-size: clamp(0.95rem, 2vw, 18px);
     line-height: 1.8;
     color: #F5F5F5;
     max-width: 1000px;
@@ -3350,6 +3576,16 @@ textarea:focus {
 .digital-banner-content .hero-eyebrow {
     font-size: 13px !important;
     letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+    .digital-transformation-banner {
+        min-height: 220px !important;
+    }
+
+    .digital-banner-content {
+        padding: 48px 6% !important;
+    }
 }
 
 
@@ -3428,7 +3664,7 @@ textarea:focus {
 
 .outsourcing-hero-content h1 {
 
-    font-size: 48px;
+    font-size: clamp(1.8rem, 5vw, 48px);
 
     color: white;
 
@@ -3452,7 +3688,7 @@ textarea:focus {
 
     color: #F5F5F5;
 
-    font-size: 18px;
+    font-size: clamp(0.95rem, 2vw, 18px);
 
     line-height: 1.8;
 
@@ -3506,7 +3742,7 @@ textarea:focus {
 
     color: #003554;
 
-    font-size: 42px;
+    font-size: clamp(1.6rem, 4.5vw, 42px);
 
     line-height: 1.2;
 
@@ -3518,7 +3754,7 @@ textarea:focus {
 
     color: #445;
 
-    font-size: 18px;
+    font-size: clamp(0.95rem, 2vw, 18px);
 
     line-height: 1.8;
 
@@ -3602,7 +3838,7 @@ textarea:focus {
 
     color: #003554;
 
-    font-size: 28px;
+    font-size: clamp(1.3rem, 3vw, 28px);
 
     margin: 15px 0;
 
@@ -3655,6 +3891,22 @@ textarea:focus {
 
     }
 
+}
+
+@media (max-width: 600px) {
+    .outsourcing-section,
+    .digital-transformation {
+        padding: 64px 6%;
+    }
+
+    .outsourcing-card {
+        padding: 28px 22px;
+    }
+
+    .outsourcing-grid {
+        margin-top: 44px;
+        gap: 22px;
+    }
 }
 
 
@@ -3731,6 +3983,10 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
 
+    .careers-bg-hero {
+        min-height: 300px !important;
+        padding: 72px 20px !important;
+    }
 }
 
 /* Internship.html */
@@ -3832,6 +4088,17 @@ textarea:focus {
 
 }
 
+@media (max-width: 600px) {
+    .internship-bg-hero,
+    .advanced-bg-hero {
+        padding: 72px 20px !important;
+    }
+
+    .internship-two-columns .section-text {
+        padding: 26px 20px;
+    }
+}
+
 /* About Programme - Full Width Layout */
 .about-programme-wide {
     width: 100%;
@@ -3881,6 +4148,12 @@ textarea:focus {
     margin-right: auto;
     text-align: center;
     line-height: 1.85;
+}
+
+@media (max-width: 900px) {
+    .about-programme-wide {
+        padding: 0 24px;
+    }
 }
 
 /* advanced-training.html */
@@ -4061,6 +4334,16 @@ textarea:focus {
     }
 }
 
+@media (max-width: 600px) {
+    .schedule-bg-hero {
+        padding: 72px 20px !important;
+    }
+
+    .schedule-card {
+        padding: 1.5rem;
+    }
+}
+
 
 
 
@@ -4192,6 +4475,21 @@ textarea:focus {
     justify-content: center;
 }
 
+/* All the fixed-height "internal page" heroes above are 520px on
+   desktop for visual consistency — that's far too tall on phones,
+   so we scale them down together on small screens. */
+@media (max-width: 600px) {
+    .industries-hero,
+    .careers-hero,
+    .schedule-bg-hero,
+    .technology-hero,
+    .consulting-hero {
+        height: auto !important;
+        min-height: 320px !important;
+        padding: 64px 20px !important;
+    }
+}
+
 /* Place the "Let's talk" content and contact form side by side. */
 #contact .section-inner {
     display: grid;
@@ -4233,4 +4531,108 @@ textarea:focus {
 
 .chat-link-button:hover{
     color:#005f87;
+}
+
+/* =============================================
+   ADDITIONAL RESPONSIVE FIXES
+   Targeted fixes for layout issues that show up
+   specifically on phones/small tablets across the
+   whole site — footer stacking, tap targets,
+   overflow prevention, and fluid spacing.
+============================================= */
+
+/* Prevent any element from forcing horizontal scroll on narrow screens */
+@media (max-width: 600px) {
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+/* Footer: stack brand / nav+contact / social vertically and remove the
+   large fixed offsets (120px margin, absolute positioning, 6rem padding)
+   that only make sense in the wide desktop layout */
+@media (max-width: 900px) {
+    .footer-nav-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        position: static;
+        padding-bottom: 0;
+    }
+
+    .footer-contact {
+        position: static;
+        flex-basis: auto;
+        margin-top: 0;
+    }
+
+    .footer-social-icons {
+        margin-left: 0;
+        top: 0;
+        margin-top: 8px;
+    }
+
+    .footer-social {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 40px 20px 24px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .footer-brand p {
+        margin-bottom: 24px;
+    }
+}
+
+/* Comfortable tap targets on touch devices */
+@media (max-width: 600px) {
+    .btn,
+    .nav-link,
+    .accordion-trigger,
+    .capability-toggle,
+    .dropdown-menu a,
+    #chat-button,
+    #send-chat,
+    .why-arrow,
+    .partner-arrow {
+        min-height: 44px;
+    }
+}
+
+/* Fluid heading/eyebrow scale across all breakpoints — belt-and-braces
+   in case any page-specific heading skipped the clamp() treatment */
+@media (max-width: 480px) {
+    h1 {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+    }
+
+    h2 {
+        font-size: clamp(1.25rem, 6vw, 1.6rem);
+    }
+
+    .section,
+    .section-alt {
+        padding: 48px 16px;
+    }
+
+    .section-inner-single {
+        padding: 0 4px;
+    }
+}
+
+/* Tables / wide embeds (if any are added later) never overflow the viewport */
+table {
+    max-width: 100%;
+    display: block;
+    overflow-x: auto;
 }
