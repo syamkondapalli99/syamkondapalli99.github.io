@@ -1,6 +1,6 @@
 // Mobile nav toggle
 
-console.log("script.js loaded");
+console.log("script.js?v=2 loaded");
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 
