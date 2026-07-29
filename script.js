@@ -237,29 +237,9 @@ if (contactForm) {
 
 
         try {
+            const result = await response.json();
 
-            const response = await fetch(
-                "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
-                {
-
-                    method: "POST",
-
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-
-
-                    body: JSON.stringify(data)
-
-                }
-            );
-
-
-console.log("Status:", response.status);
-
-const text = await response.text();
-
-console.log("Response:", text);
+console.log("Lambda response:", result);
 
 if (response.ok) {
 
@@ -269,17 +249,19 @@ if (response.ok) {
 
 } else {
 
-    alert("Server returned: " + text);
+    alert(result.message || "Something went wrong. Please try again.");
 
 }
 
+
+
         } catch (error) {
 
-            console.error( error);
+    console.error("Email failed:", error);
 
-             alert("Error: " + error.name + "\n" + error.message);
+    alert("Unable to send message.");
 
-        }
+}
 
 
     });
