@@ -237,7 +237,9 @@ if (contactForm) {
 
 
         try {
-            const result = await response.json();
+            const text = await response.text();
+console.log(text);
+alert(text);
 
 console.log("Lambda response:", result);
 
