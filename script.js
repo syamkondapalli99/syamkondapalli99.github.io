@@ -236,35 +236,44 @@ if (contactForm) {
 
 
 
-        try {
-            const text = await response.text();
-console.log(text);
-alert(text);
+     try {
 
-console.log("Lambda response:", result);
+    const response = await fetch(
+        "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        }
+    );
 
-if (response.ok) {
+    const result = await response.json();
 
-    showSuccessPopup();
+    console.log("Lambda response:", result);
 
-    contactForm.reset();
+    if (response.ok) {
 
-} else {
+        showSuccessPopup();
+        contactForm.reset();
 
-    alert(result.message || "Something went wrong. Please try again.");
+    } else {
 
-}
+        alert(result.message || "Something went wrong. Please try again.");
 
+    }
 
-
-        } catch (error) {
+} catch (error) {
 
     console.error("Email failed:", error);
 
-    alert("Unable to send message.");
+    alert(
+        "Error name: " + error.name +
+        "\nMessage: " + error.message
+    );
 
 }
-
 
     });
 
