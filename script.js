@@ -266,12 +266,9 @@ if (contactForm) {
 
 } catch (error) {
 
-    console.error("Email failed:", error);
+    console.dir(error);
 
-    alert(
-        "Error name: " + error.name +
-        "\nMessage: " + error.message
-    );
+    alert(error.toString());
 
 }
 
