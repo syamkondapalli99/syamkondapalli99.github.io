@@ -255,20 +255,29 @@ if (contactForm) {
             );
 
 
-            const result = await response.json();
+console.log("Status:", response.status);
+
+const text = await response.text();
+
+console.log("Response:", text);
 
 if (response.ok) {
+
     showSuccessPopup();
+
     contactForm.reset();
+
 } else {
-    alert("Something went wrong. Please try again.");
+
+    alert("Server returned: " + text);
+
 }
 
         } catch (error) {
 
             console.error( error);
 
-             alert(error.message);
+             alert("Error: " + error.name + "\n" + error.message);
 
         }
 
