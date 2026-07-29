@@ -257,30 +257,20 @@ if (contactForm) {
 
             const result = await response.json();
 
+console.log(result);
+alert(JSON.stringify(result));
 
-            console.log("Lambda response:", result);
-
-
-
-            if (response.ok) {
-
-                showSuccessPopup();
-
-                contactForm.reset();
-
-            }
-            else {
-
-                alert("Something went wrong. Please try again.");
-
-            }
+if (response.ok) {
+    showSuccessPopup();
+    contactForm.reset();
+}
 
 
         } catch (error) {
 
-            console.error("Email failed:", error);
+            console.error( error);
 
-            alert("Unable to send message.");
+             alert(error.message);
 
         }
 
