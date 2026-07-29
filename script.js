@@ -257,14 +257,12 @@ if (contactForm) {
 
             const result = await response.json();
 
-console.log(result);
-alert(JSON.stringify(result));
-
 if (response.ok) {
     showSuccessPopup();
     contactForm.reset();
+} else {
+    alert("Something went wrong. Please try again.");
 }
-
 
         } catch (error) {
 
