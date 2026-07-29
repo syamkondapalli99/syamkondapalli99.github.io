@@ -236,7 +236,7 @@ if (contactForm) {
 
 
 
-     try {
+try {
 
     const response = await fetch(
         "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
@@ -254,22 +254,15 @@ if (contactForm) {
     console.log("Lambda response:", result);
 
     if (response.ok) {
-
         showSuccessPopup();
         contactForm.reset();
-
     } else {
-
-        alert(result.message || "Something went wrong. Please try again.");
-
+        alert(result.message || "Something went wrong.");
     }
 
 } catch (error) {
-
-    console.dir(error);
-
-    alert(error.toString());
-
+    console.error("Email failed:", error);
+    alert("Unable to send message.");
 }
 
     });
