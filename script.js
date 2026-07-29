@@ -251,7 +251,7 @@ if (contactForm) {
 
             } else {
 
-                alert(result.error || result.message || "Something went wrong. Please try again.");
+                alert(result.error || result.message || "Something went wrong.");
 
             }
 
