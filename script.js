@@ -210,60 +210,58 @@ if (contactForm) {
 
         e.preventDefault();
 
-
         const enquiryDropdown = document.getElementById("enquiry-type");
-
 
         const data = {
 
             name: document.getElementById("full-name").value,
-
             email: document.getElementById("email").value,
-
             phone: document.getElementById("phone").value,
-
 
             // Gets visible text instead of value
             enquiryType: enquiryDropdown.options[enquiryDropdown.selectedIndex].text,
-
 
             message: document.getElementById("message").value
 
         };
 
-
         console.log("DATA SENT TO LAMBDA:", data);
 
+        try {
 
+            const response = await fetch(
+                "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                }
+            );
 
-try {
+            const result = await response.json();
 
-    const response = await fetch(
-        "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
+            console.log("Lambda response:", result);
+
+            if (response.ok) {
+
+                showSuccessPopup();
+                contactForm.reset();
+
+            } else {
+
+                alert(result.error || result.message || "Something went wrong. Please try again.");
+
+            }
+
+        } catch (error) {
+
+            console.error("Email failed:", error);
+
+            alert("Unable to send message.");
+
         }
-    );
-
-    const result = await response.json();
-
-    console.log("Lambda response:", result);
-
-    if (response.ok) {
-        showSuccessPopup();
-        contactForm.reset();
-    } else {
-        alert(result.message || "Something went wrong.");
-    }
-
-} catch (error) {
-    console.error("Email failed:", error);
-    alert("Unable to send message.");
-}
 
     });
 
