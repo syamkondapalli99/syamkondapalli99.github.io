@@ -1,6 +1,6 @@
 // Mobile nav toggle
 
-console.log("script.js?v=3 loaded");
+console.log("script.js?v=10 loaded");
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 
@@ -230,7 +230,7 @@ if (contactForm) {
         try {
 
             const response = await fetch(
-                "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com",
+                "https://f4o508lxz4.execute-api.ap-southeast-1.amazonaws.com/contact",
                 {
                     method: "POST",
                     headers: {
