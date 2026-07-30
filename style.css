@@ -1794,21 +1794,20 @@ textarea:focus {
 .info-grid-clean .info-card-large {
     flex: 0 0 320px;
     min-height: 220px;
-    scroll-snap-align: start;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-    .info-grid-clean {
-        grid-template-columns: 1fr;
-        gap: 18px;
+@media (max-width:600px) {
+    .info-card,
+    .info-grid-clean .info-card-large {
+        flex: 0 0 100% !important;
     }
+}
 
 
     .info-card {
         padding: 24px 20px;
     }
-}
+
 
 
 /* Tablet */
