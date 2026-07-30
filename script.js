@@ -1,6 +1,6 @@
 // Mobile nav toggle
 
-console.log("script.js?v=10 loaded");
+console.log("script.js?v=11 loaded");
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 
@@ -202,7 +202,7 @@ if (partnersTrack && partnerPrev && partnerNext) {
     updatePosition(false);
 }
 
-const contactForm = document.getElementById("contactForm");
+const contactForm = document.getElementById("contact-form");
 
 if (contactForm) {
 
@@ -325,6 +325,102 @@ const sendButton = document.getElementById("send-chat");
 const chatInput = document.getElementById("chat-input");
 const chatContent = document.getElementById("chat-content");
 
+const quickButtons = document.querySelectorAll(".quick-btn");
+
+// ===============================
+// Direct replies for quick-question buttons
+//
+// FIX: previously these buttons fed their `data-question` value
+// (e.g. "internship", "training") straight into getBotResponse(),
+// which does fuzzy `message.includes(...)` matching. Because
+// "internship" contains the substring "hi" and "training" contains
+// the substring "ai", they were being caught by earlier branches
+// (the greeting check and the AI/automation check) before ever
+// reaching their intended replies. Quick buttons now map directly
+// to their exact reply text instead of going through the fuzzy
+// keyword matcher, so they always return the correct message.
+// ===============================
+const quickReplies = {
+
+    jobs: "Regarding job applications, please fill out the form in the Contact Us page. Our staff will attend to you.",
+
+    contact: `You can contact us through our enquiry form or email us at 
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@jkssofttech.com" 
+       target="_blank" 
+       class="email-link">
+       info@jkssofttech.com
+    </a>.
+
+   You can also fill out the Contact Us form
+<a href="/index.html#contact-form" class="chat-link-button">
+    here
+</a>.
+
+    Our team will respond within 3 business days.`,
+
+    services: `
+We provide AI solutions, website development, software consulting, cloud solutions, and customised technology solutions for businesses.
+
+For more information please visit our Services page<a href="services.html" class="chat-link-button">
+    here
+</a>.
+`,
+
+    internship: `
+We offer internship programmes that provide hands-on experience through real-world projects, software development, consulting, digital transformation, and exposure to industry practices.
+
+For more information please visit our Careers page<a href="internship.html" class="chat-link-button">
+    here
+</a>.
+    
+`,
+
+    training: `
+We offer advanced training programmes designed to help students and professionals build skills in emerging technologies, software development, AI, cloud solutions, and enterprise systems.
+
+For more information please visit our Careers page<a href="advanced-training.html" class="chat-link-button">
+    here
+</a>.
+    
+`
+
+};
+
+quickButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const question = button.dataset.question;
+
+        // Show user's selected question
+        chatContent.innerHTML += `
+            <div class="user-message">
+                ${question}
+            </div>
+        `;
+
+        // Prefer the exact mapped reply for quick buttons; fall back
+        // to the fuzzy matcher only if a button's key isn't mapped.
+        const reply = quickReplies[question] !== undefined
+            ? quickReplies[question]
+            : getBotResponse(question);
+
+        setTimeout(() => {
+
+            chatContent.innerHTML += `
+                <div class="bot-message">
+                    ${reply}
+                </div>
+            `;
+
+            chatContent.scrollTop = chatContent.scrollHeight;
+
+        }, 400);
+
+    });
+
+});
+
 // Button click sends message
 if (sendButton) {
     sendButton.addEventListener("click", sendMessage);
@@ -385,17 +481,33 @@ function sendMessage() {
 
 }
 
+// FIX: `.includes()` does raw substring matching, so short/common
+// keywords like "ai" and "hi" were matching inside unrelated words
+// (e.g. "training" contains "ai", "internship" contains "hi").
+// hasWord() instead checks for the keyword as a standalone word
+// (with word boundaries), so "training" no longer falsely matches
+// "ai" and "internship" no longer falsely matches "hi", while
+// legitimate uses (typing "hi" or "AI" on their own, or as part of
+// phrases like "hi there" / "AI solutions") still match correctly.
+function hasWord(msg, word) {
+    return new RegExp(`\\b${word}\\b`, "i").test(msg);
+}
+
 function getBotResponse(message) {
 
+    console.log("Received:", message);
+
     message = message.toLowerCase();
+
+    console.log("Lowercase:", message);
 
 
 
     // Greetings
     if (
-        message.includes("hello") ||
-        message.includes("hi") ||
-        message.includes("hey") ||
+        hasWord(message, "hello") ||
+        hasWord(message, "hi") ||
+        hasWord(message, "hey") ||
         message.includes("good morning") ||
         message.includes("good afternoon")
     ) {
@@ -441,7 +553,7 @@ For more information please visit our Services page<a href="services.html" class
 
     // AI solutions
     else if (
-        message.includes("ai") ||
+        hasWord(message, "ai") ||
         message.includes("artificial intelligence") ||
         message.includes("machine learning") ||
         message.includes("automation")
@@ -497,7 +609,7 @@ For more information please visit our Services page<a href="services.html" class
 
     // Project timeline
     else if (
-        message.includes("time") ||
+        hasWord(message, "time") ||
         message.includes("how long") ||
         message.includes("duration") ||
         message.includes("timeline")
@@ -524,9 +636,10 @@ else if (
        info@jkssofttech.com
     </a>.
 
-    You can also fill out the Contact Us form<a href="index.html#contact" class="chat-link-button">
-        here
-    </a>.
+   You can also fill out the Contact Us form
+<a href="/index.html#contact-form" class="chat-link-button">
+    here
+</a>.
 
     Our team will respond within 3 business days.`;
 
@@ -622,6 +735,48 @@ For more information please visit our Consulting page<a href="consulting.html" c
 </a>.
 `;
     }
+    // Internship
+    else if (
+        message.includes("internship") ||
+        message.includes("internships") ||
+        message.includes("intern") ||
+        message.includes("student") ||
+        message.includes("fresher") ||
+        message.includes("graduate")
+
+    ) {
+
+        return `
+We offer internship programmes that provide hands-on experience through real-world projects, software development, consulting, digital transformation, and exposure to industry practices.
+
+For more information please visit our Careers page<a href="internship.html" class="chat-link-button">
+    here
+</a>.
+    
+`;
+    }
+
+    // Training
+    else if (
+        message.includes("training") ||
+        message.includes("course") ||
+        message.includes("learning") ||
+        message.includes("skill development") ||
+        message.includes("upskill") ||
+       message.includes("certification")
+   
+    ) {
+
+        return `
+We offer advanced training programmes designed to help students and professionals build skills in emerging technologies, software development, AI, cloud solutions, and enterprise systems.
+
+For more information please visit our Careers page<a href="advanced-training.html" class="chat-link-button">
+    here
+</a>.
+    
+`;
+    }
+
 
     // Technology////
     else if (
@@ -636,7 +791,6 @@ For more information please visit our Consulting page<a href="consulting.html" c
         message.includes("website") ||
         message.includes("web") ||
         message.includes("cloud") ||
-        message.includes("it") ||
         message.includes("innovation") ||
         message.includes("digital transformation")
     ) {
@@ -761,47 +915,7 @@ For more information please visit our Careers page<a href="careers.html" class="
 `;
     }
 
-    // Internship
-    else if (
-        message.includes("internship") ||
-        message.includes("intern") ||
-        message.includes("student") ||
-        message.includes("fresher") ||
-        message.includes("graduate")
-
-    ) {
-
-        return `
-We offer internship programmes that provide hands-on experience through real-world projects, software development, consulting, digital transformation, and exposure to industry practices.
-
-For more information please visit our Careers page<a href="internship.html" class="chat-link-button">
-    here
-</a>.
     
-`;
-    }
-
-    // Training
-    else if (
-        message.includes("training") ||
-        message.includes("course") ||
-        message.includes("learning") ||
-        message.includes("skill development") ||
-        message.includes("upskill") ||
-       message.includes("certification")
-   
-    ) {
-
-        return `
-We offer advanced training programmes designed to help students and professionals build skills in emerging technologies, software development, AI, cloud solutions, and enterprise systems.
-
-For more information please visit our Careers page<a href="advanced-training.html" class="chat-link-button">
-    here
-</a>.
-    
-`;
-    }
-
     // Thank you
     else if (
         message.includes("thank") ||
@@ -1089,4 +1203,3 @@ if (messageCounterBox) {
     });
 
 }
-

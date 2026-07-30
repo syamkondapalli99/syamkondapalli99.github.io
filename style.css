@@ -4424,21 +4424,62 @@ textarea:focus {
     color: rgba(255, 255, 255, 0.65) !important;
 }
 
-@media (max-width: 900px) {
-    .schedule-grid {
-        grid-template-columns: 1fr;
+.schedule-full-width{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.no-training-card{
+    width:min(1200px, 95%);
+    min-height:280px;
+
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    padding:60px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.no-training-card h3{
+    font-size:1.4rem;
+    font-weight:600;
+    color:#003554;
+    margin-bottom:14px;
+}
+
+.no-training-card p{
+    max-width:700px;
+    margin:0;
+    font-size:1rem;
+    line-height:1.8;
+    color:#666;
+}
+
+@media (max-width:768px){
+
+    .no-training-card{
+        width:100%;
+        padding:40px 25px;
+    }
+
+    .no-training-card h3{
+        font-size:1.15rem;
+    }
+
+    .no-training-card p{
+        font-size:.95rem;
     }
 }
 
-@media (max-width: 600px) {
-    .schedule-bg-hero {
-        padding: 72px 20px !important;
-    }
 
-    .schedule-card {
-        padding: 1.5rem;
-    }
-}
 
 
 
@@ -4641,6 +4682,30 @@ textarea:focus {
 .footer-social-icons {
     margin-left: 0;
     top: 0;
+}
+.chat-quick-questions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    padding:12px;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+
+.quick-btn{
+    background:#f5f7fa;
+    border:1px solid #d7dde5;
+    border-radius:20px;
+    padding:8px 14px;
+    font-size:13px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.quick-btn:hover{
+    background:var(--teal);
+    color:#fff;
+    border-color:var(--teal);
 }
 
 /* =============================================
