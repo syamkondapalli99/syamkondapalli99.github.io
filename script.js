@@ -865,11 +865,13 @@ if (whyTrack && whyCardsOriginal.length) {
     let animating = false;
 
 
-    function getCardWidth() {
+  function getCardWidth() {
 
-        return whyCards[0].offsetWidth + 22;
+    const gap = window.innerWidth <= 600 ? 0 : 22;
 
-    }
+    return whyCards[0].offsetWidth + gap;
+
+}
 
 
     function moveWhyCarousel(animation = true) {

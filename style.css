@@ -1681,6 +1681,12 @@ textarea:focus {
     transition: transform 0.6s ease;
 }
 
+@media (max-width:600px) {
+    .info-grid-clean {
+        gap: 0;
+    }
+}
+
 
 .info-card,
 .info-grid-clean .info-card-large {
@@ -1770,12 +1776,7 @@ textarea:focus {
     font-size: 0.97rem;
 }
 
-.info-grid-clean {
-    display: flex;
-    gap: 22px;
-    margin-top: 36px;
-    transition: transform 0.6s ease;
-}
+
 
 /* hide scrollbar (optional) */
 .info-grid-clean::-webkit-scrollbar {
