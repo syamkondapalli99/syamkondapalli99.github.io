@@ -366,6 +366,16 @@ For more information please visit our Services page<a href="services.html" class
 </a>.
 `,
 
+consulting: `
+We provide technology and business consulting to help businesses choose the right solutions, improve processes, and achieve their goals. Let us know what you need assistance with.
+
+For more information please visit our Consulting page
+<a href="consulting.html" class="chat-link-button">
+    here
+</a>.
+`,
+
+
     internship: `
 We offer internship programmes that provide hands-on experience through real-world projects, software development, consulting, digital transformation, and exposure to industry practices.
 
@@ -720,12 +730,13 @@ else if (
     }
 
     //  Consulting////
-    else if (
-        message.includes("consulting") ||
-        message.includes("consultation") ||
-        message.includes("consultant") ||
-        message.includes("business advice")
-    ) {
+else if (
+    message.includes("consult") ||
+    message.includes("consulting") ||
+    message.includes("consultation") ||
+    message.includes("consultant") ||
+    message.includes("business advice")
+) {
 
         return `
 We provide technology and business consulting to help businesses choose the right solutions, improve processes, and achieve their goals. Let us know what you need assistance with.
