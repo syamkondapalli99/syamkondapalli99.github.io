@@ -955,7 +955,7 @@ if (whyTrack && whyCardsOriginal.length) {
 
         nextWhy();
 
-    }, 4000);
+    }, 6000);
 
 
 
