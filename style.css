@@ -4828,3 +4828,635 @@ table {
     display: block;
     overflow-x: auto;
 }
+
+/* ================================
+   AI BOOTCAMP POPUP
+================================ */
+
+.ai-bootcamp-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai-bootcamp-popup.show {
+    display: flex;
+}
+
+.ai-bootcamp-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.ai-bootcamp-modal {
+    position: relative;
+    z-index: 2;
+
+    width: min(90%, 700px);
+    max-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: bootcampPopupIn 0.35s ease;
+}
+
+.ai-bootcamp-modal img {
+    display: block;
+
+    width: 100%;
+    max-height: 75vh;
+
+    object-fit: contain;
+    border-radius: 10px;
+}
+.ai-bootcamp-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #222;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+    z-index: 3;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ai-bootcamp-close:hover {
+    transform: scale(1.05);
+}
+
+@keyframes bootcampPopupIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .ai-bootcamp-modal {
+        width: 92%;
+    }
+
+    .ai-bootcamp-close {
+        top: -12px;
+        right: -8px;
+        width: 34px;
+        height: 34px;
+        font-size: 24px;
+    }
+}
+.bootcamp-register-btn {
+    display: block;
+    width: fit-content;
+
+    margin: 12px auto 0;
+    padding: 12px 26px;
+
+    background: #ffffff;
+    color: #111111;
+
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition: all 0.25s ease;
+}
+
+.bootcamp-register-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .ai-bootcamp-modal {
+        width: 88%;
+        max-height: 90vh;
+    }
+
+    .ai-bootcamp-modal img {
+        max-height: 72vh;
+    }
+
+    .bootcamp-register-btn {
+        margin-top: 10px;
+        padding: 11px 22px;
+        font-size: 14px;
+    }
+}
+
+/* ================================
+   UPCOMING EVENTS BUTTON
+================================ */
+
+#events-button {
+    position: fixed;
+    right: 25px;
+    bottom: 90px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    border: 1px solid #ddd;
+    border-radius: 30px;
+
+    background: #ffffff;
+    color: #111111;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    z-index: 9990;
+
+    transition: all 0.25s ease;
+}
+
+#events-button:hover {
+    transform: translateY(-3px);
+    background: #f7f7f7;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+#events-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+}
+
+#events-button span {
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    #events-button {
+        right: 15px;
+        bottom: 80px;
+
+        padding: 10px 15px;
+
+        font-size: 13px;
+
+        border-radius: 25px;
+
+        width: auto;
+        height: auto;
+
+        justify-content: center;
+    }
+
+    #events-button span {
+        display: inline;
+        white-space: nowrap;
+    }
+}
+
+/* ==========================================
+   AI BOOTCAMP EVENT PAGE — COMPACT
+========================================== */
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.ai-event-hero {
+    background: #f4f4f1;
+    padding: 55px 20px 45px;
+}
+
+.ai-event-hero-inner {
+    max-width: 1050px;
+    margin: auto;
+}
+
+
+/* Small "JKS Soft Tech Presents" text */
+
+.ai-event-hero .section-eyebrow {
+    font-size: 11px;
+    margin-bottom: 7px;
+}
+
+
+/* Main AI Bootcamp heading */
+
+.ai-event-hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.05;
+    margin: 8px 0 12px;
+}
+
+
+/* Hero description */
+
+.ai-event-hero p:not(.section-eyebrow) {
+    max-width: 550px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   MAIN EVENT SECTION
+========================================== */
+
+.ai-event-main {
+    padding-top: 55px;
+    padding-bottom: 60px;
+}
+
+.ai-event-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+
+/* ==========================================
+   POSTER
+========================================== */
+
+
+.ai-event-poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ai-event-poster img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+
+    border-radius: 7px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .ai-event-poster img {
+        max-width: 480px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .ai-event-poster img {
+        max-width: 390px;
+    }
+
+}
+
+/* ==========================================
+   EVENT CONTENT
+========================================== */
+
+
+/* Small "Upcoming Event" text */
+
+.ai-event-content .section-eyebrow {
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+
+/* Main content heading */
+
+.ai-event-content h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 8px 0 16px;
+}
+
+
+/* Paragraphs */
+
+.ai-event-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+
+/* Lead paragraph */
+
+.ai-event-lead {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}
+
+
+/* ==========================================
+   EVENT DETAILS
+========================================== */
+
+.ai-event-details {
+    margin: 23px 0;
+    border-top: 1px solid #d97706;
+}
+
+.ai-event-details div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #d97706;
+}
+
+.ai-event-details span {
+    color: #3f5f7a;
+    font-size: 12px;
+}
+
+.ai-event-details strong {
+    color: #3f5f7a;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   REGISTER BUTTON
+========================================== */
+
+.ai-register-btn {
+    display: inline-block;
+    margin-top: 3px;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .ai-event-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .ai-event-poster {
+        order: 1;
+    }
+
+    .ai-event-content {
+        order: 2;
+    }
+
+    .ai-event-poster img {
+        max-width: 400px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    /* HERO */
+
+    .ai-event-hero {
+        padding: 45px 20px 40px;
+    }
+
+    .ai-event-hero .section-eyebrow {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+
+    .ai-event-hero h1 {
+        font-size: 32px;
+        margin: 7px 0 10px;
+    }
+
+    .ai-event-hero p:not(.section-eyebrow) {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    /* MAIN SECTION */
+
+    .ai-event-main {
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
+
+    .ai-event-grid {
+        gap: 35px;
+    }
+
+
+    /* POSTER */
+
+    .ai-event-poster img {
+        max-width: 330px;
+    }
+
+
+    /* CONTENT */
+
+    .ai-event-content .section-eyebrow {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .ai-event-content h2 {
+        font-size: 25px;
+        margin: 7px 0 14px;
+    }
+
+    .ai-event-content p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .ai-event-lead {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+    }
+
+
+    /* DETAILS */
+
+    .ai-event-details {
+        margin: 20px 0;
+    }
+
+    .ai-event-details div {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 4px;
+
+        padding: 9px 0;
+    }
+
+    .ai-event-details span {
+        font-size: 11px;
+    }
+
+    .ai-event-details strong {
+        text-align: left;
+        font-size: 13px;
+    }
+
+
+    /* REGISTER BUTTON */
+
+    .ai-register-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/* ==========================================
+   UPCOMING EVENTS BANNER
+========================================== */
+
+.upcoming-events-banner {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.upcoming-events-banner img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.upcoming-events-banner-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.52);
+}
+
+.upcoming-events-banner-content {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.upcoming-events-banner-content .section-eyebrow {
+    color: #ffffff;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.upcoming-events-banner-content h1 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-family: 'Merriweather', serif;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.1;
+}
+
+.upcoming-events-banner-content p:last-child {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+
+    max-width: 550px;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width: 768px) {
+
+    .ai-event-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ai-event-poster {
+        order: 1;
+    }
+
+    .ai-event-content {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Only the button on events.html */
+    .ai-event-content .bootcamp-register-btn {
+        order: -1;
+        margin-top: -15px;
+        margin-bottom: 25px;
+    }
+
+}

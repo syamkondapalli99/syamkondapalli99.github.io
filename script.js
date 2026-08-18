@@ -1214,3 +1214,33 @@ if (messageCounterBox) {
     });
 
 }
+
+// ========================================
+// AI BOOTCAMP POPUP
+// Opens 10 seconds after page loads
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const bootcampPopup = document.getElementById("aiBootcampPopup");
+    const closeBootcampPopup = document.getElementById("closeBootcampPopup");
+    const bootcampOverlay = document.querySelector(".ai-bootcamp-overlay");
+
+    if (!bootcampPopup) return;
+
+    // Open popup after 10 seconds
+    setTimeout(function () {
+        bootcampPopup.classList.add("show");
+    }, 5000);
+
+    // Close button
+    closeBootcampPopup.addEventListener("click", function () {
+        bootcampPopup.classList.remove("show");
+    });
+
+    // Close when clicking outside the poster
+    bootcampOverlay.addEventListener("click", function () {
+        bootcampPopup.classList.remove("show");
+    });
+
+});
