@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,54 +16,62 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-<style>
-.course-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin: 4px 0 18px;
-    padding: 7px 12px;
-    border: 1px solid #d8d8d8;
-    border-radius: 999px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: #333;
-    background: #f7f7f7;
-}
-.course-status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #3a9b5d;
-    display: inline-block;
-}
-.ai-learning-points {
-    display: grid;
-    gap: 8px;
-    margin: 12px 0 20px;
-}
-.ai-learning-points > div {
-    padding-left: 10px;
-    border-left: 2px solid #d8d8d8;
-}
-.ai-learning-points strong {
-    display: block;
-    margin-bottom: 4px;
-}
-.ai-learning-points p {
-    margin: 0;
-}
-.ai-event-content h3 {
-    margin-top: 18px;
-}
-</style>
+    <style>
+        .course-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 4px 0 18px;
+            padding: 7px 12px;
+            border: 1px solid #d8d8d8;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: #333;
+            background: #f7f7f7;
+        }
+
+        .course-status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3a9b5d;
+            display: inline-block;
+        }
+
+        .ai-learning-points {
+            display: grid;
+            gap: 8px;
+            margin: 12px 0 20px;
+        }
+
+        .ai-learning-points>div {
+            padding-left: 10px;
+            border-left: 2px solid #d8d8d8;
+        }
+
+        /* What You Will Gain - Headers */
+        .ai-learning-points strong {
+            display: block;
+            margin-bottom: 4px;
+            color: #12304A;
+        }
+
+        /* What You Will Gain - Descriptions */
+        .ai-learning-points p {
+            margin: 0;
+            color: #4A6F8A;
+        }
+
+        .ai-event-content h3 {
+            margin-top: 18px;
+        }
+    </style>
 
 </head>
 
 <body>
-
-
 
     <!-- HEADER -->
 
@@ -72,20 +79,14 @@
 
         <div class="header-inner">
 
-            <a href="index.html"
-                class="logo"
-                aria-label="JKS Soft Tech home">
+            <a href="index.html" class="logo" aria-label="JKS Soft Tech home">
 
-                <img src="./assets/jksLogo.jpg"
-                    alt="JKS Soft Tech logo"
-                    class="logo-img">
+                <img src="./assets/jksLogo.jpg" alt="JKS Soft Tech logo" class="logo-img">
 
             </a>
 
 
-            <button class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
                 aria-controls="nav-menu">
 
                 <span></span>
@@ -95,18 +96,13 @@
             </button>
 
 
-            <nav id="nav-menu"
-                class="nav"
-                role="navigation"
-                aria-label="Main navigation">
+            <nav id="nav-menu" class="nav" role="navigation" aria-label="Main navigation">
 
-                <a href="index.html"
-                    class="nav-link">
+                <a href="index.html" class="nav-link">
                     Home
                 </a>
 
-                <a href="about.html"
-                    class="nav-link">
+                <a href="about.html" class="nav-link">
                     About Us
                 </a>
 
@@ -115,8 +111,7 @@
 
                 <div class="nav-item dropdown">
 
-                    <a href="services.html"
-                        class="nav-link">
+                    <a href="services.html" class="nav-link">
                         Services
                     </a>
 
@@ -139,8 +134,7 @@
                 </div>
 
 
-                <a href="industries.html"
-                    class="nav-link">
+                <a href="industries.html" class="nav-link">
                     Industries
                 </a>
 
@@ -149,8 +143,7 @@
 
                 <div class="nav-item dropdown">
 
-                    <a href="careers.html"
-                        class="nav-link">
+                    <a href="careers.html" class="nav-link">
                         Careers
                     </a>
 
@@ -164,10 +157,6 @@
                             Advanced Training
                         </a>
 
-                        <a href="training-schedule.html">
-                            Training Schedule
-                        </a>
-
                         <a href="events.html">
                             Upcoming Events
                         </a>
@@ -177,8 +166,7 @@
                 </div>
 
 
-                <a href="index.html#contact"
-                    class="nav-link">
+                <a href="index.html#contact" class="nav-link">
 
                     Contact
 
@@ -190,34 +178,32 @@
 
     </header>
 
-     <!-- UPCOMING EVENTS BANNER -->
 
-<section class="upcoming-events-banner">
+    <!-- UPCOMING EVENTS BANNER -->
 
-    <img src="./assets/ai-business-transformation.jpg" alt="Upcoming Events">
+    <section class="upcoming-events-banner">
 
-    <div class="upcoming-events-banner-overlay"></div>
+        <img src="./assets/ai-business-transformation.jpg" alt="Upcoming Events">
 
-    <div class="upcoming-events-banner-content">
+        <div class="upcoming-events-banner-overlay"></div>
 
-        <p class="section-eyebrow">
-            JKS Soft Tech
-        </p>
+        <div class="upcoming-events-banner-content">
 
-        <h1>
-            Upcoming Events
-        </h1>
+            <p class="section-eyebrow">
+                JKS Soft Tech
+            </p>
 
-        <p>
-            Discover our latest workshops, bootcamps and learning opportunities.
-        </p>
+            <h1>
+                Upcoming Events
+            </h1>
 
-    </div>
+            <p>
+                Discover our latest workshops, bootcamps and learning opportunities.
+            </p>
 
-</section>
+        </div>
 
-    
-
+    </section>
 
 
     <!-- AI BOOTCAMP HERO -->
@@ -245,7 +231,6 @@
     </section>
 
 
-
     <!-- MAIN EVENT -->
 
     <section class="section ai-event-main">
@@ -257,8 +242,7 @@
 
             <div class="ai-event-poster reveal">
 
-                <img src="./assets/ai_bootcamp.jpg"
-                    alt="AI Bootcamp poster">
+                <img src="./assets/ai_bootcamp.jpg" alt="AI Bootcamp poster">
 
             </div>
 
@@ -294,15 +278,48 @@
                     with guidance from experienced professionals.
                 </p>
 
+
                 <h3>What You Will Gain</h3>
 
                 <div class="ai-learning-points">
-                    <div><strong>AI & ML Fundamentals</strong><p>Understand AI and ML fundamentals and real-world applications.</p></div>
-                    <div><strong>Hands-On Projects</strong><p>Work with AI tools, real-world data, and practical projects.</p></div>
-                    <div><strong>Expert Guidance</strong><p>Learn from experienced professionals.</p></div>
-                    <div><strong>Certificate</strong><p>Receive a certificate upon completing the Bootcamp and Assessment.</p></div>
-                    <div><strong>Advanced Sessions</strong><p>Unlock opportunities for future advanced AI sessions.</p></div>
+
+                    <div>
+                        <strong>AI & ML Fundamentals</strong>
+                        <p>
+                            Understand AI and ML fundamentals and real-world applications.
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>Hands-On Projects</strong>
+                        <p>
+                            Work with AI tools, real-world data, and practical projects.
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>Expert Guidance</strong>
+                        <p>
+                            Learn from experienced professionals.
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>Certificate</strong>
+                        <p>
+                            Receive a certificate upon completing the Bootcamp and Assessment.
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>Advanced Sessions</strong>
+                        <p>
+                            Unlock opportunities for future advanced AI sessions.
+                        </p>
+                    </div>
+
                 </div>
+
 
                 <h3>Bootcamp Details</h3>
 
@@ -315,7 +332,10 @@
 
                     <div>
                         <span>Time</span>
-                        <strong>7:00 PM – 9:00 PM SGT | 4:30 PM – 6:30 PM IST</strong>
+                        <strong>
+                            7:00 PM – 9:00 PM SGT |
+                            4:30 PM – 6:30 PM IST
+                        </strong>
                     </div>
 
                     <div>
@@ -330,11 +350,12 @@
 
                 </div>
 
+
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScGgzslDuC_6RYDX74Fe9o-TUvo2zLp4pJI6ENSgWWhHH2qqA/viewform?usp=sharing&ouid=114106117959324077203"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="bootcamp-register-btn">
+                    target="_blank" rel="noopener noreferrer" class="bootcamp-register-btn">
+
                     Register for FREE
+
                 </a>
 
             </div>
@@ -342,12 +363,6 @@
         </div>
 
     </section>
-
-
-
-    
-  
-
 
 
     <!-- FOOTER -->
@@ -374,8 +389,7 @@
 
                 <div class="footer-nav-contact">
 
-                    <nav class="footer-links"
-                        aria-label="Footer navigation">
+                    <nav class="footer-links" aria-label="Footer navigation">
 
                         <a href="index.html">Home</a>
 
@@ -427,33 +441,26 @@
 
                     <div class="footer-social-icons">
 
-                        <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all"
-                            target="_blank"
+                        <a href="https://www.linkedin.com/company/jkssofttech/posts/?feedView=all" target="_blank"
                             aria-label="LinkedIn">
 
-                            <img src="./assets/linkedin.png"
-                                alt="LinkedIn">
+                            <img src="./assets/linkedin.png" alt="LinkedIn">
 
                         </a>
 
 
-                        <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw"
-                            target="_blank"
+                        <a href="https://x.com/jkssofttech?s=11&t=h7Jd55dWQyyXjJFp_9wnGw" target="_blank"
                             aria-label="Twitter">
 
-                            <img src="./assets/twitter.png"
-                                alt="Twitter">
+                            <img src="./assets/twitter.png" alt="Twitter">
 
                         </a>
 
 
-                        <a href="https://wa.me/6587936389"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <a href="https://wa.me/6587936389" target="_blank" rel="noopener noreferrer"
                             aria-label="WhatsApp">
 
-                            <img src="./assets/whatsapp.png"
-                                alt="WhatsApp">
+                            <img src="./assets/whatsapp.png" alt="WhatsApp">
 
                         </a>
 
