@@ -1,42 +1,50 @@
 [
     {
         "certificateId": "JKS-AI-2026-0001",
-        "name": "Tenali Haswanth",
+        "name": "TENALI HASWANTH",
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
     },
     {
         "certificateId": "JKS-AI-2026-0002",
-        "name": "Gujjula Radha Sherlyn",
+        "name": "GUJJULA RADHA SHERLYN",
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
     },
     {
         "certificateId": "JKS-AI-2026-0003",
-        "name": "Praneetha Gorle",
+        "name": "PRANEETHA GORLE",
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
     },
      {
         "certificateId": "JKS-AI-2026-0004",
-        "name": "Koruvada Surya Chaitanya",
+        "name": "KORUVADA SURYA CHAITANYA",
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
     },
     {
         "certificateId": "JKS-AI-2026-0005",
-        "name": "Frehja Antonysamy Jency",
+        "name": "FREHJA ANTONYSAMY JENCY",
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
     },
       {
         "certificateId": "JKS-AI-2026-0006",
-        "name": "Nikhitha Nimmagadda",
+        "name": "NIKHITHA NIMMAGADDA",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
+    },
+
+     {
+        "certificateId": "JKS-AI-2026-0007",
+        "name": "ESTHER PETERS",
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
