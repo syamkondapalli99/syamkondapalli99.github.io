@@ -48,6 +48,28 @@
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
+    },
+
+        {
+        "certificateId": "JKS-AI-2026-0008",
+        "name": "S. MEKARANJINI",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
+    },
+        {
+        "certificateId": "JKS-AI-2026-0009",
+        "name": "G. RADHA SHALINI",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
+    },
+        {
+        "certificateId": "JKS-AI-2026-0010",
+        "name": "BODDETI RAMYA",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
     }
     
 ]
