@@ -1,23 +1,45 @@
 [
     {
         "certificateId": "JKS-AI-2026-0001",
-        "name": "John Smith",
+        "name": "Tenali Haswanth",
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
     },
     {
         "certificateId": "JKS-AI-2026-0002",
-        "name": "Sarah Thomas",
+        "name": "Gujjula Radha Sherlyn",
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
     },
     {
         "certificateId": "JKS-AI-2026-0003",
-        "name": "Alex Kumar",
+        "name": "Praneetha Gorle",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
+    },
+     {
+        "certificateId": "JKS-AI-2026-0004",
+        "name": "Koruvada Surya Chaitanya",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-AI-2026-0005",
+        "name": "Frehja Antonysamy Jency",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
+    },
+      {
+        "certificateId": "JKS-AI-2026-0006",
+        "name": "Nikhitha Nimmagadda",
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
     }
+    
 ]
