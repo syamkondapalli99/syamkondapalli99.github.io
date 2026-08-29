@@ -70,6 +70,20 @@
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
+    },
+      {
+        "certificateId": "JKS-AI-2026-0011",
+        "name": "MUMMULURI MEGHANA",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
+    },
+      {
+        "certificateId": "JKS-AI-2026-0012",
+        "name": "LOHITYA SHRI",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
     }
     
 ]
