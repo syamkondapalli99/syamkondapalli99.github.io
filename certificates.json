@@ -1,0 +1,23 @@
+[
+    {
+        "certificateId": "JKS-AI-2026-0001",
+        "name": "John Smith",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-AI-2026-0002",
+        "name": "Sarah Thomas",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-AI-2026-0003",
+        "name": "Alex Kumar",
+        "event": "JKS AI Bootcamp 2026",
+        "date": "27 August 2026",
+        "status": "Valid"
+    }
+]
