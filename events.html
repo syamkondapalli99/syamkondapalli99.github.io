@@ -82,6 +82,57 @@
         .ai-event-content h3 {
             margin-top: 18px;
         }
+        /* RAG Masterclass - compact right column */
+        .rag-compact h2 {
+            margin: 4px 0 10px;
+        }
+
+        .rag-compact .course-status {
+            margin: 2px 0 10px;
+        }
+
+        .rag-compact .ai-event-lead {
+            margin-bottom: 6px;
+        }
+
+        .rag-compact h3 {
+            margin: 12px 0 6px !important;
+        }
+
+        .rag-compact .ai-learning-points {
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 18px;
+            margin: 6px 0 10px;
+        }
+
+        .rag-compact .ai-learning-points strong {
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .rag-compact .ai-learning-points p {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .rag-compact .ai-event-details {
+            margin: 8px 0 0;
+        }
+
+        .rag-compact .ai-event-details div {
+            padding: 7px 0;
+        }
+
+        .rag-compact .rag-register-btn {
+            margin-top: 16px;
+        }
+
+        @media (max-width: 520px) {
+            .rag-compact .ai-learning-points {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 
 </head>
@@ -264,7 +315,7 @@
 
             <!-- CONTENT -->
 
-            <div class="ai-event-content reveal reveal-delay-1">
+            <div class="ai-event-content rag-compact reveal reveal-delay-1">
 
                 <p class="section-eyebrow">
                     RAG Masterclass
@@ -280,18 +331,9 @@
                 </h2>
 
                 <p class="ai-event-lead">
-                    Join our hands-on RAG Masterclass and learn how to build
-                    Generative AI applications that give accurate, grounded
-                    answers from your own data.
-                </p>
-
-                <p>
-                    Large language models are powerful, but they can only answer
-                    from what they were trained on. In this masterclass, you will
-                    learn how Retrieval-Augmented Generation (RAG) solves this by
-                    retrieving relevant information from documents and feeding it
-                    to the model, then put it into practice by building your own
-                    mini RAG assistant with LangChain.
+                    Learn how Retrieval-Augmented Generation (RAG) lets AI give
+                    accurate, grounded answers from your own documents, then build
+                    your own mini RAG assistant with LangChain.
                 </p>
 
 
@@ -302,42 +344,42 @@
                     <div>
                         <strong>Document Retrieval</strong>
                         <p>
-                            Load, split and retrieve the right content from your documents.
+                            Find the right content in your documents.
                         </p>
                     </div>
 
                     <div>
                         <strong>Embeddings &amp; Vector DB</strong>
                         <p>
-                            Turn text into embeddings and store them in a vector database.
+                            Store text as searchable vectors.
                         </p>
                     </div>
 
                     <div>
                         <strong>Semantic Search</strong>
                         <p>
-                            Find information by meaning, not just keywords.
+                            Search by meaning, not keywords.
                         </p>
                     </div>
 
                     <div>
                         <strong>Prompt Augmentation</strong>
                         <p>
-                            Ground the model's answers by adding retrieved context to prompts.
+                            Ground answers with retrieved context.
                         </p>
                     </div>
 
                     <div>
-                        <strong>Building a RAG App with LangChain</strong>
+                        <strong>RAG App with LangChain</strong>
                         <p>
-                            Bring it all together into a working mini RAG assistant.
+                            Build a working mini RAG assistant.
                         </p>
                     </div>
 
                     <div>
                         <strong>Certificate</strong>
                         <p>
-                            Receive a certificate of completion upon completing the masterclass.
+                            Awarded on completion.
                         </p>
                     </div>
 
