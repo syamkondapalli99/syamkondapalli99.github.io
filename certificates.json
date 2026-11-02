@@ -185,8 +185,82 @@
         "event": "JKS AI Bootcamp 2026",
         "date": "27 August 2026",
         "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0001",
+        "name": "ALBIN LAIJU",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0002",
+        "name": "IVIN SABU",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0003",
+        "name": "JEEVAN",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0004",
+        "name": "Y. ANITHA",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0005",
+        "name": "THISHAN S",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0006",
+        "name": "SUJIV SURYA",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0007",
+        "name": "FREHJA ANTONYSAMY JENCY",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0008",
+        "name": "PRATEKSHA MARIAPPAN",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0009",
+        "name": "KISHAN M RAVINDRA",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0010",
+        "name": "PHINIYAS H",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0011",
+        "name": "GYANSHEKHARAN TITUS CHELLA PANDIYAN",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
     }
-    
-    
-    
 ]
