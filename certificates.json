@@ -262,5 +262,19 @@
         "event": "JKS RAG Masterclass 2026",
         "date": "29 October 2026",
         "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0012",
+        "name": "SAM SPURGEON MARLAPUDI",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+    {
+        "certificateId": "JKS-RAG-2026-0013",
+        "name": "JEMIMA BAIPA",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
     }
 ]
