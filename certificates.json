@@ -276,5 +276,19 @@
         "event": "JKS RAG Masterclass 2026",
         "date": "29 October 2026",
         "status": "Valid"
+    },
+     {
+        "certificateId": "JKS-RAG-2026-0014",
+        "name": "MEKA RAJESH",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
+    },
+     {
+        "certificateId": "JKS-RAG-2026-0015",
+        "name": "MAMIDI PRATAP",
+        "event": "JKS RAG Masterclass 2026",
+        "date": "29 October 2026",
+        "status": "Valid"
     }
 ]
